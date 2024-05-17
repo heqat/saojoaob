@@ -1,0 +1,104 @@
+.body {
+    background-color: white;
+}
+.header-turismo {
+    margin-top: 8rem;
+}
+
+.marca-turistica {
+    width: 500px;
+    height: auto;
+}
+
+@media (max-width: 767px) {
+    .marca-turistica {
+        width: 300px;
+    }
+
+    .imagem-card {
+        height: 5rem;
+    }
+}
+
+.barra-colorida {
+    height: 8px;
+}
+
+.barra-colorida.um {
+    background-color: var(--cor-rosa);
+}
+
+.barra-colorida.dois {
+    background-color: var(--cor-roxa);
+}
+
+.barra-colorida.tres {
+    background-color: var(--cor-laranja);
+}
+
+.barra-colorida.quatro {
+    background-color: var(--cor-verde-turistica);
+}
+
+.texto-nav {
+    font-family: var(--fonte-principal);
+    color: var(--cor-cinza);
+}
+
+.texto-card {
+    font-family: var(--fonte-principal);
+    color: white;
+}
+
+.texto-card.titulo {
+    font-weight: 800;
+}
+
+.container-imagem {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.imagem-card {
+    width: auto;
+    height: 15rem;
+}
+
+@media (max-width: 767px) {
+    .imagem-card {
+        height: 6rem;
+    }
+}
+
+.container-card-texto {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#terra-do-papangu {
+    scroll-margin-top: 100px;
+    background-color: var(--cor-rosa);
+    min-height: 18rem
+}
+
+#terra-de-tradicoes {
+    scroll-margin-top: 100px;
+    background-color: var(--cor-roxa);
+    min-height: 18rem
+}
+
+#terra-dos-bolos-e-doces {
+    scroll-margin-top: 100px;
+    background-color: var(--cor-laranja);
+    min-height: 18rem
+
+}
+
+#terra-das-serras {
+    scroll-margin-top: 100px;
+    background-color: var(--cor-verde-turistica);
+    min-height: 18rem
+
+}

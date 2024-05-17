@@ -1,0 +1,43 @@
+:root{
+    --cor-roxa: #390061;
+    --cor-amarela: #fde426;
+    --cor-laranja: #ff9933;
+    --cor-verde: rgba(7, 105, 125, 0.90);
+
+    --fonte: 'Montserrat', sans-serif;
+}
+
+* {
+    font-size: 16px;
+}
+
+.navbar {
+    background-color: var(--cor-verde);
+}
+
+.text-nav {
+    font-family: var(--fonte);
+    color: white;
+    text-decoration: none;
+}
+
+.text-nav:hover {
+    color: white;
+    background-color: var(--cor-laranja);
+    transition: 0.5s;
+    border-radius: 20px;
+}
+
+.m-hero {
+    background-image: url("/bg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.teste {
+    height: 500px;
+    width: 100%;
+    background-color: brown;
+}

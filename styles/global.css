@@ -1,0 +1,47 @@
+:root{
+    --cor-vermelho-escuro: #9E0000;
+    --cor-vermelho: #D10404;
+    --cor-azul-escuro: #0048A2;
+    --cor-azul: #0670C7;
+    --cor-verde-escuro: #0C745F;
+    --cor-verde: #009483;
+    --cor-laranja-escuro: #E67800;
+    --cor-laranja: #FFAA01;
+    --cor-marrom: #D65600;
+    --cor-branco: #FFFFFF;
+    --cor-cinza-escuro: #333333;
+
+    --fonte-principal: 'Palamecia', sans-serif;
+    --fonte-apoio: 'Morl', sans-serif;
+}
+
+@font-face {
+    font-family: 'Palamecia';
+    src: url("../assets/fonts/palamecia-titling.ttf");
+}
+
+@font-face {
+    font-family: 'Morl';
+    src: url("../assets/fonts/MorlRounded-Regular.otf");
+}
+
+
+* {
+    font-size: 16px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;              
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--cor-laranja);
+    border-radius: 20px;             
+}
+

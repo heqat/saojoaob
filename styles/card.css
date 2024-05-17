@@ -1,0 +1,69 @@
+.card {
+    width: 16rem;
+    height: 12.5rem;
+    border-radius: 0;
+    background: var(--cor-azul-escuro);
+    border-color: white !important;
+}
+
+.card.palco {
+    width: 18rem;
+    height: auto;
+
+}
+
+.card-body.bloco {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+}
+
+.container-categoria {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    right: 0;
+    width: 6rem;
+    height: 2rem;
+    background-color: white;
+    z-index: 1000;
+    border-bottom-left-radius: 50px;
+}
+
+.categoria {
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-family: var(--fonte-apoio);
+    color: var(--cor-roxa);
+}
+
+.categoria.palco {
+    color: var(--cor-azul-escuro);
+    text-align: right;
+}
+
+.card-title {
+    margin-bottom: 2rem;
+    color: var(--cor-azul-escuro);
+    font-family: var(--fonte-apoio);
+    text-transform: uppercase;
+}
+
+.card-title.palco {
+    margin: 0.5rem 0;
+    color: var(--cor-branco);
+}
+
+.horario {
+    color: var(--cor-laranja);
+}
+
+.dia {
+    color: var(--cor-laranja);
+    font-family: var(--fonte-principal);
+}
+
+.card-subtitle {
+    font-family: var(--fonte-apoio);
+}

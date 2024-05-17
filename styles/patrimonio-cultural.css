@@ -1,0 +1,13 @@
+.titulo {
+    color: var(--cor-branco);
+}
+
+.selo {
+    width: 10rem;
+    height: auto;
+}
+
+#patrimonio {
+    background: var(--cor-azul-escuro);
+    scroll-margin-top: 100px;
+}

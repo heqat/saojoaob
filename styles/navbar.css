@@ -1,0 +1,36 @@
+#navbar {
+    width: 100%;
+    background: url('../public/bg-azul.jpg');
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.text-nav {
+    font-family: var(--fonte-principal);
+    color: white;
+    text-decoration: none;
+}
+
+.text-nav:hover {
+    color: white;
+    background-color: var(--cor-laranja-escuro);
+    transition: 0.5s;
+}
+
+.m-icone-navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.m-icone-navbar:hover {
+    transition: 0.5s;
+    background-color:  var(--cor-laranja-escuro);
+}
+
+@media (max-width: 991px) {
+    .m-navbar-icones {
+        border-top: 1px solid white;
+    }
+}
