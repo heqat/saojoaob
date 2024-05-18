@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alata&family=Secular+One&display=swap');
+
 :root{
     --cor-vermelho-escuro: #9E0000;
     --cor-vermelho: #D10404;
@@ -11,18 +15,18 @@
     --cor-branco: #FFFFFF;
     --cor-cinza-escuro: #333333;
 
-    --fonte-principal: 'Palamecia', sans-serif;
-    --fonte-apoio: 'Morl', sans-serif;
+    --fonte-principal: 'Passero One', sans-serif;
+    --fonte-apoio: 'Secular One', sans-serif;
 }
 
 @font-face {
-    font-family: 'Palamecia';
-    src: url("../assets/fonts/palamecia-titling.ttf");
+    font-family: "Passero One", sans-serif;
+    font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Morl';
-    src: url("../assets/fonts/MorlRounded-Regular.otf");
+    font-family: "Secular One", sans-serif;
+    font-weight: 400;
 }
 
 
