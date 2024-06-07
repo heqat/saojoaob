@@ -1,9 +1,13 @@
 import Image from 'next/image'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import { useRouter } from 'next/router'
 import marca from '../public/marca2.svg'
 import Link from 'next/link'
 
 export default function Navbar() {
+  const [activeSection, setActiveSection] = useState('');
+  const router = useRouter();
+
   useEffect(() => {
     const navItems = document.querySelectorAll('.nav-item')
     const navbarCollapse = document.getElementById('navbar-collapse')
@@ -12,13 +16,30 @@ export default function Navbar() {
         navbarCollapse.classList.remove('show')
       })
     })
-  }, [])
+
+    const handleScroll = () => {
+      const sections = document.querySelectorAll('section');
+      let currentSection = '';
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop - 120; // Ajuste a margem conforme necessário
+        const sectionHeight = section.clientHeight;
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute('id');
+        }
+      });
+      setActiveSection(currentSection);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   return (
     <header>
       <nav id='navbar' className='navbar navbar-expand-lg fixed-top'>
         <div className='container'>
-
           <a href="/"><Image className='m-navbar-marca' src={marca} alt='marca são joao' height={85} /></a>
 
           <button id='btn-nav' className='navbar-toggler text-white' type='button' aria-expanded='false' data-bs-toggle='collapse' data-bs-target='#navbar-collapse'>
@@ -27,17 +48,20 @@ export default function Navbar() {
 
           <div className='navbar-collapse collapse' id='navbar-collapse'>
             <ul className='navbar-nav ms-auto align-items-center'>
-              <li className='nav-item m-2'>
-                <a href='/../#apresentacao' className='text-nav p-2'>O SÃO JOÃO</a>
+              <li className={`nav-item m-2 ${activeSection === 'apresentacao' ? 'active' : ''}`}>
+                <a href='/../#apresentacao' className='text-nav p-2' onClick={() => setActiveSection('apresentacao')}>O SÃO JOÃO</a>
               </li>
-              <li className='nav-item m-2'>
-                <a href='/../#programacao' className='text-nav p-2'>PROGRAMAÇÃO</a>
+              <li className={`nav-item m-2 ${activeSection === 'programacao' ? 'active' : ''}`}>
+                <a href='/../#programacao' className='text-nav p-2' onClick={() => setActiveSection('programacao')}>PROGRAMAÇÃO</a>
               </li>
-              <li className='nav-item m-2'>
-                <a href='/../#mapa' className='text-nav p-2'>MAPA</a>
+              <li className={`nav-item m-2 ${activeSection === 'mapa' ? 'active' : ''}`}>
+                <a href='/../#mapa' className='text-nav p-2' onClick={() => setActiveSection('mapa')}>MAPA</a>
               </li>
-              <li className='nav-item m-2'>
-                <a href='/../#faq' className='text-nav p-2'>FAQ</a>
+              <li className={`nav-item m-2 ${activeSection === 'faq' ? 'active' : ''}`}>
+                <a href='/../#faq' className='text-nav p-2' onClick={() => setActiveSection('faq')}>FAQ</a>
+              </li>
+              <li className={`nav-item m-2 ${router.pathname === '/vitrine-criativa' ? 'active' : ''}`}>
+                <a href='/vitrine-criativa' className='text-nav p-2'>VITRINE CRIATIVA</a>
               </li>
             </ul>
             <ul className='navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones'>
@@ -57,6 +81,18 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
+
+      <style jsx>{`
+        .nav-item.active a {
+          font-size: larger;
+          font-weight: bold;
+        }
+        .nav-item.active-vitrine a {
+          font-size: larger;
+          font-weight: bold;
+        
+        }
+      `}</style>
     </header>
   )
 }

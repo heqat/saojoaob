@@ -140,21 +140,21 @@
 
 #apresentacao {
     scroll-margin-top: 100px;
-    background: url('../public/bg-azul.jpg');
+    background: url('../public/BG-AZUL.png');
     background-position: center;
     background-repeat: repeat;
 }
 
 #programacao {
     scroll-margin-top: 100px;
-    background: url('../public/bg-sortido.jpg');
+    background: url('../public/BG-LARANJA.png');
     background-position: center;
     background-repeat: repeat;
 }
 
 #mapa {
     scroll-margin-top: 100px;
-    background: url('../public/bg-laranja.jpg');
+    background: url('../public/textura\ site\ madeira\ v1.png');
     background-position: center;
     background-repeat: repeat;
 }
@@ -167,7 +167,7 @@
 
 #faq {
     scroll-margin-top: 100px;
-    background: url('../public/bg-verde.jpg');
+    background: url('../public/textura\ site\ palha\ v1.png');
     background-position: center;
     background-repeat: repeat;
 }
