@@ -13,7 +13,6 @@ import governo from '../public/governo.png'
 import fundarpe from '../public/fundarpe.png'
 import empetur from '../public/empetur.png'
 
-import MapComponent from '../components/MapComponent';
 
 export default function Home() {
   useEffect(() => {

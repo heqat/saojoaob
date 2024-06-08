@@ -1,0 +1,11 @@
+.justificado {
+    text-align: justify;
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+  }
+
+  .carousel-image {
+    width: 1600px; /* largura desejada */
+    height: 1066px; /* altura desejada */
+    object-fit: cover; /* Mantém a proporção da imagem enquanto preenche o espaço */
+  }
+  

@@ -41,3 +41,8 @@
     width: 100%;
     background-color: brown;
 }
+
+.justificado {
+    text-align: justify;
+    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+  }
