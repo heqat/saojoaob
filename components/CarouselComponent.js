@@ -8,24 +8,50 @@ const CarouselComponent = () => {
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/VITRINE1.JPG'
+          src='/VITRINE/carrinhos.png'
           alt="Primeira imagem"
         />
-        <Carousel.Caption>
-          <h3>Título da Imagem 1</h3>
-          <p>Descrição da Imagem 1</p>
-        </Carousel.Caption>
+     
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/VITRINE2.JPG'
+          src='/VITRINE/esp.png'
           alt="Segunda imagem"
         />
-        <Carousel.Caption>
-          <h3>Título da Imagem 2</h3>
-          <p>Descrição da Imagem 2</p>
-        </Carousel.Caption>
+        
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src='/VITRINE/cordeis.png'
+          alt="Segunda imagem"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src='/VITRINE/artesoes.png'
+          alt="Segunda imagem"
+        />
+       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src='/VITRINE/canc.png'
+          alt="Segunda imagem"
+        />
+  
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src='/VITRINE/jsas.png'
+          alt="Segunda imagem"
+        />
+       
       </Carousel.Item>
       {/* Adicione mais itens de carrossel conforme necessário */}
     </Carousel>

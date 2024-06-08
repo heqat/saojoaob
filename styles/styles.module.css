@@ -1,11 +1,60 @@
+/* Responsivo para o componente principal */
+.responsiveMain {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  margin-top: 100px;
+  flex-direction: row; /* Padrão: disposição em linha */
+}
+
+.textContainer {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.title {
+  font-family: var(--fonte-principal);
+  text-align: center;
+}
+
+.text {
+  font-family: var(--fonte-apoio);
+}
+
+.carouselContainer {
+  flex: 1;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+/* Estilo justificado já fornecido */
 .justificado {
-    text-align: justify;
-    margin-bottom: 20px; /* Espaçamento entre parágrafos */
+  text-align: justify;
+  margin-bottom: 20px; /* Espaçamento entre parágrafos */
+}
+
+/* Imagens do carrossel */
+.carousel-image {
+  width: 1600px; /* largura desejada */
+  height: 1066px; /* altura desejada */
+  object-fit: cover; /* Mantém a proporção da imagem enquanto preenche o espaço */
+}
+
+/* Media query para telas menores que 768px (por exemplo, tablets e celulares) */
+@media (max-width: 768px) {
+  .responsiveMain {
+    flex-direction: column; /* Disposição em coluna */
+    padding: 20px;
+    margin-top: 50px;
   }
 
-  .carousel-image {
-    width: 1600px; /* largura desejada */
-    height: 1066px; /* altura desejada */
-    object-fit: cover; /* Mantém a proporção da imagem enquanto preenche o espaço */
+  .textContainer {
+    margin-right: 0;
+    margin-bottom: 20px;
   }
-  
+
+  .carouselContainer {
+    margin-left: 0;
+    margin-top: 0; /* Remove o espaçamento superior */
+  }
+}
