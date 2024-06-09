@@ -16,23 +16,7 @@ export default function VitrineCria() {
       <Head>
         <title>Vitrine Criativa</title>
         <meta name="title" content="Vitrine Criativa" />
-
-        <meta
-          property="og:url"
-          content="https://carnaval.bezerros.pe.gov.br/homenageados"
-        />
-        <meta
-          property="og:title"
-          content="Vitrine Criativa - São João Bezerros 2024"
-        />
-        <meta
-          property="twitter:url"
-          content="https://carnaval.bezerros.pe.gov.br/homenageados"
-        />
-        <meta
-          property="twitter:title"
-          content="Vitrine Criativa - São João Bezerros 2024"
-        />
+        
       </Head>
 
       <Navbar />

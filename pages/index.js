@@ -84,7 +84,7 @@ export default function Home() {
                 graus, o São João na Serra Negra tornou-se um evento consolidado
                 no calendário festivo do estado.
               </p>
-              <h2 className="m-titulo-programacao mb-4">
+              <h2 className="m-titulo-programacaotxt mb-4">
                 PATRIMÔNIO CULTURAL IMATERIAL
               </h2>
               <p className="m-apresentacao-texto">
@@ -117,12 +117,14 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="divisoria"></div>
+
         <section id="programacao">
           <div className="d-flex justify-content-center align-items-center flex-column">
             <div className="m-container-palcos-serra">
               <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
               <div className="container mt-5">
-                <h3 className="m-titulo-programacao">POLOS</h3>
+                <h3 className="m-titulo-programacao">SERRA NEGRA</h3>
                 <ul
                   className="nav nav-tabs justify-content-center"
                   role="tablist"
@@ -460,18 +462,66 @@ export default function Home() {
                 </div>
               </div>
             </div>
+
+            <div className="divisoria"></div>
+
             <div className="m-container-palcos-cidade">
-              <h3 className="m-titulo-programacao-cidade">SITIO À CIDADE</h3>
-              <div className="container-card">
-                <div className="d-flex justify-content-center flex-wrap">
-                  <CardCidade
-                    nome={["Artista 1", "Artista 2", "Artista 3"]}
-                    horario={["12:00", "14:00", "16:00"]}
-                    dia="Sábado"
-                    data="10/06"
-                  />
+              <div className="container mt-5">
+                <h3 className="m-titulo-programacao-cidade">SÍTIO À CIDADE</h3>
+                <div className="container-card">
+                  <div className="d-flex justify-content-center flex-wrap">
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardCidade
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                  </div>
                 </div>
               </div>
+              <div className="divisoria"></div>
             </div>
           </div>
         </section>

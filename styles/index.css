@@ -18,13 +18,14 @@
 .m-titulo-secao {
     color: white;
     font-family: var(--fonte-principal);
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .m-apresentacao-texto {
     font-size: 1.2rem;
     font-family: var(--fonte-apoio);
     line-height: 1.5rem;
+    text-align: justify;
 }
 
 .arrow-down {
@@ -117,36 +118,49 @@
     border: none !important;
 }
 
-.m-titulo-programacao {
+/* é o texto da apresentação */
+.m-titulo-programacaotxt {
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: var(--fonte-principal);
 }
 
-.m-container-palcos-serra {
+.m-titulo-programacao {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-family: var(--fonte-principal);
+    background-color: rgb(255, 204, 102);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+.m-container-palcos-serra,
+.m-container-palcos-cidade {
     width: 100%;
-    background: url('../public/serra-negra-vila.png');
     background-position: center;
     background-repeat: repeat;
 }
 
+.m-container-palcos-serra {
+    background-image: url('../public/serra-negra-vila.png');
+}
+
 .m-container-palcos-cidade {
-    width: 100%;
-    background: url('../public/sitio-cidade-vila.png');
-    background-position: center;
-    background-repeat: repeat;
-    margin-bottom: 3vh;
+    background-image: url('../public/sitio-cidade-vila.png');
 }
 
 .m-titulo-programacao-cidade{
     text-align: center;
     color: white;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: var(--fonte-principal);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    background-color: yellow;
+    background-color: rgb(255, 204, 102);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .m-container-mapa {
@@ -165,12 +179,6 @@
     background-repeat: repeat;
 }
 
-#programacao {
-    scroll-margin-top: 100px;
-    /* background: url('../public/BG-LARANJA.png'); */
-    background-position: center;
-    background-repeat: repeat;
-}
 
 #mapa {
     scroll-margin-top: 100px;
@@ -196,6 +204,13 @@
     .container-video {
         height: 50vh;
     }
+    .m-container-palcos-serra {
+        background-image: url('../public/BG-AZUL.png'); /* Substitua pelo nome da imagem menor */
+    }
+
+   .m-container-palcos-cidade {
+        background-image: url('../public/BG-VERDE.png'); /* Substitua pelo nome da imagem menor */
+    }
 }
 
 @keyframes animacao-logo-hero {
@@ -220,4 +235,12 @@
 
 .nav-link.active {
     opacity: 1;
+}
+
+.divisoria {
+    width: 100%;
+    height: 1rem;
+    background-image: url("/faixa.png");
+    background-position: center;
+    background-size: contain;
 }
