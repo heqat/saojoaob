@@ -124,9 +124,14 @@
     font-family: var(--fonte-principal);
 }
 
-.m-container-palcos {
+.m-container-palcos-serra {
     width: 100%;
-    background-color: var(--cor-ciano);
+    background-color: red;
+}
+
+.m-container-palcos-cidade {
+    width: 100%;
+    background-color: blue;
 }
 
 .m-container-mapa {
@@ -147,7 +152,7 @@
 
 #programacao {
     scroll-margin-top: 100px;
-    background: url('../public/BG-LARANJA.png');
+    /* background: url('../public/BG-LARANJA.png'); */
     background-position: center;
     background-repeat: repeat;
 }

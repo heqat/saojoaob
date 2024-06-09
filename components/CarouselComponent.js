@@ -1,7 +1,6 @@
 import React from 'react';
 import { Carousel } from 'react-bootstrap';
-import '../styles/styles.module.css'; // Certifique-se de importar o arquivo CSS
-
+import '../styles/styles.module.css'; 
 const CarouselComponent = () => {
   return (
     <Carousel>

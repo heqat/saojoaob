@@ -6,16 +6,24 @@
     border-color: white !important;
 }
 
+.card-cidade {
+    width: 16rem;
+    height: 12.5rem;
+    border-radius: 0;
+    background: gray;
+    border-color: white !important;
+}
+
 .card.palco {
     width: 18rem;
     height: auto;
 
 }
 
-.card-body.bloco {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+.card-cidade.palco-cidade {
+    width: 18rem;
+    height: auto;
+
 }
 
 .container-categoria {
@@ -45,7 +53,7 @@
 
 .card-title {
     margin-bottom: 2rem;
-    color: var(--cor-azul-escuro);
+    color: whi;
     font-family: var(--fonte-apoio);
     text-transform: uppercase;
 }
