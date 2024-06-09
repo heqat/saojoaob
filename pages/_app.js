@@ -5,7 +5,6 @@ import '../styles/navbar.css'
 import '../styles/footer.css'
 import '../styles/index.css'
 import '../styles/card.css'
-import '../styles/turismo.css'
 import '../styles/patrimonio-cultural.css'
 
 import Head from 'next/head'
