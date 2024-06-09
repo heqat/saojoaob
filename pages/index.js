@@ -460,7 +460,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-          <div className="m-container-palcos-cidade">
+            <div className="m-container-palcos-cidade">
               <h3 className="m-titulo-programacao-cidade">SITIO À CIDADE</h3>
               <div className="container-card">
                 <div className="d-flex justify-content-center flex-wrap">
@@ -473,8 +473,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            </div>
+          </div>
         </section>
 
         <section id="patrocinio" className="mt-5 mb-5">

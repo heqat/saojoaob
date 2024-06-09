@@ -1,82 +1,80 @@
 .card {
-    width: 16rem;
-    height: 12.5rem;
-    border-radius: 0;
-    background: var(--cor-azul-escuro);
-    border-color: white !important;
+  width: 16rem;
+  height: 12.5rem;
+  border-radius: 0;
+  background: var(--cor-azul-escuro);
+  border-color: white !important;
 }
 
 .card-cidade {
-    width: 16rem;
-    height: 12.5rem;
-    border-radius: 0;
-    background: gray;
-    border-color: white !important;
+  width: 16rem;
+  height: 12.5rem;
+  border-radius: 0;
+  background: gray;
+  border-color: white !important;
 }
 
 .card.palco {
-    width: 18rem;
-    height: auto;
-
+  width: 18rem;
+  height: auto;
 }
 
 .card-cidade.palco {
-    width: 18rem;
-    height: auto;
-
+  width: 18rem;
+  height: auto;
 }
 
 .container-categoria {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    right: 0;
-    width: 6rem;
-    height: 2rem;
-    background-color: white;
-    z-index: 1000;
-    border-bottom-left-radius: 50px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  width: 6rem;
+  height: 2rem;
+  background-color: white;
+  z-index: 1000;
+  border-bottom-left-radius: 50px;
 }
 
 .categoria {
-    font-size: 1rem;
-    text-transform: uppercase;
-    font-family: var(--fonte-apoio);
-    color: var(--cor-roxa);
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-family: var(--fonte-apoio);
+  color: var(--cor-roxa);
 }
 
 .categoria.palco {
-    color: var(--cor-azul-escuro);
-    text-align: right;
+  color: var(--cor-azul-escuro);
+  text-align: right;
 }
 
 .card-title {
-    margin-bottom: 2rem;
-    color: whi;
-    font-family: var(--fonte-apoio);
-    text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: whi;
+  font-family: var(--fonte-apoio);
+  text-transform: uppercase;
 }
 
 .card-title.palco {
-    margin: 0.5rem 0;
-    color: var(--cor-branco);
+  margin: 0.5rem 0;
+  color: var(--cor-branco);
 }
 
 .horario {
-    color: var(--cor-laranja);
+  color: var(--cor-laranja);
 }
 
 .dia {
-    color: var(--cor-laranja);
-    font-family: var(--fonte-principal);
+  color: var(--cor-laranja);
+  font-family: var(--fonte-principal);
 }
 
 .card-subtitle {
-    font-family: var(--fonte-apoio);
+  font-family: var(--fonte-apoio);
 }
 
-.container-card{
-    margin-bottom: 4rem;
-    margin-top: 1rem;
+.container-card {
+  margin-bottom: 4rem;
+  margin-top: 1rem;
 }
