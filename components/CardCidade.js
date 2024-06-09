@@ -1,11 +1,8 @@
 import React from 'react';
-
-
-
 export default function CardCidade({ nome, horario, data, dia }) {
 
   return (
-      <div className="card-cidade palco-cidade m-1 border border-2">
+      <div className="card palco card-cidade m-1 border border-2">
           <div className="container-categoria">
               <span className="categoria palco">{data}</span>
           </div>

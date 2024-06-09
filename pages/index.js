@@ -120,7 +120,7 @@ export default function Home() {
         <section id="programacao">
           <div className="d-flex justify-content-center align-items-center flex-column">
             <div className="m-container-palcos-serra">
-              <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2> 
+              <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
               <div className="container mt-5">
                 <h3 className="m-titulo-programacao">POLOS</h3>
                 <ul
@@ -153,34 +153,6 @@ export default function Home() {
                       aria-selected="false"
                     >
                       Palco Cultural
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link m-button-programacao palcos"
-                      id="palcos-tab3"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab3-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab3-pane"
-                      aria-selected="false"
-                    >
-                      Sítio a Cidade
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link m-button-programacao palcos"
-                      id="palcos-tab4"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab4-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab4-pane"
-                      aria-selected="false"
-                    >
-                      Centro da Cidade
                     </button>
                   </li>
                 </ul>
@@ -488,19 +460,21 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <div className="m-container-palcos-cidade">
-              <h3 className="m-titulo-programacao">SITIO À CIDADE</h3>
-              <div className="d-flex justify-content-center flex-wrap">
-                <CardCidade
-                  nome={["Artista 1", "Artista 2", "Artista 3"]}
-                  horario={["12:00", "14:00", "16:00"]}
-                  dia="Sábado"
-                  data="10/06"
-                />
+          <div className="m-container-palcos-cidade">
+              <h3 className="m-titulo-programacao-cidade">SITIO À CIDADE</h3>
+              <div className="container-card">
+                <div className="d-flex justify-content-center flex-wrap">
+                  <CardCidade
+                    nome={["Artista 1", "Artista 2", "Artista 3"]}
+                    horario={["12:00", "14:00", "16:00"]}
+                    dia="Sábado"
+                    data="10/06"
+                  />
+                </div>
               </div>
             </div>
-          </div>
+
+            </div>
         </section>
 
         <section id="patrocinio" className="mt-5 mb-5">

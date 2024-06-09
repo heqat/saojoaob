@@ -20,7 +20,7 @@
 
 }
 
-.card-cidade.palco-cidade {
+.card-cidade.palco {
     width: 18rem;
     height: auto;
 
@@ -74,4 +74,9 @@
 
 .card-subtitle {
     font-family: var(--fonte-apoio);
+}
+
+.container-card{
+    margin-bottom: 4rem;
+    margin-top: 1rem;
 }

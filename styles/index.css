@@ -126,12 +126,27 @@
 
 .m-container-palcos-serra {
     width: 100%;
-    background-color: red;
+    background: url('../public/serra-negra-vila.png');
+    background-position: center;
+    background-repeat: repeat;
 }
 
 .m-container-palcos-cidade {
     width: 100%;
-    background-color: blue;
+    background: url('../public/sitio-cidade-vila.png');
+    background-position: center;
+    background-repeat: repeat;
+    margin-bottom: 3vh;
+}
+
+.m-titulo-programacao-cidade{
+    text-align: center;
+    color: white;
+    font-size: 1.5rem;
+    font-family: var(--fonte-principal);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: yellow;
 }
 
 .m-container-mapa {
@@ -193,4 +208,16 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+.nav-tabs {
+    border: none !important;
+}
+
+.nav-link:not(.active) {
+    opacity: 0.8;
+}
+
+.nav-link.active {
+    opacity: 1;
 }
