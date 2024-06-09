@@ -19,8 +19,20 @@
     color: white;
     font-family: var(--fonte-principal);
     font-size: 2.5rem;
+    -webkit-text-stroke: 1px blue; /* Contorno azul */
 }
 
+.m-titulo-secao-linha {
+    display: inline-block; 
+    padding: 10px 20px;
+    border-radius: 15px;
+    color: white;
+    font-family: var(--fonte-principal);
+    font-size: 2.5rem;
+    background-image: url('../public/BG-AZUL.png');
+    width: auto; /* Permite que a largura do elemento se ajuste automaticamente ao conteúdo */
+    max-width: 500px; /* Define um limite máximo para a largura do elemento */
+}
 .m-apresentacao-texto {
     font-size: 1.2rem;
     font-family: var(--fonte-apoio);
@@ -76,7 +88,7 @@
 .accordion-button {
     box-shadow: none !important;
     color: white !important;
-    background-color: var(--cor-laranja) !important;
+    background-color:  #f17c2d !important;
     font-family: var(--fonte-principal);
 }
 
@@ -128,11 +140,19 @@
 
 .m-titulo-programacao {
     text-align: center;
-    color: white;
+    color: #fff;
     font-size: 2rem;
     font-family: var(--fonte-principal);
-    background-color: rgb(255, 204, 102);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    background-color: #fc6;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 
@@ -154,13 +174,19 @@
 
 .m-titulo-programacao-cidade{
     text-align: center;
-    color: white;
+    color: #fff;
     font-size: 2rem;
     font-family: var(--fonte-principal);
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    background-color: rgb(255, 204, 102);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: #fc6;
+    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .m-container-mapa {
@@ -174,7 +200,7 @@
 
 #apresentacao {
     scroll-margin-top: 100px;
-    background: url('../public/BG-AZUL.png');
+    background: url('../public/textura\ site\ azul\ v2.png');
     background-position: center;
     background-repeat: repeat;
 }

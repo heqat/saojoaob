@@ -65,7 +65,7 @@ export default function Home() {
             </button>
           </div>
         </section>
-
+        <div className="divisoria"></div>
         <section id="apresentacao">
           <div className="container d-flex w-100 justify-content-center align-items-center">
             <div className="d-flex flex-column justify-content-center align-items-center text-center my-5 text-white">
@@ -99,7 +99,7 @@ export default function Home() {
             </div>
           </div>
         </section>
-
+        <div className="divisoria"></div>
         <section id="clipe">
           <div
             id="container-video"
@@ -549,11 +549,13 @@ export default function Home() {
               </div>
             </div>
           </div>
-        </section>
 
+          
+        </section>
+        <div className="divisoria"></div>
         <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
-            <h2 className="m-titulo-secao mt-5 mb-5">MAPA</h2>
+            <h2 className="m-titulo-secao-linha mt-5 mb-5">MAPA</h2>
             <iframe
               loading="lazy"
               className="container mb-5"
@@ -563,10 +565,10 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
-
+        <div className="divisoria"></div>
         <section id="faq" className="pb-5">
           <div className="container d-flex justify-content-center align-items-center flex-column">
-            <h2 className="m-titulo-secao mt-5 mb-5">PERGUNTAS E RESPOSTAS</h2>
+            <h2 className="m-titulo-secao-linha mt-5 mb-5">PERGUNTAS E RESPOSTAS</h2>
             <div
               className="container accordion accordion-flush"
               id="accordionFlushExample"
@@ -843,6 +845,7 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <div className="divisoria"></div>
       </main>
       <Footer />
     </>
