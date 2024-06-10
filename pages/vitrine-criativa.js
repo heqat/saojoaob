@@ -1,15 +1,14 @@
-// VitrineCria.jsx
+
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import CarouselComponent from "../components/CarouselComponent";
-import { useRouter } from "next/router"; // Importe o useRouter do next/router
+import { useRouter } from "next/router"; 
 
-// Importe o CSS
 import styles from "../styles/styles.module.css";
 
 export default function VitrineCria() {
-  const router = useRouter(); // Utilize o useRouter para navegação
+  const router = useRouter(); 
 
   return (
     <>
@@ -20,7 +19,9 @@ export default function VitrineCria() {
       </Head>
 
       <Navbar />
+      
       <main className={styles.responsiveMain}>
+        
         <div className={styles.textContainer}>
           <h1 className={styles.title}>Vitrine Criativa</h1>
           <p className={`${styles.justificado} ${styles.text}`}>
@@ -54,6 +55,7 @@ export default function VitrineCria() {
         <div className={styles.carouselContainer}>
           <CarouselComponent />
         </div>
+        
       </main>
       <Footer />
     </>
