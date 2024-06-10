@@ -1,272 +1,267 @@
 .bg-hero {
-    margin-top: 100px;
-    width: 100%;
-    height: 100%;
+  margin-top: 100px;
+  width: 100%;
+  height: 100%;
 }
 
 .bg-hero-marca {
-    margin-top: 100px;
-    width: 20rem;
-    height: auto;
-    position: absolute;
-    filter: drop-shadow(0px 0px 3px black);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, calc(-50% - 100px));
+  margin-top: 100px;
+  width: 20rem;
+  height: auto;
+  position: absolute;
+  filter: drop-shadow(0px 0px 3px black);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, calc(-50% - 100px));
 }
 
 .m-titulo-secao {
-    color: white;
-    font-family: var(--fonte-principal);
-    font-size: 2.5rem;
-    -webkit-text-stroke: 1px blue; /* Contorno azul */
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
 }
 
 .m-titulo-secao-linha {
-    display: inline-block; 
-    padding: 10px 20px;
-    border-radius: 15px;
-    color: white;
-    font-family: var(--fonte-principal);
-    font-size: 2.5rem;
-    background-image: url('../public/BG-AZUL.png');
-    width: auto; /* Permite que a largura do elemento se ajuste automaticamente ao conteúdo */
-    max-width: 500px; /* Define um limite máximo para a largura do elemento */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  background-image: url("../public/BG-AZUL.png");
+  width: auto;
+  max-width: 500px;
 }
 .m-apresentacao-texto {
-    font-size: 1.2rem;
-    font-family: var(--fonte-apoio);
-    line-height: 1.5rem;
-    text-align: justify;
+  font-size: 1.2rem;
+  font-family: var(--fonte-apoio);
+  line-height: 1.5rem;
+  text-align: justify;
 }
 
 .arrow-down {
-    border: none;
-    background: none;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 0;
+  border: none;
+  background: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
 }
 
 .m-btn-historia {
-    padding: 1rem 1.5rem;
-    color: white;
-    text-decoration: none;
-    border: none;
-    background-color: var(--cor-laranja);
+  padding: 1rem 1.5rem;
+  color: white;
+  text-decoration: none;
+  border: none;
+  background-color: var(--cor-laranja);
 }
 
 .m-btn-historia:hover {
-    color: white;
-    transition: 0.5s;
-    background-color: var(--cor-laranja-escuro);
-    cursor: pointer;
+  color: white;
+  transition: 0.5s;
+  background-color: var(--cor-laranja-escuro);
+  cursor: pointer;
 }
 
 .container-video {
-    width: 100%;
-    height: 90vh;
+  width: 100%;
+  height: 90vh;
 }
 
 .m-btn-play-video {
-    border: none;
-    background: none;
+  border: none;
+  background: none;
 }
 
 .m-btn-play-video:hover {
-    transition: 0.5s;
-    transform: scale(1.2);
+  transition: 0.5s;
+  transform: scale(1.2);
 }
 
 .m-iframe-video {
-    visibility: hidden;
-    width: 100%;
-    height: 100%;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .accordion-button {
-    box-shadow: none !important;
-    color: white !important;
-    background-color:  #f17c2d !important;
-    font-family: var(--fonte-principal);
+  box-shadow: none !important;
+  color: white !important;
+  background-color: #f17c2d !important;
+  font-family: var(--fonte-principal);
 }
 
 .accordion-button:after {
-    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
+  background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>") !important;
 }
 
 .accordion-body {
-    font-family: var(--fonte-apoio);
-    background-color: var(--cor-amarela);
+  font-family: var(--fonte-apoio);
+  background-color: var(--cor-amarela);
 }
 
 .m-button-programacao {
-    font-family: var(--fonte-apoio);
-    color: var(--cor-cinza-escuro);
-    background: var(--cor-branco) !important;
-    border-radius: 0 !important;
+  font-family: var(--fonte-apoio);
+  color: var(--cor-cinza-escuro);
+  background: var(--cor-branco) !important;
+  border-radius: 0 !important;
 }
 
 .m-button-programacao:hover {
-    color: var(--cor-branco);
-    background: var(--cor-azul-escuro) !important;
-    border: 1px solid white;
+  color: var(--cor-branco);
+  background: var(--cor-azul-escuro) !important;
+  border: 1px solid white;
 }
 
 .m-button-programacao.active {
-    background: var(--cor-azul-escuro) !important;
+  background: var(--cor-azul-escuro) !important;
 }
 
 .active {
-    color: var(--cor-branco) !important;
+  color: var(--cor-branco) !important;
 }
 
 .palcos.active {
-    color: var(--cor-branco) !important;
+  color: var(--cor-branco) !important;
 }
 
 .nav-tabs {
-    border: none !important;
+  border: none !important;
 }
 
 /* é o texto da apresentação */
 .m-titulo-programacaotxt {
-    text-align: center;
-    color: white;
-    font-size: 2rem;
-    font-family: var(--fonte-principal);
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
 }
 
 .m-titulo-programacao {
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    font-family: var(--fonte-principal);
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    background-color: #fc6;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: #fc6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
-
-
 
 .m-container-palcos-serra,
 .m-container-palcos-cidade {
-    width: 100%;
-    background-position: center;
-    background-repeat: repeat;
+  width: 100%;
+  background-position: center;
+  background-repeat: repeat;
 }
 
 .m-container-palcos-serra {
-    background-image: url('../public/serra-negra-vila.png');
+  background-image: url("../public/serra-negra-vila.png");
 }
 
 .m-container-palcos-cidade {
-    background-image: url('../public/sitio-cidade-vila.png');
+  background-image: url("../public/sitio-cidade-vila.png");
 }
 
-.m-titulo-programacao-cidade{
-    text-align: center;
-    color: #fff;
-    font-size: 2rem;
-    font-family: var(--fonte-principal);
-    margin-top: 2.5rem;
-    margin-bottom: 1rem;
-    background-color: #fc6;
-    text-shadow: 2px 2px 4px rgba(0,0,0,.5);
-    height: 50px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
+.m-titulo-programacao-cidade {
+  text-align: center;
+  color: #fff;
+  font-size: 2rem;
+  font-family: var(--fonte-principal);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  background-color: #fc6;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  height: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
 }
 
 .m-container-mapa {
-    height: 100vh;
-    width: 100%;
+  height: 100vh;
+  width: 100%;
 }
 
 #hero {
-    height: calc(100vh - 100px); 
+  height: calc(100vh - 100px);
 }
 
 #apresentacao {
-    scroll-margin-top: 100px;
-    background: url('../public/textura\ site\ azul\ v2.png');
-    background-position: center;
-    background-repeat: repeat;
+  scroll-margin-top: 100px;
+  background: url("../public/textura\ site\ azul\ v2.png");
+  background-position: center;
+  background-repeat: repeat;
 }
 
-
 #mapa {
-    scroll-margin-top: 100px;
-    background: url('../public/textura\ site\ madeira\ v1.png');
-    background-position: center;
-    background-repeat: repeat;
+  scroll-margin-top: 100px;
+  background: url("../public/textura\ site\ madeira\ v1.png");
+  background-position: center;
+  background-repeat: repeat;
 }
 
 #patrocinio {
-    background: var(--cor-branco);
-    background-position: center;
-    background-repeat: repeat;
+  background: var(--cor-branco);
+  background-position: center;
+  background-repeat: repeat;
 }
 
 #faq {
-    scroll-margin-top: 100px;
-    background: url('../public/textura\ site\ palha\ v1.png');
-    background-position: center;
-    background-repeat: repeat;
+  scroll-margin-top: 100px;
+  background: url("../public/textura\ site\ palha\ v1.png");
+  background-position: center;
+  background-repeat: repeat;
 }
 
 @media (max-width: 767px) {
-    .container-video {
-        height: 50vh;
-    }
-    .m-container-palcos-serra {
-        background-image: url('../public/BG-AZUL.png'); /* Substitua pelo nome da imagem menor */
-    }
+  .container-video {
+    height: 50vh;
+  }
+  .m-container-palcos-serra {
+    background-image: url("../public/BG-AZUL.png"); /* Substitua pelo nome da imagem menor */
+  }
 
-   .m-container-palcos-cidade {
-        background-image: url('../public/BG-VERDE.png'); /* Substitua pelo nome da imagem menor */
-    }
+  .m-container-palcos-cidade {
+    background-image: url("../public/BG-VERDE.png"); /* Substitua pelo nome da imagem menor */
+  }
 }
 
 @keyframes animacao-logo-hero {
-    from {
-        opacity: 0;
+  from {
+    opacity: 0;
+  }
 
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .nav-tabs {
-    border: none !important;
+  border: none !important;
 }
 
 .nav-link:not(.active) {
-    opacity: 0.8;
+  opacity: 0.8;
 }
 
 .nav-link.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 .divisoria {
-    width: 100%;
-    height: 1rem;
-    background-image: url("/faixa.png");
-    background-position: center;
-    background-size: contain;
+  width: 100%;
+  height: 1rem;
+  background-image: url("/faixa.png");
+  background-position: center;
+  background-size: contain;
 }
