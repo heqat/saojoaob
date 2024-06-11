@@ -172,86 +172,86 @@ export default function Home() {
                       <CardPalco
                         nome={[
                           "Forró Rei do Cangaço",
-                          "Daniel Gouveia",
-                          "Carlinhos Melo",
-                          "Jorge de Altinho",
-                          "Fábio Carneirinho",
+                          "Forretrô",
+                          "Flávio José",
+                          "Flávio Leandro",
+                          "Amanda Leão",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
                         dia="Sábado"
-                        data="10/06"
+                        data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "Higor Henrique",
+                          "Luizinho Moreno",
+                          "Waldonys",
+                          "Quinteto Violado",
+                          "Assisão",
                           "Walter Lins",
-                          "Victor Ferrari",
-                          "Cezzinha",
-                          "Santanna, O Cantador",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
                         dia="Domingo"
-                        data="11/06"
+                        data="16/06"
                       />
                       <CardPalco
                         nome={[
-                          "Michel Deniz",
-                          "Banda de Pau e Corda",
-                          "Aduílio Mendes",
-                          "Alcymar Monteiro",
+                          "Damião Mota",
+                          "Rodrigo Raposo",
+                          "Cezzinha",
                           "Nena Queiroga",
+                          "Igor Henrique",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
                         dia="Sábado"
-                        data="17/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Morganna Bernardo",
-                          "Geraldinho Lins",
-                          "Lady Falcão",
-                          "Eliane do forró",
-                          "Jamile Oliveira",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
-                        data="18/06"
+                        data="22/06"
                       />
                       <CardPalco
                         nome={[
                           "Ciel Santos",
-                          "Petrúcio Amorim",
-                          "Irah Caldeira",
-                          "Marcão Noventta",
-                          "Anderson Alves",
+                          "Novinho da Paraíba",
+                          "Lady Falcão",
+                          "Cristina Amaral",
+                          "Marcão Noventa",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sexta"
+                        dia="Domingo"
                         data="23/06"
                       />
                       <CardPalco
                         nome={[
-                          "Samara Costa",
-                          "Pau no Xote",
-                          "Dudu do Acordeon",
+                          "Daniel Gouveia",
+                          "Geraldinho Lins",
+                          "Almir Rouche",
                           "Henrique Barbosa",
-                          "Nádia Maia",
+                          "Azulinho",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sábado"
+                        dia="Segunda"
                         data="24/06"
                       />
                       <CardPalco
                         nome={[
-                          "Amannda Leão",
-                          "Cristina Amaral",
-                          "Almir Rouche",
+                          "Pau no Xote",
+                          "Michel Diniz",
+                          "Irah Caldeira",
+                          "Petrúcio Amorin",
+                          "Dudu do Acordeon",
+                        ]}
+                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
+                        dia="Sábado"
+                        data="29/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "Anderson Alves",
+                          "Nordestinos do Forró",
+                          "Morganna Bernardo",
                           "Benil",
-                          "Magnatas do forró",
+                          "Santanna",
                         ]}
                         horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
                         dia="Domingo"
-                        data="25/06"
+                        data="30/06"
                       />
                     </div>
                   </div>
@@ -265,198 +265,143 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "trio manoel da concertina",
-                          "matheus e catirina",
-                          "batalhão 44",
-                          "renilda cardoso",
-                          "quadrilha folcpopular",
-                        ]}
-                        horario={["13:00", "14:30", "15:00", "15:30", "16:30"]}
-                        dia="Sábado"
-                        data="10/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "dadal e forró de três",
-                          "banda de pífano são josé dos bezerros",
-                          "quadrilha junina estilizada filhos do barro",
-                          "clara ellys",
-                          "luizinho moreno",
-                          "trio kabras da peste",
-                        ]}
-                        horario={[
-                          "13:00",
-                          "14:30",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:00",
-                        ]}
-                        dia="Domingo"
-                        data="11/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "valdinho paz",
-                          "matheus e catirina",
-                          "lunas costa, biu lourenço e mateus aboiador",
-                          "quadrilha recorda junina",
-                          "douglas leon",
-                          "ed carlos",
-                        ]}
-                        horario={[
-                          "13:00",
-                          "14:30",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:00",
-                        ]}
-                        dia="Sábado"
-                        data="17/06"
-                      />
-                      <CardPalco
-                        nome={[
+                          "mateus e catirina",
                           "kaio lima",
-                          "banda de pífano são josé dos bezerros",
-                          "batalhão 44",
-                          "banda cheiro de sanfona",
-                          "quadrilha junina é por amor",
-                        ]}
-                        horario={["13:00", "14:30", "15:00", "15:30", "16:30"]}
-                        dia="Domingo"
-                        data="18/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "farra dos tops",
-                          "matheus e catirina",
+                          "banda de pífanos",
+                          "mateus e catirina",
                           "quadrilha folcpopular",
-                          "neno do acordeon",
-                          "quadrilha festejando santo antônio",
+                          "batalhão 44/ matheus e catirina",
+                          "renilda cardoso",
                         ]}
-                        horario={["13:00", "14:30", "15:00", "15:30", "16:30"]}
-                        dia="Sexta"
-                        data="23/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "andré ferraz",
-                          "quadrilha junina é por amor",
-                          "quadrilha festejando santo antônio",
-                          "os talentos",
-                          "kaká kantareli",
+                        horario={[
+                          "12:30",
+                          "13:00",
+                          "14:30",
+                          "15:00",
+                          "15:30",
+                          "16:30",
+                          "17:30",
                         ]}
-                        horario={["13:00", "14:30", "15:00", "15:30", "16:30"]}
                         dia="Sábado"
-                        data="24/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "emerson cavalcante",
-                          "matheus e catirina",
-                          "batalhão 44",
-                          "trio nildo e seu regional",
-                          "grupo cultural papanguarte",
-                        ]}
-                        horario={["13:00", "14:30", "15:00", "15:30", "16:30"]}
-                        dia="Domingo"
-                        data="25/06"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="palcos-tab3-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab3"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
-                      <CardPalco
-                        nome={[
-                          "Apresentação escolar",
-                          "programação religiosa",
-                          "forró rei do cangaço",
-                          "forró dos bossas",
-                        ]}
-                        horario={["16:00", "18:30", "21:00", "22:20"]}
-                        dia="Cajazeiras"
-                        data="13/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e Catirina",
-                          "dadal e forró de três",
-                          "walter lins",
-                        ]}
-                        horario={["18:00", "19:00", "20:20"]}
-                        dia="Sítio Areias"
-                        data="14/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Apresentação escolar",
-                          "matheus e catirina",
-                          "kaká kantareli",
-                          "trio nildo e seu regional",
-                        ]}
-                        horario={["17:00", "18:00", "19:00", "20:30"]}
-                        dia="Sítio dos Remédios"
                         data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "Apresentação escolar",
-                          "matheus e catirina",
-                          "higor henrique",
-                          "trio asa branca",
+                          "mateus e catirina",
+                          "clara ellys",
+                          "banda de pífanos",
+                          "mateus e catirina",
+                          "marcos montez",
+                          "jamile",
+                          "som da terra",
                         ]}
-                        horario={["15:00", "18:00", "19:00", "20:50"]}
-                        dia="Boas Novas"
-                        data="20/06"
+                        horario={[
+                          "12:30",
+                          "13:00",
+                          "15:00",
+                          "15:30",
+                          "16:30",
+                          "17:30",
+                          "18:30",
+                        ]}
+                        dia="Domingo"
+                        data="16/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e Catirina",
-                          "quadrilha junina é por amor",
-                          "elian do acordeon",
-                          "michel deniz",
+                          "mateus e catirina",
+                          "carlinho melo",
+                          "mateus e catirina",
+                          "quadrilha misturat",
+                          "douglas leon",
+                          "thalentos",
                         ]}
-                        horario={["18:00", "19:00", "20:00", "21:30"]}
-                        dia="Sapucarana"
-                        data="21/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e Catirina",
-                          "gil teclas",
-                          "samara costa",
+                        horario={[
+                          "12:30",
+                          "13:00",
+                          "15:00",
+                          "15:30",
+                          "16:30",
+                          "17:30",
                         ]}
-                        horario={["18:00", "19:00", "20:50"]}
-                        dia="Encruzilhada"
+                        dia="Sábado"
                         data="22/06"
                       />
-                    </div>
-                  </div>
-
-                  <div
-                    className="tab-pane fade"
-                    id="palcos-tab4-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab4"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "Higor Henrique",
-                          "Lipe Lucena",
-                          "Wallas Arrais",
+                          "mateus e catirina",
+                          "victor ferrari",
+                          "mateus e catirina",
+                          "grupo panpaguarte",
+                          "matheus aboiador, biu lourenço e lunas costas",
+                          "zé barreto",
+                          "joãozinho de exu",
                         ]}
-                        horario={["20:00", "22:00", "00:00"]}
+                        horario={[
+                          "12,30",
+                          "13:00",
+                          "15:00",
+                          "15:30",
+                          "16:30",
+                          "17:30",
+                          "18:30",
+                        ]}
+                        dia="Domingo"
+                        data="23/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "mateus e catirina",
+                          "kabras da peste",
+                          "mateus e catirina",
+                          "quadrilha folcpopular",
+                          "batalhão 44/ mateus e catirina",
+                          "farra dos tops",
+                          "valdinho paes",
+                        ]}
+                        horario={[
+                          "12:30",
+                          "13:00",
+                          "15:00",
+                          "15:30",
+                          "16:30",
+                          "17:30",
+                          "18:30",
+                        ]}
+                        dia="Segunda"
+                        data="24/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "mateus e catirina",
+                          "samara costa",
+                          "mateus e catirina",
+                          "quadrilha misturart",
+                          "joãozinho e banda",
+                          "eu, tu e elas",
+                        ]}
+                        horario={[
+                          "12:30",
+                          "13:00",
+                          "15:00",
+                          "15:30",
+                          "16:00",
+                          "17:30",
+                        ]}
                         dia="Sábado"
-                        data="01/07"
+                        data="29/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "mateus e catirina",
+                          "emerson cavalcante",
+                          "mateus e catirina",
+                          "quadrilha riacho das almas",
+                          "neno do acordeon",
+                        ]}
+                        horario={["12:30", "13:00", "15:00", "15:30", "16:00"]}
+                        dia="Domingo"
+                        data="25/06"
                       />
                     </div>
                   </div>
@@ -472,59 +417,69 @@ export default function Home() {
                 <div className="container-card">
                   <div className="d-flex justify-content-center flex-wrap">
                     <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
+                      nome={[
+                        "Apresentações Escolar",
+                        "Leninho Filho",
+                        "Dadal Forró de Três",
+                      ]}
+                      horario={["15:30", "18:30", "20:30"]}
+                      dia="Sítio dos Remédios"
+                      data="11/06"
+                    />
+
+                    <CardSitio
+                      nome={[
+                        "Apresentações Escolar",
+                        "Programação Religiosa",
+                        "Emerson Cavalcante",
+                        "André Ferraz",
+                      ]}
+                      horario={["15:30", "18:30", "20:00", "21:30"]}
+                      dia="Cajazeiras"
+                      data="13/06"
                     />
                     <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
+                      nome={[
+                        "Matheus e Catirina",
+                        "Quadrilha  Gonzagão de Areias",
+                        "Michel Deniz",
+                        "Anny Sales",
+                      ]}
+                      horario={["18:00", "18:30", "19:00", "20:30"]}
                       dia="Areias"
-                      data="10/06"
+                      data="14/06"
                     />
                     <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
+                      nome={[
+                        "Quadrilha folcpopular",
+                        "Manoel da Concertina",
+                        "Wanessa Roger",
+                      ]}
+                      horario={["20:00", "21:00", "22:30"]}
+                      dia="Encruzilhada"
+                      data="19/06"
                     />
                     <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
+                      nome={[
+                        "Apresentações Escolar",
+                        "Gil Teclas",
+                        "Higor Henrique",
+                      ]}
+                      horario={["15:30", "19:00", "21:00"]}
+                      dia="Boas Novas"
+                      data="20/06"
                     />
                     <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
+                      nome={[
+                        "Quadrilha Junina é por amor",
+                        "Trio nildo e seu reginal",
+                        "Geraldinho Lins",
+                      ]}
+                      horario={["19:00", "20:00", "21:30"]}
+                      dia="Sapucarana"
+                      data="26/06"
                     />
-                    <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
-                    />
-                    <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
-                    />
-                    <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
-                    />
-                    <CardSitio
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
-                    />
+
                     <CardCidade
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
@@ -881,7 +836,7 @@ export default function Home() {
                 >
                   <div className="accordion-body">
                     Não, não é permitido. De acordo com o item III do Art. 4 do{" "}
-                     <a
+                    <a
                       href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
                       target="_blank"
                     >

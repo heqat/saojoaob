@@ -5,6 +5,9 @@
   margin-top: 100px;
   flex-direction: row;
   background-color: rgb(19, 70, 133);
+  background-image: url("../public/textura\ site\ palha\ v2.png");
+  background-blend-mode: multiply; 
+  position: relative;
 }
 
 .textContainer {
