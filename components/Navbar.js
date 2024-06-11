@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
-import marca from '../public/marca2.svg'
+import marca from '../public/marca.png'
 import Link from 'next/link'
 
 export default function Navbar() {

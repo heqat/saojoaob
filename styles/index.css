@@ -23,15 +23,49 @@
 
 .m-titulo-secao-linha {
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 15px;
+  padding: 15px 25px;
   color: white;
   font-family: var(--fonte-principal);
   font-size: 2.5rem;
-  background-image: url("../public/BG-AZUL.png");
+  background-image: url("../public/placa-madeira.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: auto;
   max-width: 500px;
+  filter: drop-shadow(0px 0px 3px black)
 }
+
+.m-titulo-secao-maior {
+  display: inline-block;
+  padding: 15px 25px;
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  background-image: url("../public/placa-madeira.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  max-width: 500px;
+  filter: drop-shadow(0px 0px 3px black)
+}
+
+.m-titulo-secao-menor {
+  display: none;
+  padding: 15px 25px;
+  color: white;
+  font-family: var(--fonte-principal);
+  font-size: 2.5rem;
+  background-image: url("../public/placa-madeira.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: auto;
+  max-width: 500px;
+  filter: drop-shadow(0px 0px 3px black)
+}
+
 .m-apresentacao-texto {
   font-size: 1.2rem;
   font-family: var(--fonte-apoio);
@@ -152,6 +186,7 @@
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
+  
 }
 
 .m-container-palcos-serra,
@@ -162,11 +197,11 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/serra-negra-vila.png");
+  background-image: url("../public/serra-negra-viladsdsd.png");
 }
 
 .m-container-palcos-cidade {
-  background-image: url("../public/sitio-cidade-vila.png");
+  background-image: url("../public/sitio-cidade-vila444444444.png");
 }
 
 .m-titulo-programacao-cidade {
@@ -232,6 +267,14 @@
 
   .m-container-palcos-cidade {
     background-image: url("../public/BG-VERDE.png"); /* Substitua pelo nome da imagem menor */
+  }
+
+  .m-titulo-secao-maior {
+    display: none;
+  }
+
+  .m-titulo-secao-menor {
+    display: inline-block;
   }
 }
 

@@ -4,9 +4,7 @@
   padding: 50px;
   margin-top: 100px;
   flex-direction: row;
-  background-color: rgb(19, 70, 133);
-  background-image: url("../public/textura\ site\ palha\ v2.png");
-  background-blend-mode: multiply; 
+  background-image: url("../public/esse\ \(1\).png");
   position: relative;
 }
 
@@ -21,17 +19,19 @@
 }
 
 .title {
-  display: block;
-  padding: 10px 20px;
-  border-radius: 15px;
+  display: inline-block;
+  padding: 20px 30px;
   color: white;
   font-family: var(--fonte-principal);
-  text-align: center;
   font-size: 2.5rem;
-  background-image: url("../public/BG-LARANJA.png");
+  background-image: url("../public/placa-madeira.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   width: auto;
   max-width: 500px;
-  margin-bottom: 10px;
+  filter: drop-shadow(0px 0px 3px black)
+
 }
 
 .text {

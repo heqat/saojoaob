@@ -534,8 +534,11 @@ export default function Home() {
         <div className="divisoria"></div>
         <section id="faq" className="pb-5">
           <div className="container d-flex justify-content-center align-items-center flex-column">
-            <h2 className="m-titulo-secao-linha mt-5 mb-5">
+            <h2 className="m-titulo-secao-maior mt-5 mb-5">
               PERGUNTAS E RESPOSTAS
+            </h2>
+            <h2 className="m-titulo-secao-menor mt-5 mb-5">
+              FAQ
             </h2>
             <div
               className="container accordion accordion-flush"
