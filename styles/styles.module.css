@@ -3,23 +3,22 @@
   justify-content: space-between;
   padding: 50px;
   margin-top: 100px;
-  flex-direction: row; 
+  flex-direction: row;
   background-color: rgb(19, 70, 133);
-
 }
 
 .textContainer {
   flex: 1;
   margin-right: 20px;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center; 
-  height: 100%; 
+  align-items: center;
+  height: 100%;
 }
 
 .title {
-  display: block; 
+  display: block;
   padding: 10px 20px;
   border-radius: 15px;
   color: white;
@@ -29,7 +28,7 @@
   background-image: url("../public/BG-LARANJA.png");
   width: auto;
   max-width: 500px;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
 .text {
@@ -51,7 +50,7 @@
 .carousel-image {
   width: 1600px;
   height: 1066px;
-  object-fit: cover; /* Mantém a proporção da imagem enquanto preenche o espaço */
+  object-fit: cover; 
 }
 
 @media (max-width: 768px) {

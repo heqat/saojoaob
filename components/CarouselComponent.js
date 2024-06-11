@@ -1,60 +1,68 @@
-import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import '../styles/styles.module.css'; 
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import "../styles/styles.module.css";
 const CarouselComponent = () => {
   return (
     <Carousel>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/carrinhos.png'
+          src="/VITRINE/jsas.png"
           alt="Primeira imagem"
         />
-     
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/esp.png'
+          src="/VITRINE/csjds.png"
           alt="Segunda imagem"
         />
-        
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/cordeis.png'
+          src="/VITRINE/20222.png"
           alt="Segunda imagem"
         />
-       
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/artesoes.png'
+          src="/VITRINE/canc.png"
           alt="Segunda imagem"
         />
-       
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/canc.png'
+          src="/VITRINE/esp.png"
           alt="Segunda imagem"
         />
-  
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="carousel-image d-block w-100"
-          src='/VITRINE/jsas.png'
+          src="/VITRINE/cordeis.png"
           alt="Segunda imagem"
         />
-       
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src="/VITRINE/artesoes.png"
+          alt="Segunda imagem"
+        />
+      </Carousel.Item>
+      <Carousel.Item>
+        <img
+          className="carousel-image d-block w-100"
+          src="/VITRINE/carrinhos.png"
+          alt="Segunda imagem"
+        />
       </Carousel.Item>
       {/* Adicione mais itens de carrossel conforme necessário */}
     </Carousel>
   );
-}
+};
 
 export default CarouselComponent;

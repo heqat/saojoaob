@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useEffect } from "react";
 import CardPalco from "../components/CardPalco";
 import CardCidade from "../components/CardCidade";
+import CardSitio from "../components/CardSitio";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 
@@ -470,43 +471,55 @@ export default function Home() {
                 <h3 className="m-titulo-programacao-cidade">SÍTIO À CIDADE</h3>
                 <div className="container-card">
                   <div className="d-flex justify-content-center flex-wrap">
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
                       data="10/06"
                     />
-                    <CardCidade
+                    <CardSitio
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardSitio
+                      nome={["Artista 1", "Artista 2", "Artista 3"]}
+                      horario={["12:00", "14:00", "16:00"]}
+                      dia="Areias"
+                      data="10/06"
+                    />
+                    <CardSitio
                       nome={["Artista 1", "Artista 2", "Artista 3"]}
                       horario={["12:00", "14:00", "16:00"]}
                       dia="Areias"
@@ -549,8 +562,6 @@ export default function Home() {
               </div>
             </div>
           </div>
-
-          
         </section>
         <div className="divisoria"></div>
         <section id="mapa">
@@ -568,7 +579,9 @@ export default function Home() {
         <div className="divisoria"></div>
         <section id="faq" className="pb-5">
           <div className="container d-flex justify-content-center align-items-center flex-column">
-            <h2 className="m-titulo-secao-linha mt-5 mb-5">PERGUNTAS E RESPOSTAS</h2>
+            <h2 className="m-titulo-secao-linha mt-5 mb-5">
+              PERGUNTAS E RESPOSTAS
+            </h2>
             <div
               className="container accordion accordion-flush"
               id="accordionFlushExample"
@@ -661,9 +674,16 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não pode. De acordo com o Art. 2 do Decreto Nº
-                    2.643/2024, fica proibido o transporte coletivo por meio de
-                    ônibus e micro-ônibus para o evento na Serra Negra.
+                    Não, não pode. De acordo com o Art. 2 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      {" "}
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , fica proibido o transporte coletivo por meio de ônibus e
+                    micro-ônibus para o evento na Serra Negra.
                   </div>
                 </div>
               </div>
@@ -717,12 +737,18 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não pode. De acordo com o item I do Art. 4 do Decreto
-                    Nº 2.643/2024, está terminantemente proibida ao público e
-                    aos comerciantes a utilização de cooler, isopor, bolsa e
-                    caixa térmica para comidas e bebidas, bem como todo e
-                    qualquer objeto que de alguma forma atrapalhe, dificulte ou
-                    impeça o fluxo de pessoas em todo o espaço das festividades.
+                    Não, não pode. De acordo com o item I do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibida ao público e aos
+                    comerciantes a utilização de cooler, isopor, bolsa e caixa
+                    térmica para comidas e bebidas, bem como todo e qualquer
+                    objeto que de alguma forma atrapalhe, dificulte ou impeça o
+                    fluxo de pessoas em todo o espaço das festividades.
                   </div>
                 </div>
               </div>
@@ -748,10 +774,16 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item IV do Art. 4 do
-                    Decreto Nº 2.643/2024, está terminantemente proibida ao
-                    público e aos comerciantes a utilização e comercialização de
-                    bebidas e comidas em recipientes de vidros.
+                    Não, não é permitido. De acordo com o item IV do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibida ao público e aos
+                    comerciantes a utilização e comercialização de bebidas e
+                    comidas em recipientes de vidros.
                   </div>
                 </div>
               </div>
@@ -777,11 +809,17 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item II do Art. 4 do
-                    Decreto Nº 2.643/2024, está terminantemente proibida a
-                    utilização de mesas, cadeiras e afins por parte do público
-                    em geral, bem como pelos comerciantes nas proximidades e
-                    arredores das barracas.
+                    Não, não é permitido. De acordo com o item II do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibida a utilização de mesas,
+                    cadeiras e afins por parte do público em geral, bem como
+                    pelos comerciantes nas proximidades e arredores das
+                    barracas.
                   </div>
                 </div>
               </div>
@@ -807,9 +845,15 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não pode. De acordo com o item V do Art. 4 do Decreto
-                    Nº 2.643/2024, está terminantemente proibido armas de fogo,
-                    armas brancas, drogas e menores desacompanhados de pessoas
+                    Não, não pode. De acordo com o item V do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibido armas de fogo, armas
+                    brancas, drogas e menores desacompanhados de pessoas
                     responsáveis.
                   </div>
                 </div>
@@ -836,9 +880,142 @@ export default function Home() {
                   data-bs-parent="#accordionFlushExample"
                 >
                   <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item III do Art. 4 do
-                    Decreto Nº 2.643/2024, está terminantemente proibido a
-                    entrada e a circulação de pessoas portando capacete.
+                    Não, não é permitido. De acordo com o item III do Art. 4 do{" "}
+                     <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibido a entrada e a circulação de
+                    pessoas portando capacete.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="flush-heading10">
+                  <button
+                    className="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse10"
+                    aria-expanded="false"
+                    aria-controls="flush-collapse10"
+                  >
+                    QUAL SERÁ O LOCAL DE APOIO PARA EMERGÊNCIA NO SÃO JOÃO DA
+                    SERRA NEGRA?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapse10"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-heading10"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    Todos os equipamentos de saúde do município tiveram suas
+                    equipes reforçadas, bem como terão centros de apoio montados
+                    para atender as demandas do São João conforme localização no{" "}
+                    <a href="#mapa">mapa</a>.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="flush-heading11">
+                  <button
+                    className="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse11"
+                    aria-expanded="false"
+                    aria-controls="flush-collapse11"
+                  >
+                    ONDE POSSO ENCONTRAR MATERIAIS DE ARTESANATO E CULTURA LOCAL
+                    DA CIDADE DE BEZERROS?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapse11"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-heading11"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    Durante o São João na Serra Negra 2024 haverá a
+                    comercialização de peças exclusivas dos artesãos locais.
+                    Tanto os turistas quanto os bezerrenses podem encontrar esse
+                    espaço na Vitrine Criativa, com localização conforme o{" "}
+                    <a href="#mapa">mapa</a>.
+                  </div>
+                </div>
+              </div>
+
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="flush-heading12">
+                  <button
+                    className="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse12"
+                    aria-expanded="false"
+                    aria-controls="flush-collapse12"
+                  >
+                    POSSO LIGAR QUALQUER TIPO DE SOM OU PAREDÕES, DENTRO E NO
+                    ENTORNO, DO EVENTO E DOS ESTACIONAMENTOS?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapse12"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-heading12"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    Não, não pode. De acordo com o item VII do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibido o uso de qualquer tipo de
+                    som e paredões dentro, no entorno do evento e nos
+                    estacionamentos.
+                  </div>
+                </div>
+              </div>
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="flush-heading13">
+                  <button
+                    className="accordion-button collapsed text-white"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flush-collapse13"
+                    aria-expanded="false"
+                    aria-controls="flush-collapse13"
+                  >
+                    É PERMITIDO A UTILIZAÇÃO DE FOGOS DE ARTIFÍCIO DENTRO E NO
+                    ENTORNO, DO EVENTO E DOS ESTACIONAMENTOS?
+                  </button>
+                </h2>
+                <div
+                  id="flush-collapse13"
+                  className="accordion-collapse collapse"
+                  aria-labelledby="flush-heading13"
+                  data-bs-parent="#accordionFlushExample"
+                >
+                  <div className="accordion-body">
+                    Não, não pode. De acordo com o item III do Art. 4 do{" "}
+                    <a
+                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
+                      target="_blank"
+                    >
+                      Decreto Nº 2.643/2024
+                    </a>
+                    , está terminantemente proibido a utilização de fogos de
+                    artifícios por particulares.
                   </div>
                 </div>
               </div>

@@ -1,65 +1,65 @@
 .m-footer {
-    background-color: white;   
+  background-color: white;
 }
 
 .m-titulo-informacoes {
-    font-family: var(--fonte-principal);
-    color: var(--cor-verde-escuro);
-    font-size: 1rem;
+  font-family: var(--fonte-principal);
+  color: var(--cor-verde-escuro);
+  font-size: 1rem;
 }
 
 .m-titulo-informacoes::after {
-    content: "";
-    margin-top: 1rem;
-    display: block;
-    width: 30px;
-    height: 1px;
-    background-color: var(--cor-verde-escuro);
+  content: "";
+  margin-top: 1rem;
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: var(--cor-verde-escuro);
 }
 
 .m-texto-informacoes {
-    color: var(--cor-verde-escuro);
-    font-family: var(--fonte-apoio);
-    font-size: 0.8rem;
+  color: var(--cor-verde-escuro);
+  font-family: var(--fonte-apoio);
+  font-size: 0.8rem;
 }
 
 .m-container-barras {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .m-barra-colorida {
-    width: 25%;
-    height: 4px;
+  width: 25%;
+  height: 4px;
 }
 
 .m-barra-colorida:nth-child(1) {
-    background-color: var(--cor-vermelho);
+  background-color: var(--cor-vermelho);
 }
 
 .m-barra-colorida:nth-child(2) {
-    background-color: var(--cor-azul-escuro);
+  background-color: var(--cor-azul-escuro);
 }
 
 .m-barra-colorida:nth-child(3) {
-    background-color: var(--cor-laranja);
+  background-color: var(--cor-laranja);
 }
 
 .m-barra-colorida:nth-child(4) {
-    background-color: var(--cor-verde);
+  background-color: var(--cor-verde);
 }
 
 .m-texto-copy {
-    color: var(--cor-verde-escuro);
-    margin-bottom: 0;
-    padding: 0.5rem;
-    font-size: 0.8rem;
+  color: var(--cor-verde-escuro);
+  margin-bottom: 0;
+  padding: 0.5rem;
+  font-size: 0.8rem;
 }
 
 @media (max-width: 575px) {
-    .m-marca {
-        display: flex;
-        justify-content: center;
-    }
+  .m-marca {
+    display: flex;
+    justify-content: center;
+  }
 }

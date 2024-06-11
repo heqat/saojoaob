@@ -1,51 +1,46 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Passero+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alata&family=Secular+One&display=swap');
 
-:root{
-    --cor-vermelho-escuro: #9E0000;
-    --cor-vermelho: #D10404;
-    --cor-azul-escuro: #0048A2;
-    --cor-azul: #0670C7;
-    --cor-verde-escuro: #0C745F;
-    --cor-verde: #009483;
-    --cor-laranja-escuro: #E67800;
-    --cor-laranja: #FFAA01;
-    --cor-marrom: #D65600;
-    --cor-branco: #FFFFFF;
-    --cor-cinza-escuro: #333333;
+:root {
+  --cor-vermelho-escuro: #9e0000;
+  --cor-vermelho: #d10404;
+  --cor-azul-escuro: #0048a2;
+  --cor-azul: #0670c7;
+  --cor-verde-escuro: #0c745f;
+  --cor-verde: #009483;
+  --cor-laranja-escuro: #e67800;
+  --cor-laranja: #ffaa01;
+  --cor-marrom: #d65600;
+  --cor-branco: #ffffff;
+  --cor-cinza-escuro: #333333;
 
-    --fonte-principal: 'Passero One', sans-serif;
-    --fonte-apoio: 'Secular One', sans-serif;
+  --fonte-principal: "Palamecia", sans-serif;
+  --fonte-apoio: "Morl", sans-serif;
 }
 
 @font-face {
-    font-family: "Passero One", sans-serif;
-    font-weight: 400;
+  font-family: "Palamecia";
+  src: url("../assets/fonts/palamecia-titling.ttf");
 }
 
 @font-face {
-    font-family: "Secular One", sans-serif;
-    font-weight: 400;
+  font-family: "Morl";
+  src: url("../assets/fonts/MorlRounded-Regular.otf");
 }
-
 
 * {
-    font-size: 16px;
-    margin: 0;
-    box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body::-webkit-scrollbar {
-    width: 0.5rem;              
+  width: 0.5rem;
 }
 
 body::-webkit-scrollbar-thumb {
-    background-color: var(--cor-laranja);
-    border-radius: 20px;             
+  background-color: var(--cor-laranja);
+  border-radius: 20px;
 }
-

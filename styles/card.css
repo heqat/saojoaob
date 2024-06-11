@@ -10,7 +10,15 @@
   width: 16rem;
   height: 12.5rem;
   border-radius: 0;
-  background: rgb(241,124, 45);
+  background: rgb(83, 35, 2);
+  border-color: white !important;
+}
+
+.card-sitio {
+  width: 16rem;
+  height: 12.5rem;
+  border-radius: 0;
+  background: rgb(241, 124, 45);
   border-color: white !important;
 }
 
@@ -49,10 +57,16 @@
   text-align: right;
 }
 
-.categoria.palco-cidade {
-  color: rgb(241,124, 45);
+.categoria.palco-sitio {
+  color: rgb(241, 124, 45);
   text-align: right;
 }
+
+.categoria.palco-cidade {
+  color: rgb(0, 0, 0);
+  text-align: right;
+}
+
 
 .card-title {
   margin-bottom: 2rem;
@@ -68,6 +82,11 @@
 
 .card-title.cidade {
   margin: 0.5rem 0;
+  color: var(--cor-roxa);
+}
+
+.card-title.sitio {
+  margin: 0.5rem 0;
   color: var(--cor-branco);
 }
 
@@ -76,6 +95,10 @@
 }
 
 .horario-cidade {
+  color: rgb(234, 192, 42);
+}
+
+.horario-sitio {
   color: rgb(19, 70, 133);
 }
 
@@ -89,6 +112,10 @@
   font-family: var(--fonte-principal);
 }
 
+.dia-sitio {
+  color: rgb(19, 70, 133);
+  font-family: var(--fonte-principal);
+}
 
 .card-subtitle {
   font-family: var(--fonte-apoio);
