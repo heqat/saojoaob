@@ -121,11 +121,13 @@ export default function Home() {
         <div className="divisoria"></div>
 
         <section id="programacao">
-          <div className="d-flex justify-content-center align-items-center flex-column">
-            <div className="m-container-palcos-serra">
-              <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
-              <div className="container mt-5">
+          <div className="">
+            <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
+              <div className="m-container-titulo">
+                <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
                 <h3 className="m-titulo-programacao">SERRA NEGRA</h3>
+              </div>
+              <div className="container mt-3">
                 <ul
                   className="nav nav-tabs justify-content-center"
                   role="tablist"
@@ -411,9 +413,9 @@ export default function Home() {
 
             <div className="divisoria"></div>
 
-            <div className="m-container-palcos-cidade">
-              <div className="container mt-5">
-                <h3 className="m-titulo-programacao-cidade">SÍTIO À CIDADE</h3>
+            <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
+              <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
+              <div className="container mt-3">
                 <div className="container-card">
                   <div className="d-flex justify-content-center flex-wrap">
                     <CardSitio
@@ -537,9 +539,7 @@ export default function Home() {
             <h2 className="m-titulo-secao-maior mt-5 mb-5">
               PERGUNTAS E RESPOSTAS
             </h2>
-            <h2 className="m-titulo-secao-menor mt-5 mb-5">
-              FAQ
-            </h2>
+            <h2 className="m-titulo-secao-menor mt-5 mb-5">FAQ</h2>
             <div
               className="container accordion accordion-flush"
               id="accordionFlushExample"
