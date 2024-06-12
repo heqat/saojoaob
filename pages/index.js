@@ -486,14 +486,14 @@ export default function Home() {
                       nome={["EM BREVE!"]}
                       horario={[""]}
                       dia="Centro da Cidade"
-                      data="12/06"
+                      data="06/07"
                     />
 
                     <CardCidade
                       nome={["EM BREVE!"]}
                       horario={[""]}
                       dia="Centro da Cidade"
-                      data="12/06"
+                      data="07/07"
                     />
                   </div>
                 </div>
