@@ -121,7 +121,7 @@
 .accordion-button {
   box-shadow: none !important;
   color: white !important;
-  background-color: #f17c2d !important;
+  background-color: rgb(19, 70, 133) !important;
   font-family: var(--fonte-principal);
 }
 
@@ -197,11 +197,11 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/serra-negra-viladsdsd.png");
+  background-image: url("../public/serra-negra-bg.png");
 }
 
 .m-container-palcos-cidade {
-  background-image: url("../public/sitio-cidade-vila444444444.png");
+  background-image: url("../public/sitio-cidade-bg.png");
 }
 
 .m-titulo-programacao-cidade {
@@ -232,14 +232,14 @@
 
 #apresentacao {
   scroll-margin-top: 100px;
-  background: url("../public/textura\ site\ azul\ v2.png");
+  background: url("../public/textura-azul-v2.png");
   background-position: center;
   background-repeat: repeat;
 }
 
 #mapa {
   scroll-margin-top: 100px;
-  background: url("../public/textura\ site\ madeira\ v1.png");
+  background: url("../public/textura-azul-v2.png");
   background-position: center;
   background-repeat: repeat;
 }
