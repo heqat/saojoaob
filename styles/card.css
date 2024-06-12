@@ -10,7 +10,7 @@
   width: 16rem;
   height: 12.5rem;
   border-radius: 0;
-  background: rgb(83, 35, 2);
+  background: #7c2e18;
   border-color: white !important;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .categoria.palco-cidade {
-  color: rgb(0, 0, 0);
+  color: #7c2e19;
   text-align: right;
 }
 
@@ -82,7 +82,7 @@
 
 .card-title.cidade {
   margin: 0.5rem 0;
-  color: var(--cor-roxa);
+  color: var(--cor-branco);
 }
 
 .card-title.sitio {
@@ -95,7 +95,7 @@
 }
 
 .horario-cidade {
-  color: rgb(234, 192, 42);
+  color: #ff8569;
 }
 
 .horario-sitio {
@@ -108,7 +108,7 @@
 }
 
 .dia-cidade {
-  color: rgb(19, 70, 133);
+  color: var(--cor-branco);
   font-family: var(--fonte-principal);
 }
 

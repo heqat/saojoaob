@@ -41,10 +41,10 @@ export default function VitrineCria() {
             oportunidades para a realização de negócios da sua cadeia produtiva.{" "}
             <br />
             <br />A Vitrine Criativa edição São João 2024 pode ser encontrada no
-            Pólo de Eventos da Serra Negra. Verifique a{" "}
-            <a href="/#mapa" className="map-link">
+            Pólo de Eventos da Serra Negra. Verifique a localização no{" "}
+            <a href="/#mapa" className={`${styles.mapaCor} map-link`}>
               {" "}
-              localização no mapa
+               mapa
             </a>
             .
           </p>
@@ -52,7 +52,9 @@ export default function VitrineCria() {
         <div className={styles.carouselContainer}>
           <CarouselComponent />
         </div>
+        
       </main>
+      <div className="divisoria"></div>
       <Footer />
     </>
   );

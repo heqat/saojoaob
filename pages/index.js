@@ -483,10 +483,17 @@ export default function Home() {
                     />
 
                     <CardCidade
-                      nome={["Artista 1", "Artista 2", "Artista 3"]}
-                      horario={["12:00", "14:00", "16:00"]}
-                      dia="Areias"
-                      data="10/06"
+                      nome={["EM BREVE!"]}
+                      horario={[""]}
+                      dia="Centro da Cidade"
+                      data="12/06"
+                    />
+
+                    <CardCidade
+                      nome={["EM BREVE!"]}
+                      horario={[""]}
+                      dia="Centro da Cidade"
+                      data="12/06"
                     />
                   </div>
                 </div>
