@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>São João 2023 - Bezerros-PE</title>
-        <meta name="title" content="São João 2023 - Bezerros-PE"></meta>
+        <title>São João 2024 - Bezerros-PE</title>
+        <meta name="title" content="São João 2024 - Bezerros-PE"></meta>
       </Head>
 
       <Navbar />
