@@ -10,7 +10,6 @@ import Navbar from "../components/Navbar";
 import marca from "../public/marca2.png";
 import devassa from "../public/devassa.png";
 import kuat from "../public/kuat.png";
-import pitu from "../public/pitu.png";
 import governo from "../public/governo.png";
 import fundarpe from "../public/fundarpe.png";
 import empetur from "../public/empetur.png";
@@ -511,9 +510,6 @@ export default function Home() {
               </div>
               <div className="col m-2">
                 <Image src={kuat} width={85} alt={"kuat"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={pitu} width={85} alt={"pitu"}></Image>
               </div>
               <div className="col m-2">
                 <Image src={fundarpe} width={85} alt={"fundarpe"}></Image>
