@@ -71,9 +71,6 @@ export default function Navbar() {
               <li className='nav-item m-2'>
                 <Link href='https://www.instagram.com/saojoaonaserranegra/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-instagram bx-sm'></i></Link>
               </li>
-                      <li className='nav-item m-2'>
-                <Link href='https://open.spotify.com/playlist/4bbNlh9UEg2hwU3NvwuWuI?si=6yEOQUjCTVWHxpZGzcqODw' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-spotify bx-sm'></i></Link>
-              </li>
             </ul>
           </div>
         </div>

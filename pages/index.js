@@ -483,8 +483,8 @@ export default function Home() {
                     />
 
                     <CardCidade
-                      nome={["João Gomes"]}
-                      horario={[""]}
+                      nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]}
+                      horario={["", ""]}
                       dia="Centro da Cidade"
                       data="07/07"
                     />
@@ -876,7 +876,9 @@ export default function Home() {
                   <div className="accordion-body">
                     Todos os equipamentos de saúde do município tiveram suas
                     equipes reforçadas, bem como terão centros de apoio montados
-                    para atender as demandas do São João conforme localização no{" "}
+                    para atender as demandas do São João. Os pontos de podem ser
+                    encontrados nas duas entradas do evento e próximo a
+                    Igrejinha da Vila, conforme localização no{" "}
                     <a href="#mapa">mapa</a>.
                   </div>
                 </div>
