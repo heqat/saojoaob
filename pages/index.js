@@ -267,10 +267,10 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "kaio lima",
                           "banda de pífanos",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "quadrilha folcpopular",
                           "batalhão 44/ matheus e catirina",
                           "renilda cardoso",
@@ -289,10 +289,10 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "clara ellys",
                           "banda de pífanos",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "marcos montez",
                           "jamile",
                           "som da terra",
@@ -311,9 +311,9 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "carlinho melo",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "quadrilha misturat",
                           "douglas leon",
                           "thalentos",
@@ -331,9 +331,9 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "victor ferrari",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "grupo panpaguarte",
                           "matheus aboiador, biu lourenço e lunas costas",
                           "zé barreto",
@@ -353,11 +353,11 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "kabras da peste",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "quadrilha folcpopular",
-                          "batalhão 44/ mateus e catirina",
+                          "batalhão 44/ Matheus e catirina",
                           "farra dos tops",
                           "valdinho paes",
                         ]}
@@ -375,9 +375,9 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "samara costa",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "quadrilha misturart",
                           "joãozinho e banda",
                           "eu, tu e elas",
@@ -395,9 +395,9 @@ export default function Home() {
                       />
                       <CardPalco
                         nome={[
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "emerson cavalcante",
-                          "mateus e catirina",
+                          "Matheus e catirina",
                           "quadrilha riacho das almas",
                           "neno do acordeon",
                         ]}
@@ -444,7 +444,7 @@ export default function Home() {
                       nome={[
                         "Matheus e Catirina",
                         "Quadrilha  Gonzagão de Areias",
-                        "Michel Deniz",
+                        "Michel Diniz",
                         "Anny Sales",
                       ]}
                       horario={["18:00", "18:30", "19:00", "20:30"]}
@@ -483,7 +483,7 @@ export default function Home() {
                     />
 
                     <CardCidade
-                      nome={["EM BREVE!"]}
+                      nome={["João Gomes"]}
                       horario={[""]}
                       dia="Centro da Cidade"
                       data="07/07"
@@ -684,7 +684,7 @@ export default function Home() {
                     aria-expanded="false"
                     aria-controls="flush-collapse5"
                   >
-                    POSSO ENTRAR COM COOLER, ISOPOR, CAIXA OU BOLSA TÉRMICA NO
+                    POSSO ENTRAR COM COOLER, ISOPOR OU CAIXA TÉRMICA NO
                     POLO DO SÃO JOÃO NA SERRA NEGRA?
                   </button>
                 </h2>
@@ -703,7 +703,7 @@ export default function Home() {
                       Decreto Nº 2.643/2024
                     </a>
                     , está terminantemente proibida ao público e aos
-                    comerciantes a utilização de cooler, isopor, bolsa e caixa
+                    comerciantes a utilização de cooler, isopor e caixa
                     térmica para comidas e bebidas, bem como todo e qualquer
                     objeto que de alguma forma atrapalhe, dificulte ou impeça o
                     fluxo de pessoas em todo o espaço das festividades.
