@@ -13,6 +13,7 @@ import kuat from "../public/kuat.png";
 import governo from "../public/governo.png";
 import fundarpe from "../public/fundarpe.png";
 import empetur from "../public/empetur.png";
+import sesc from "../public/sesc-senac.png"
 
 export default function Home() {
   useEffect(() => {
@@ -485,13 +486,6 @@ export default function Home() {
                       nome={["EM BREVE!"]}
                       horario={[""]}
                       dia="Centro da Cidade"
-                      data="06/07"
-                    />
-
-                    <CardCidade
-                      nome={["EM BREVE!"]}
-                      horario={[""]}
-                      dia="Centro da Cidade"
                       data="07/07"
                     />
                   </div>
@@ -512,13 +506,16 @@ export default function Home() {
                 <Image src={kuat} width={85} alt={"kuat"}></Image>
               </div>
               <div className="col m-2">
-                <Image src={fundarpe} width={85} alt={"fundarpe"}></Image>
+                <Image src={fundarpe} width={100} alt={"fundarpe"}></Image>
+              </div>
+              <div className="col m-2">
+                <Image src={sesc} width={175} alt={"sesc-senac"}></Image>
               </div>
               <div className="col m-2">
                 <Image src={empetur} width={85} alt={"empetur"}></Image>
               </div>
               <div className="col m-2">
-                <Image src={governo} width={85} alt={"governo"}></Image>
+                <Image src={governo} width={100} alt={"governo"}></Image>
               </div>
             </div>
           </div>
