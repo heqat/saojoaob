@@ -13,7 +13,7 @@ import kuat from "../public/kuat.png";
 import governo from "../public/governo.png";
 import fundarpe from "../public/fundarpe.png";
 import empetur from "../public/empetur.png";
-import sesc from "../public/sesc-senac.png"
+import sesc from "../public/sesc-senac.png";
 
 export default function Home() {
   useEffect(() => {
@@ -684,8 +684,8 @@ export default function Home() {
                     aria-expanded="false"
                     aria-controls="flush-collapse5"
                   >
-                    POSSO ENTRAR COM COOLER, ISOPOR OU CAIXA TÉRMICA NO
-                    POLO DO SÃO JOÃO NA SERRA NEGRA?
+                    POSSO ENTRAR COM COOLER, ISOPOR OU CAIXA TÉRMICA NO POLO DO
+                    SÃO JOÃO NA SERRA NEGRA?
                   </button>
                 </h2>
                 <div
@@ -703,10 +703,10 @@ export default function Home() {
                       Decreto Nº 2.643/2024
                     </a>
                     , está terminantemente proibida ao público e aos
-                    comerciantes a utilização de cooler, isopor e caixa
-                    térmica para comidas e bebidas, bem como todo e qualquer
-                    objeto que de alguma forma atrapalhe, dificulte ou impeça o
-                    fluxo de pessoas em todo o espaço das festividades.
+                    comerciantes a utilização de cooler, isopor e caixa térmica
+                    para comidas e bebidas, bem como todo e qualquer objeto que
+                    de alguma forma atrapalhe, dificulte ou impeça o fluxo de
+                    pessoas em todo o espaço das festividades.
                   </div>
                 </div>
               </div>
@@ -741,7 +741,9 @@ export default function Home() {
                     </a>
                     , está terminantemente proibida ao público e aos
                     comerciantes a utilização e comercialização de bebidas e
-                    comidas em recipientes de vidros.
+                    comidas em recipientes de vidros. Verifique no{" "}
+                    <a href="#mapa">mapa</a> o local para fazer a troca de
+                    recipientes de vidro por recipientes de plástico.
                   </div>
                 </div>
               </div>
