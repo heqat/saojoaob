@@ -123,10 +123,12 @@
 }
 
 .accordion-button {
-  box-shadow: none !important;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important; 
   color: white !important;
   background-color: rgb(241, 124, 45) !important;
   font-family: var(--fonte-principal);
+  border-radius: 2px !important; 
+  border: 2px solid #ffffff !important; 
 }
 
 .accordion-button:after {

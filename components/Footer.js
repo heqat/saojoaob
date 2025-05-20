@@ -55,7 +55,7 @@ export default function () {
                 </div>
             </div>
             <div className='container text-center'>
-                <p className='m-texto-copy'>&copy; Copyright - 2024 Prefeitura Municipal de Bezerros - PE. | Desenvolvido por T.I.C. Bezerros.</p>
+                <p className='m-texto-copy'>&copy; Copyright - 2025 Prefeitura Municipal de Bezerros - PE. | Desenvolvido por T.I.C. Bezerros.</p>
             </div>
         </footer>
     )

@@ -1,7 +1,7 @@
 .responsiveMain {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
+  padding: 30px;
   margin-top: 100px;
   flex-direction: row;
   background-image: url("../public/fundo-vitrine.png");
@@ -16,21 +16,20 @@
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  background-color: rgb(0, 79, 255, 0.8);
+  border-radius: 3rem;
+  padding: 20px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  border: black 4px solid;
 }
 
 .title {
   display: inline-block;
-  padding: 25px 30px;
+  padding: 10px 10px;
   color: white;
   font-family: var(--fonte-principal);
-  font-size: 2rem; /*
-  background-image: url("../public/placa-madeira.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  width: auto;
-  max-width: 500px;
-  filter: drop-shadow(0px 0px 3px black); */
+  font-size: 2rem; 
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 
 }
@@ -44,11 +43,13 @@
   flex: 1;
   margin-left: 20px;
   margin-top: 20px;
+   
+    
 }
 
 .justificado {
   text-align: justify;
-  margin-bottom: 20px;
+
 }
 
 .carousel-image {

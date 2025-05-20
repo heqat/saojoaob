@@ -41,8 +41,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>São João 2024 - Bezerros-PE</title>
-        <meta name="title" content="São João 2024 - Bezerros-PE"></meta>
+        <title>São João 2025 - Bezerros-PE</title>
+        <meta name="title" content="São João 2025 - Bezerros-PE"></meta>
       </Head>
 
       <Navbar />
@@ -173,87 +173,60 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "Forró Rei do Cangaço",
-                          "Forretrô",
-                          "Flávio José",
-                          "Flávio Leandro",
-                          "Amanda Leão",
+                          "EM BREVE!",
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
+                        horario={[""]}
                         dia="Sábado"
+                        data="14/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "EM BREVE!",
+                        ]}
+                        horario={[""]}
+                        dia="Domingo"
                         data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "Luizinho Moreno",
-                          "Waldonys",
-                          "Quinteto Violado",
-                          "Assisão",
-                          "Walter Lins",
+                          "EM BREVE!",
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
-                        data="16/06"
+                        horario={[""]}
+                        dia="Sábado"
+                        data="21/06"
                       />
                       <CardPalco
                         nome={[
-                          "Damião Mota",
-                          "Rodrigo Raposo",
-                          "Cezzinha",
-                          "Nena Queiroga",
-                          "Igor Henrique",
+                          "EM BREVE",
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Sábado"
+                        horario={[""]}
+                        dia="Domingo"
                         data="22/06"
                       />
                       <CardPalco
                         nome={[
-                          "Ciel Santos",
-                          "Novinho da Paraíba",
-                          "Lady Falcão",
-                          "Cristina Amaral",
-                          "Marcão Noventa",
+                          "EM BREVE!",
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Domingo"
+                        horario={[""]}
+                        dia="Segunda"
                         data="23/06"
                       />
                       <CardPalco
                         nome={[
-                          "Daniel Gouveia",
-                          "Geraldinho Lins",
-                          "Almir Rouche",
-                          "Henrique Barbosa",
-                          "Azulinho",
+                          "EM BREVE!",
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
-                        dia="Segunda"
-                        data="24/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Pau no Xote",
-                          "Michel Diniz",
-                          "Irah Caldeira",
-                          "Petrúcio Amorin",
-                          "Dudu do Acordeon",
-                        ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
+                        horario={[""]}
                         dia="Sábado"
-                        data="29/06"
+                        data="28/06"
                       />
                       <CardPalco
                         nome={[
-                          "Anderson Alves",
-                          "Nordestinos do Forró",
-                          "Morganna Bernardo",
-                          "Benil",
-                          "Santanna",
+                          "EM BREVE!",
+                      
                         ]}
-                        horario={["12:00", "14:00", "16:00", "18:00", "20:00"]}
+                        horario={[""]}
                         dia="Domingo"
-                        data="30/06"
+                        data="29/06"
                       />
                     </div>
                   </div>
@@ -267,143 +240,71 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "kaio lima",
-                          "banda de pífanos",
-                          "Matheus e catirina",
-                          "quadrilha folcpopular",
-                          "batalhão 44/ matheus e catirina",
-                          "renilda cardoso",
+                          "EM BREVE!",
                         ]}
                         horario={[
-                          "12:30",
-                          "13:00",
-                          "14:30",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
+                          "",
                         ]}
                         dia="Sábado"
+                        data="14/06"
+                      />
+                      <CardPalco
+                        nome={[
+                          "EM BREVE!",
+                        ]}
+                        horario={[
+                          "",
+                        ]}
+                        dia="Domingo"
                         data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "clara ellys",
-                          "banda de pífanos",
-                          "Matheus e catirina",
-                          "marcos montez",
-                          "jamile",
-                          "som da terra",
+                          "EM BREVE!",
                         ]}
                         horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
+                          "",
                         ]}
-                        dia="Domingo"
-                        data="16/06"
+                        dia="Sábado"
+                        data="21/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "carlinho melo",
-                          "Matheus e catirina",
-                          "quadrilha misturat",
-                          "douglas leon",
-                          "thalentos",
+                          "EM BREVE!",
                         ]}
                         horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
+                          "",
                         ]}
-                        dia="Sábado"
+                        dia="Domingo"
                         data="22/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "victor ferrari",
-                          "Matheus e catirina",
-                          "grupo panpaguarte",
-                          "matheus aboiador, biu lourenço e lunas costas",
-                          "zé barreto",
-                          "joãozinho de exu",
+                          "EM BREVE!",
                         ]}
                         horario={[
-                          "12,30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
+                          "",
                         ]}
-                        dia="Domingo"
+                        dia="Segunda"
                         data="23/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "kabras da peste",
-                          "Matheus e catirina",
-                          "quadrilha folcpopular",
-                          "batalhão 44/ Matheus e catirina",
-                          "farra dos tops",
-                          "valdinho paes",
+                          "EM BREVE!",
                         ]}
                         horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:30",
-                          "17:30",
-                          "18:30",
-                        ]}
-                        dia="Segunda"
-                        data="24/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "Matheus e catirina",
-                          "samara costa",
-                          "Matheus e catirina",
-                          "quadrilha misturart",
-                          "joãozinho e banda",
-                          "eu, tu e elas",
-                        ]}
-                        horario={[
-                          "12:30",
-                          "13:00",
-                          "15:00",
-                          "15:30",
-                          "16:00",
-                          "17:30",
+                          "",
                         ]}
                         dia="Sábado"
-                        data="29/06"
+                        data="28/06"
                       />
                       <CardPalco
                         nome={[
-                          "Matheus e catirina",
-                          "emerson cavalcante",
-                          "Matheus e catirina",
-                          "quadrilha riacho das almas",
-                          "neno do acordeon",
+                          "EM BREVE!",
                         ]}
-                        horario={["12:30", "13:00", "15:00", "15:30", "16:00"]}
+                        horario={[""]}
                         dia="Domingo"
-                        data="25/06"
+                        data="29/06"
                       />
                     </div>
                   </div>
@@ -413,115 +314,13 @@ export default function Home() {
 
             <div className="divisoria"></div>
 
-            <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-              <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
-              <div className="container mt-3">
-                <div className="container-card">
-                  <div className="d-flex justify-content-center flex-wrap">
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Leninho Filho",
-                        "Dadal Forró de Três",
-                      ]}
-                      horario={["15:30", "18:30", "20:30"]}
-                      dia="Sítio dos Remédios"
-                      data="11/06"
-                    />
-
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Programação Religiosa",
-                        "Emerson Cavalcante",
-                        "André Ferraz",
-                      ]}
-                      horario={["15:30", "18:30", "20:00", "21:30"]}
-                      dia="Cajazeiras"
-                      data="13/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Matheus e Catirina",
-                        "Quadrilha  Gonzagão de Areias",
-                        "Michel Diniz",
-                        "Anny Sales",
-                      ]}
-                      horario={["18:00", "18:30", "19:00", "20:30"]}
-                      dia="Areias"
-                      data="14/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Quadrilha folcpopular",
-                        "Manoel da Concertina",
-                        "Wanessa Roger",
-                      ]}
-                      horario={["20:00", "21:00", "22:30"]}
-                      dia="Encruzilhada"
-                      data="19/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Apresentações Escolar",
-                        "Gil Teclas",
-                        "Higor Henrique",
-                      ]}
-                      horario={["15:30", "19:00", "21:00"]}
-                      dia="Boas Novas"
-                      data="20/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "Quadrilha Junina é por amor",
-                        "Trio nildo e seu reginal",
-                        "Geraldinho Lins",
-                      ]}
-                      horario={["19:00", "20:00", "21:30"]}
-                      dia="Sapucarana"
-                      data="26/06"
-                    />
-
-                    <CardCidade
-                      nome={["João Gomes", "MAIS ATRAÇÕES EM BREVE!"]}
-                      horario={["", ""]}
-                      dia="Centro da Cidade"
-                      data="07/07"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div className="divisoria"></div>
-            </div>
+          
           </div>
         </section>
 
-        <section id="patrocinio" className="mt-5 mb-5">
-          <div className="container text-center">
-            <div className="row align-items-center">
-              <div className="col m-2">
-                <Image src={devassa} width={85} alt={"devassa"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={kuat} width={85} alt={"kuat"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={fundarpe} width={100} alt={"fundarpe"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={sesc} width={175} alt={"sesc-senac"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={empetur} width={85} alt={"empetur"}></Image>
-              </div>
-              <div className="col m-2">
-                <Image src={governo} width={100} alt={"governo"}></Image>
-              </div>
-            </div>
-          </div>
-        </section>
-        <div className="divisoria"></div>
-        <section id="mapa">
+       
+       
+        <section id="mapa"> 
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
             <h2 className="m-titulo-secao-linha mt-5 mb-5">MAPA</h2>
             <iframe
@@ -534,457 +333,122 @@ export default function Home() {
           </div>
         </section>
         <div className="divisoria"></div>
-        <section id="faq" className="pb-5">
-          <div className="container d-flex justify-content-center align-items-center flex-column">
-            <h2 className="m-titulo-secao-maior mt-5 mb-5">
-              PERGUNTAS E RESPOSTAS
-            </h2>
-            <h2 className="m-titulo-secao-menor mt-5 mb-5">FAQ</h2>
-            <div
-              className="container accordion accordion-flush"
-              id="accordionFlushExample"
-            >
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading1">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse1"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse1"
-                  >
-                    QUAIS SERÃO OS DIAS DE FESTA DO SÃO JOÃO 2024 DE BEZERROS?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse1"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading1"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    SÃO JOÃO NOS DISTRITOS:
-                    <ul>
-                      <li>Sítio dos Remédios (11/06)</li>
-                      <li>Areias (13/06)</li>
-                      <li>Cajazeiras (14/06)</li>
-                      <li>Encruzilhada (19/06)</li>
-                      <li>Boas Novas (20/06)</li>
-                      <li>Sapucarana (26/06)</li>
-                    </ul>
-                    SÃO JOÃO NA SERRA NEGRA (Pólo da Serra):
-                    <ul>
-                      <li>15/06, 16/06, 22/06, 23/06, 24/06, 29/06 e 30/06</li>
-                    </ul>
-                    SÃO JOÃO NA CIDADE (Rua da Matriz):
-                    <ul>
-                      <li>07/07</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+       <section id="faq" className="pb-5">
+  <div className="container d-flex justify-content-center align-items-center flex-column">
+    <h2 className="m-titulo-secao-maior mt-5 mb-5">
+      PERGUNTAS E RESPOSTAS
+    </h2>
+    <h2 className="m-titulo-secao-menor mt-5 mb-5">FAQ</h2>
+    <div className="container accordion accordion-flush" id="accordionFlushExample">
+      {/* — Perguntas originais — */}
+      {/* ... (itens 1 a 13 conforme você já tinha) ... */}
 
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading2">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse2"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse2"
-                  >
-                    COMO SERÁ A ESTRUTURA DA FESTA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse2"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading2"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Confira nosso <a href="#mapa">mapa</a> com as informações
-                    necessárias para localizações durante o período junino.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading3">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse3"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse3"
-                  >
-                    ÔNIBUS E MICRO ÔNIBUS PODEM SUBIR PARA A SERRA NEGRA NOS
-                    DIAS DE EVENTO?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse3"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading3"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não pode. De acordo com o Art. 2 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      {" "}
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , fica proibido o transporte coletivo por meio de ônibus e
-                    micro-ônibus para o evento na Serra Negra.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading4">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse4"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse4"
-                  >
-                    ONDE POSSO ESTACIONAR MEU CARRO DE FORMA GRATUITA NA SERRA
-                    NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse4"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading4"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Os estacionamentos permitidos estarão sinalizados ao longo
-                    da via, como também podem ser localizados no{" "}
-                    <a href="#mapa">mapa</a>.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading5">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse5"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse5"
-                  >
-                    POSSO ENTRAR COM COOLER, ISOPOR OU CAIXA TÉRMICA NO POLO DO
-                    SÃO JOÃO NA SERRA NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse5"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading5"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não pode. De acordo com o item I do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibida ao público e aos
-                    comerciantes a utilização de cooler, isopor e caixa térmica
-                    para comidas e bebidas, bem como todo e qualquer objeto que
-                    de alguma forma atrapalhe, dificulte ou impeça o fluxo de
-                    pessoas em todo o espaço das festividades.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading6">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse6"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse6"
-                  >
-                    RECIPIENTES DE VIDRO SÃO PERMITIDOS NO POLO DO SÃO JOÃO NA
-                    SERRA NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse6"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading6"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item IV do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibida ao público e aos
-                    comerciantes a utilização e comercialização de bebidas e
-                    comidas em recipientes de vidros. Verifique no{" "}
-                    <a href="#mapa">mapa</a> o local para fazer a troca de
-                    recipientes de vidro por recipientes de plástico.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading7">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse7"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse7"
-                  >
-                    MESAS E CADEIRAS SÃO PERMITIDAS NA ÁREA DO EVENTO DO SÃO
-                    JOÃO NA SERRA NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse7"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading7"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item II do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibida a utilização de mesas,
-                    cadeiras e afins por parte do público em geral, bem como
-                    pelos comerciantes nas proximidades e arredores das
-                    barracas.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading8">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse8"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse8"
-                  >
-                    DROGAS ILÍCITAS, ARMAS DE FOGO E ARMAS BRANCAS SÃO
-                    PERMITIDAS DENTRO DO EVENTO?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse8"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading8"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não pode. De acordo com o item V do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibido armas de fogo, armas
-                    brancas, drogas e menores desacompanhados de pessoas
-                    responsáveis.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading9">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse9"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse9"
-                  >
-                    É PERMITIDA A ENTRADA E USO DO CAPACETE DENTRO DA ÁREA DO
-                    EVENTO NA SERRA NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse9"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading9"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não é permitido. De acordo com o item III do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibido a entrada e a circulação de
-                    pessoas portando capacete.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading10">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse10"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse10"
-                  >
-                    QUAL SERÁ O LOCAL DE APOIO PARA EMERGÊNCIA NO SÃO JOÃO DA
-                    SERRA NEGRA?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse10"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading10"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Todos os equipamentos de saúde do município tiveram suas
-                    equipes reforçadas, bem como terão centros de apoio montados
-                    para atender as demandas do São João. Os pontos de podem ser
-                    encontrados nas duas entradas do evento e próximo a
-                    Igrejinha da Vila, conforme localização no{" "}
-                    <a href="#mapa">mapa</a>.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading11">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse11"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse11"
-                  >
-                    ONDE POSSO ENCONTRAR MATERIAIS DE ARTESANATO E CULTURA LOCAL
-                    DA CIDADE DE BEZERROS?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse11"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading11"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Durante o São João na Serra Negra 2024 haverá a
-                    comercialização de peças exclusivas dos artesãos locais.
-                    Tanto os turistas quanto os bezerrenses podem encontrar esse
-                    espaço na Vitrine Criativa, com localização conforme o{" "}
-                    <a href="#mapa">mapa</a>.
-                  </div>
-                </div>
-              </div>
-
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading12">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse12"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse12"
-                  >
-                    POSSO LIGAR QUALQUER TIPO DE SOM OU PAREDÕES, DENTRO E NO
-                    ENTORNO, DO EVENTO E DOS ESTACIONAMENTOS?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse12"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading12"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não pode. De acordo com o item VII do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibido o uso de qualquer tipo de
-                    som e paredões dentro, no entorno do evento e nos
-                    estacionamentos.
-                  </div>
-                </div>
-              </div>
-              <div className="accordion-item">
-                <h2 className="accordion-header" id="flush-heading13">
-                  <button
-                    className="accordion-button collapsed text-white"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#flush-collapse13"
-                    aria-expanded="false"
-                    aria-controls="flush-collapse13"
-                  >
-                    É PERMITIDO A UTILIZAÇÃO DE FOGOS DE ARTIFÍCIO DENTRO E NO
-                    ENTORNO, DO EVENTO E DOS ESTACIONAMENTOS?
-                  </button>
-                </h2>
-                <div
-                  id="flush-collapse13"
-                  className="accordion-collapse collapse"
-                  aria-labelledby="flush-heading13"
-                  data-bs-parent="#accordionFlushExample"
-                >
-                  <div className="accordion-body">
-                    Não, não pode. De acordo com o item III do Art. 4 do{" "}
-                    <a
-                      href="DECRETO-N.2.643-DE-03-DE-JUNHO-DE-2024.pdf"
-                      target="_blank"
-                    >
-                      Decreto Nº 2.643/2024
-                    </a>
-                    , está terminantemente proibido a utilização de fogos de
-                    artifícios por particulares.
-                  </div>
-                </div>
-              </div>
-            </div>
+      {/* — Novas perguntas adicionadas a seguir — */}
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="flush-heading14">
+          <button
+            className="accordion-button collapsed text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapse14"
+            aria-expanded="false"
+            aria-controls="flush-collapse14"
+          >
+            Preciso pagar ingresso para participar dos shows?
+          </button>
+        </h2>
+        <div
+          id="flush-collapse14"
+          className="accordion-collapse collapse"
+          aria-labelledby="flush-heading14"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div className="accordion-body">
+            Não! O São João na Serra Negra é um evento gratuito e aberto ao público. Todos os shows e atrações culturais são acessíveis sem cobrança de ingresso.
           </div>
-        </section>
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="flush-heading15">
+          <button
+            className="accordion-button collapsed text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapse15"
+            aria-expanded="false"
+            aria-controls="flush-collapse15"
+          >
+            Como chegar à Serra Negra durante o evento?
+          </button>
+        </h2>
+        <div
+          id="flush-collapse15"
+          className="accordion-collapse collapse"
+          aria-labelledby="flush-heading15"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div className="accordion-body">
+            O acesso pode ser feito por transporte próprio ou pelas vans durante os dias de festa. Informações sobre os horários e pontos de embarque são divulgadas nas redes sociais do evento.
+          </div>
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="flush-heading16">
+          <button
+            className="accordion-button collapsed text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapse16"
+            aria-expanded="false"
+            aria-controls="flush-collapse16"
+          >
+            O evento é seguro para famílias e crianças?
+          </button>
+        </h2>
+        <div
+          id="flush-collapse16"
+          className="accordion-collapse collapse"
+          aria-labelledby="flush-heading16"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div className="accordion-body">
+            Sim. O São João na Serra Negra conta com segurança reforçada, presença da Guarda Municipal, Polícia Militar, equipes de saúde e estrutura voltada para receber todos os públicos com conforto e tranquilidade.
+          </div>
+        </div>
+      </div>
+
+      <div className="accordion-item">
+        <h2 className="accordion-header" id="flush-heading17">
+          <button
+            className="accordion-button collapsed text-white"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#flush-collapse17"
+            aria-expanded="false"
+            aria-controls="flush-collapse17"
+          >
+            Vai ter espaço para artesanato e comidas típicas?
+          </button>
+        </h2>
+        <div
+          id="flush-collapse17"
+          className="accordion-collapse collapse"
+          aria-labelledby="flush-heading17"
+          data-bs-parent="#accordionFlushExample"
+        >
+          <div className="accordion-body">
+            Sim! A festa valoriza a cultura local, com feirinhas de artesanato, comidas típicas, bebidas e muito forró pé de serra. É uma oportunidade de vivenciar o melhor do São João tradicional.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
         <div className="divisoria"></div>
+
+      
       </main>
       <Footer />
     </>

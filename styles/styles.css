@@ -46,3 +46,11 @@
   text-align: justify;
   margin-bottom: 20px; /* Espaçamento entre parágrafos */
 }
+
+.container-texto.vitrine {
+    background-color: rgb(0, 79, 255, 0.8);
+}
+
+.container-texto.vitrine {
+    top: -11.5rem;
+}

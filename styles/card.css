@@ -1,7 +1,7 @@
 .card {
   width: 16rem;
   height: 12.5rem;
-  border-radius: 0;
+  border-radius: 2;
   background: var(--cor-azul-escuro);
   border-color: white !important;
 }
@@ -9,7 +9,7 @@
 .card-cidade {
   width: 16rem;
   height: 12.5rem;
-  border-radius: 0;
+  border-radius: 2;
   background: #7c2e18;
   border-color: white !important;
 }
@@ -17,7 +17,7 @@
 .card-sitio {
   width: 16rem;
   height: 12.5rem;
-  border-radius: 0;
+  border-radius: 2;
   background: rgb(241, 124, 45);
   border-color: white !important;
 }

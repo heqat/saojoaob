@@ -1,75 +1,159 @@
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
-import { useRouter } from 'next/router'
-import marca from '../public/marca.png'
-import Link from 'next/link'
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
+import marca from "../public/marca.png";
+import Link from "next/link";
 
 export default function Navbar() {
-  const [activeSection, setActiveSection] = useState('');
+  const [activeSection, setActiveSection] = useState("");
+  const [isVisible, setIsVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const router = useRouter();
 
+  const toggleMenu = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   useEffect(() => {
-    const navItems = document.querySelectorAll('.nav-item')
-    const navbarCollapse = document.getElementById('navbar-collapse')
-    navItems.forEach((l) => {
-      l.addEventListener('click', () => {
-        navbarCollapse.classList.remove('show')
-      })
-    })
+    let lastScrollY = window.scrollY;
+    let timeoutId;
 
     const handleScroll = () => {
-      const sections = document.querySelectorAll('section');
-      let currentSection = '';
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      lastScrollY = currentScrollY;
+
+      const sections = document.querySelectorAll("section");
+      let currentSection = "";
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120; // Ajuste a margem conforme necessário
+        const sectionTop = section.offsetTop - 120;
         const sectionHeight = section.clientHeight;
-        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
-          currentSection = section.getAttribute('id');
+        if (
+          window.scrollY >= sectionTop &&
+          window.scrollY < sectionTop + sectionHeight
+        ) {
+          currentSection = section.getAttribute("id");
         }
       });
       setActiveSection(currentSection);
+
+      clearTimeout(timeoutId);
+      timeoutId = setTimeout(() => {
+        setIsVisible(true);
+      }, 500);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(timeoutId);
     };
   }, []);
 
   return (
     <header>
-      <nav id='navbar' className='navbar navbar-expand-lg fixed-top'>
-        <div className='container'>
-          <a href="/"><Image className='m-navbar-marca' src={marca} alt='marca são joao' height={85} /></a>
+      <nav
+        id="navbar"
+        className={`navbar navbar-expand-lg fixed-top bg-white ${
+          isVisible ? "visible" : "hidden"
+        }`}
+      >
+        <div className="container">
+          <a href="/">
+            <Image
+              className="m-navbar-marca"
+              src={marca}
+              alt="marca são joão"
+              height={85}
+            />
+          </a>
 
-          <button id='btn-nav' className='navbar-toggler text-white' type='button' aria-expanded='false' data-bs-toggle='collapse' data-bs-target='#navbar-collapse'>
-            <i className='bx bx-menu bx-md'></i>
+          <button
+            id="btn-nav"
+            className="navbar-toggler text-white"
+            type="button"
+            aria-expanded={isMenuOpen ? "true" : "false"}
+            onClick={toggleMenu}
+            aria-label="Toggle navigation"
+          >
+            <i className="bx bx-menu bx-md"></i>
           </button>
 
-          <div className='navbar-collapse collapse' id='navbar-collapse'>
-            <ul className='navbar-nav ms-auto align-items-center'>
-              <li className={`nav-item m-2 ${activeSection === 'apresentacao' ? 'active' : ''}`}>
-                <a href='/../#apresentacao' className='text-nav p-2' onClick={() => setActiveSection('apresentacao')}>O SÃO JOÃO</a>
-              </li>
-              <li className={`nav-item m-2 ${activeSection === 'programacao' ? 'active' : ''}`}>
-                <a href='/../#programacao' className='text-nav p-2' onClick={() => setActiveSection('programacao')}>PROGRAMAÇÃO</a>
-              </li>
-              <li className={`nav-item m-2 ${activeSection === 'mapa' ? 'active' : ''}`}>
-                <a href='/../#mapa' className='text-nav p-2' onClick={() => setActiveSection('mapa')}>MAPA</a>
-              </li>
-              <li className={`nav-item m-2 ${activeSection === 'faq' ? 'active' : ''}`}>
-                <a href='/../#faq' className='text-nav p-2' onClick={() => setActiveSection('faq')}>FAQ</a>
-              </li>
-              <li className={`nav-item m-2 ${router.pathname === '/vitrine-criativa' ? 'active' : ''}`}>
-                <a href='/vitrine-criativa' className='text-nav p-2'>VITRINE CRIATIVA</a>
+          <div
+            className={`navbar-collapse collapse ${isMenuOpen ? "show" : ""}`}
+            id="navbar-collapse"
+          >
+            <ul className="navbar-nav ms-auto align-items-center">
+              {[
+                { id: "apresentacao", label: "O SÃO JOÃO" },
+                { id: "programacao", label: "PROGRAMAÇÃO" },
+                { id: "mapa", label: "MAPA" },
+                { id: "faq", label: "FAQ" },
+              ].map(({ id, label }) => (
+                <li
+                  key={id}
+                  className={`nav-item m-2 ${
+                    activeSection === id ? "active" : ""
+                  }`}
+                >
+                  <a
+                    href={`/../#${id}`}
+                    className="text-nav p-2"
+                    onClick={() => {
+                      setActiveSection(id);
+                      closeMenu();
+                    }}
+                  >
+                    {label}
+                  </a>
+                </li>
+              ))}
+
+              <li
+                className={`nav-item m-2 ${
+                  router.pathname === "/vitrine-criativa" ? "active" : ""
+                }`}
+              >
+                <a
+                  href="/vitrine-criativa"
+                  className="text-nav p-2"
+                  onClick={closeMenu}
+                >
+                  VITRINE CRIATIVA
+                </a>
               </li>
             </ul>
-            <ul className='navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones'>
-              <li className='nav-item m-2'>
-                <Link href='https://www.facebook.com/saojoaonaserranegra/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-facebook-circle bx-sm'></i></Link>
+
+            <ul className="navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones">
+              <li className="nav-item m-2">
+                <Link
+                  href="https://www.facebook.com/saojoaonaserranegra/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="m-icone-navbar text-white p-1"
+                >
+                  <i className="bx bxl-facebook-circle bx-sm"></i>
+                </Link>
               </li>
-              <li className='nav-item m-2'>
-                <Link href='https://www.instagram.com/saojoaonaserranegra/' rel="noreferrer" className='m-icone-navbar text-white p-1' target='_blank'><i className='bx bxl-instagram bx-sm'></i></Link>
+              <li className="nav-item m-2">
+                <Link
+                  href="https://www.instagram.com/saojoaonaserranegra/"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="m-icone-navbar text-white p-1"
+                >
+                  <i className="bx bxl-instagram bx-sm"></i>
+                </Link>
               </li>
             </ul>
           </div>
@@ -77,16 +161,21 @@ export default function Navbar() {
       </nav>
 
       <style jsx>{`
+        #navbar {
+          transition: transform 0.3s ease-in-out;
+          transform: translateY(0);
+        }
+        #navbar.hidden {
+          transform: translateY(-100%);
+        }
+        #navbar.visible {
+          transform: translateY(0);
+        }
         .nav-item.active a {
           font-size: larger;
           font-weight: bold;
         }
-        .nav-item.active-vitrine a {
-          font-size: larger;
-          font-weight: bold;
-        
-        }
       `}</style>
     </header>
-  )
+  );
 }
