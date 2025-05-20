@@ -1,8 +1,9 @@
 #navbar {
   width: 100%;
-  background: url("../public/BG-AZUL.png");
+  background: url("../public/bgazul3.jpg");
   background-position: center;
   background-attachment: fixed;
+  background-size: auto;
 }
 
 .text-nav {

@@ -340,10 +340,7 @@ export default function Home() {
     </h2>
     <h2 className="m-titulo-secao-menor mt-5 mb-5">FAQ</h2>
     <div className="container accordion accordion-flush" id="accordionFlushExample">
-      {/* — Perguntas originais — */}
-      {/* ... (itens 1 a 13 conforme você já tinha) ... */}
-
-      {/* — Novas perguntas adicionadas a seguir — */}
+    
       <div className="accordion-item">
         <h2 className="accordion-header" id="flush-heading14">
           <button

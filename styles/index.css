@@ -6,7 +6,7 @@
 
 .bg-hero-marca {
   margin-top: 100px;
-  width: 20rem;
+  width: 25rem;
   height: auto;
   position: absolute;
   filter: drop-shadow(0px 0px 3px black);
@@ -19,6 +19,7 @@
   color: white;
   font-family: var(--fonte-principal);
   font-size: 2.5rem;
+  
 }
 
 .m-titulo-secao-linha {
@@ -75,6 +76,7 @@
   font-family: var(--fonte-apoio);
   line-height: 1.5rem;
   text-align: justify;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .arrow-down {
@@ -125,7 +127,7 @@
 .accordion-button {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5) !important; 
   color: white !important;
-  background-color: rgb(241, 124, 45) !important;
+  background-color: #D68500 !important;
   font-family: var(--fonte-principal);
   border-radius: 2px !important; 
   border: 2px solid #ffffff !important; 
@@ -208,11 +210,11 @@
 }
 
 .m-container-palcos-serra {
-  background-image: url("../public/serra-negra-bg.png");
+  background-image: url("../public/bgserra.jpg");
 }
 
 .m-container-palcos-cidade {
-  background-image: url("../public/sitio-cidade-bg.png");
+  background-image: url("../public/bgverde3.jpg");
 }
 
 .m-container-mapa {
@@ -226,14 +228,14 @@
 
 #apresentacao {
   scroll-margin-top: 100px;
-  background: url("../public/textura-azul-v2.png");
+  background: url("../public/bgazul2.jpg");
   background-position: center;
   background-repeat: repeat;
 }
 
 #mapa {
   scroll-margin-top: 100px;
-  background: url("../public/textura-azul-v2.png");
+  background: url("../public/bgamarelo1.jpg");
   background-position: center;
   background-repeat: repeat;
 }
@@ -246,7 +248,7 @@
 
 #faq {
   scroll-margin-top: 100px;
-  background: url("../public/bg-palha-verde.png");
+  background: url("../public/bgverde3.jpg");
   background-position: center;
   background-repeat: repeat;
 }
@@ -255,14 +257,7 @@
   .container-video {
     height: 50vh;
   }
-  .m-container-palcos-serra {
-    background-image: url("../public/BG-AZUL.png"); /* Substitua pelo nome da imagem menor */
-  }
-
-  .m-container-palcos-cidade {
-    background-image: url("../public/BG-VERDE.png"); /* Substitua pelo nome da imagem menor */
-  }
-
+  
   .m-titulo-secao-maior {
     display: none;
   }
