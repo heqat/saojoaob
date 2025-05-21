@@ -9,7 +9,7 @@ export default function () {
 
                 <div className="col mb-3 d-flex justify-content-center">
                     <a href="https://bezerros.pe.gov.br/" className="mt-2 m-marca" target="_blank">
-                        <Image src={marcaPrefeitura} alt='marca prefeitura' height={85} />
+                        <Image src={marcaPrefeitura} alt='marca prefeitura' height={55} />
                     </a>
                 </div>
 

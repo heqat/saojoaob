@@ -173,58 +173,57 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "rei do cangaço", "marcão noventa", "alcymar", "novinho da paraiba", "maciel melo",
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Sábado"
                         data="14/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "pau no xote", "liv morais", "luiz fidelis", "santana", "fabio carneirinho",
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Domingo"
                         data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "daniel gouveia", "cristina amaral", "henrique barbosa", "lady falcão", "dudu do acordeon",
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Sábado"
                         data="21/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE",
+                          "walter lins", "juarez", "higor henrique", "ciel santos", "cezzinha"
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Domingo"
                         data="22/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "almir rouche", "assisão", "geraldinho lins", "nena queiroga", "irah caldeira"
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Segunda"
                         data="23/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "luizinho moreno", "morganna bernardo", "mestrinho", "bruninho lima", "geraldo azevedo"
                         ]}
-                        horario={[""]}
+                        horario={["", " ", " ", " ", ""]}
                         dia="Sábado"
                         data="28/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
-                      
+                          "amazan", "anderson alves", "waldonys", "petrucio amorim", "Joyce Alane"
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Domingo"
                         data="29/06"
                       />
@@ -240,69 +239,69 @@ export default function Home() {
                     <div className="d-flex justify-content-center flex-wrap">
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "quadrilha", "banda de pífanos", "trio pé de serra", "quadrilha folcpopular", "trio pé de serra"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Sábado"
                         data="14/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "jamile", "clara elliys", "quadrilha", "zé barreto", "marcos montez"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Domingo"
                         data="15/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "michel", "cabila tamborete de forró", "quadrilha misturant", "vitor ferrari", "elas cantam gonzaga"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Sábado"
                         data="21/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "trio asa branca", "quadrilha", "papanguarte", "emerson cavalcanti", "elian do acordeon"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Domingo"
                         data="22/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "samara", "trio lampião a gás", "farra dos tops", "quadrilha folcpopular", "batalhão 44"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Segunda"
                         data="23/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "amanda leão", "dadau forró de 3", "eu, tu e elas", "quadrilha misturart", "trio pé de serra"
                         ]}
                         horario={[
-                          "",
+                          "", " ", "", "", ""
                         ]}
                         dia="Sábado"
                         data="28/06"
                       />
                       <CardPalco
                         nome={[
-                          "EM BREVE!",
+                          "manoel da concertina", "os thalentos", "quadrilha riacho das almas", "quadrilha", "trio kabas da peste"
                         ]}
-                        horario={[""]}
+                        horario={["", " ", "", "", ""]}
                         dia="Domingo"
                         data="29/06"
                       />
@@ -311,8 +310,75 @@ export default function Home() {
                 </div>
               </div>
             </div>
+                    <div className="divisoria"></div>
+            <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
+              <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
+              <div className="container mt-3">
+                <div className="container-card">
+                  <div className="d-flex justify-content-center flex-wrap">
+                    <CardSitio
+                      nome={[
+                        " EM BREVE!",
+                      ]}
+                      horario={[" "]}
+                      dia="Sítio dos Remédios"
+                      data="06/06"
+                    />
 
-            <div className="divisoria"></div>
+                    <CardSitio
+                      nome={[
+                        "EM BREVE!",
+                      ]}
+                      horario={[""]}
+                      dia="Areias"
+                      data="11/06"
+                    />
+                    <CardSitio
+                      nome={[
+                        "EM BREVE!",
+                      ]}
+                      horario={[" "]}
+                      dia="Cajazeiras"
+                      data="13/06"
+                    />
+                    <CardSitio
+                      nome={[
+                        "EM BREVE!",
+                      ]}
+                      horario={[" "]}
+                      dia="Boas Novas"
+                      data="17/06"
+                    />
+                    <CardSitio
+                      nome={[
+                        "EM BREVE!",
+                      ]}
+                      horario={[" "]}
+                      dia="Encruzilhada"
+                      data="18/06"
+                    />
+                    <CardSitio
+                      nome={[
+                        "EM BREVE!",
+                      ]}
+                      horario={["19:00", "20:00", "21:30"]}
+                      dia="Sapucarana"
+                      data="26/06"
+                    />
+
+                    <CardCidade
+                      nome={["EM BREVE!"]}
+                      horario={[" "]}
+                      dia="Centro da Cidade"
+                      data="07/07"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div className="divisoria"></div>
+            </div>
+
+          
 
           
           </div>

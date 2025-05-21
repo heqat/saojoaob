@@ -26,7 +26,11 @@ export default function VitrineCria() {
 
             Mais que um espaço de vendas, a Vitrine Criativa consolida-se como política pública de valorização cultural, incentivo ao empreendedorismo e fortalecimento da economia criativa.<br /><br />
 
-            A Vitrine Criativa – Edição São João 2025 está localizada no Polo de Eventos da Serra Negra. Acesse o mapa, conheça os expositores e venha prestigiar o talento e a originalidade dos nossos artesãos.<br /><br />
+            A Vitrine Criativa – Edição São João 2025 está localizada no Polo de Eventos da Serra Negra. Acesse o
+            <a href="/#mapa" className={`${styles.mapaCor} map-link`}>
+              {" "}
+               mapa
+            </a>, conheça os expositores e venha prestigiar o talento e a originalidade dos nossos artesãos.<br /><br />
           </p>
         </div>
         <div className={styles.carouselContainer}>
