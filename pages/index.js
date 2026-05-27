@@ -1,517 +1,506 @@
+import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { useEffect } from "react";
-import CardPalco from "../components/CardPalco";
-import CardCidade from "../components/CardCidade";
-import CardSitio from "../components/CardSitio";
+import { useState, useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { artistas } from "../components/data/artistasConfirmados";
+import { programacaoGeral } from "../components/programacaoCompleta";
+import { blocosData } from "../components/blocosData";
 
-import marca from "../public/marca2.png";
-import devassa from "../public/devassa.png";
-import kuat from "../public/kuat.png";
-import governo from "../public/governo.png";
-import fundarpe from "../public/fundarpe.png";
-import empetur from "../public/empetur.png";
-import sesc from "../public/sesc-senac.png";
+import marca from "../public/marcasembezerros.png";
+import marcaFundarpe from "../public/marca-fundarpe.png";
+import marcaEmpetur from "../public/marca-empetur.png";
+import marcaSecCultura from "../public/marca-seccultura.png";
+import marcaSecTurismo from "../public/marca-secturismo.png";
+import marcaDtel from "../public/marca-dtel.png";
+import marcaSesc from "../public/marca-sesc.png";
+import marcaCoca from "../public/marca-cocacola.png";
+import marcaPitu from "../public/marca-pitu.png";
+import marcaDevassa from "../public/marca-devassa.png";
+import marcaPrefeitura from "../public/marca-prefeitura.png";
 
 export default function Home() {
-  useEffect(() => {
-    const btnPlayVideo = document.getElementById("btn-play-video");
-    const containerVideo = document.getElementById("container-video");
+  const router = useRouter();
 
-    btnPlayVideo.addEventListener("click", handlePlayVideo);
+  const nomesOficiaisPalcos = {
+    "QG do Frevo": "Polo Lucas Cardoso",
+    "Palco Cultural": "Polo Mestre J. Borges",
+    "Palco Centenária": "Polo Mestre Lula Vassoureiro",
+    "Palco São Sebastião": "Polo Ronaldo Souto Maior",
+    "Espaço Frevo": "Polo Malvina Salvador",
+    "Forró do Papangu": "Polo Zezé e Zezita",
+    "Espaço Kids": "Polo Infantil",
+    "Polo Mercado Barra Branca": "Polo Mercado Barra Branca",
+  };
 
-    function handlePlayVideo() {
-      event.preventDefault();
-      btnPlayVideo.style.display = "none";
-      containerVideo.innerHTML = `<iframe width=100% height=100% src="https://www.youtube.com/embed/EmgkGqSWJRI?autoplay=1" title="Teaser" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>`;
-    }
+  const [busca, setBusca] = useState("");
+  const [abaAtiva, setAbaAtiva] = useState("apresentacao");
+  const [videoRodando, setVideoRodando] = useState(false);
 
-    const btnArrow = document.getElementById("btn-arrow");
-    const sectionApresentacao = document.getElementById("apresentacao");
+  const [diaAtivo, setDiaAtivo] = useState(programacaoGeral[0]?.data || "");
 
-    btnArrow.addEventListener("click", handleClickBtnArrow);
+  const [palcoFiltro, setPalcoFiltro] = useState("Todos");
+  const [dropdownAberto, setDropdownAberto] = useState(false);
+  const dropdownRef = useRef(null);
 
-    function handleClickBtnArrow() {
-      sectionApresentacao.scrollIntoView();
-    }
+  const diasDisponiveis = [
+    ...new Set(programacaoGeral.map((item) => item.data)),
+  ];
+
+  const eventosDoDia = programacaoGeral.filter(
+    (item) => item.data === diaAtivo,
+  );
+
+  const palcosDoDia = [
+    "Todos",
+    ...new Set(eventosDoDia.map((item) => item.palco)),
+  ];
+
+  const eventosFiltrados = eventosDoDia.filter((evento) => {
+    if (palcoFiltro === "Todos") return true;
+    return evento.palco === palcoFiltro;
   });
+
+  const eventosPorPalco = eventosFiltrados.reduce((acc, evento) => {
+    if (!acc[evento.palco]) {
+      acc[evento.palco] = [];
+    }
+    acc[evento.palco].push(evento);
+    return acc;
+  }, {});
+
+  const ordenarHorarioEvento = (a, b) => {
+    const getMinutos = (time) => {
+      if (!time) return 0;
+      let [horas, minutos] = time.split(":").map(Number);
+
+      if (horas < 5) horas += 24;
+
+      return horas * 60 + minutos;
+    };
+
+    return getMinutos(a.horario) - getMinutos(b.horario);
+  };
+
+  // Aplica a nova ordenação
+  Object.keys(eventosPorPalco).forEach((palco) => {
+    eventosPorPalco[palco].sort(ordenarHorarioEvento);
+  });
+
+  const [dataBlocoAtiva, setDataBlocoAtiva] = useState(
+    blocosData[0]?.data || "",
+  );
+
+  const datasUnicasBlocos = [...new Set(blocosData.map((item) => item.data))];
+
+  const blocosFiltrados = blocosData
+    .filter((item) => item.data === dataBlocoAtiva)
+    .sort((a, b) => a.horario.localeCompare(b.horario));
+
+  // NOVO: Efeito 2: Fechar dropdown ao clicar fora
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownAberto(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const handleScrollDown = () => {
+    const nextSection = document.getElementById("baile");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <>
       <Head>
-        <title>São João 2025 - Bezerros-PE</title>
-        <meta name="title" content="São João 2025 - Bezerros-PE"></meta>
+        <title>Carnaval 2026 - Bezerros-PE</title>
+        <meta name="title" content="Carnaval 2026 - Bezerros-PE"></meta>
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        />
+        <link
+          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+          rel="stylesheet"
+        />
       </Head>
 
       <Navbar />
 
       <main>
-        <section id="hero">
+        <section
+          className={`hero-interativo d-flex flex-column align-items-center ${
+            abaAtiva === "apresentacao" ? "bg-festa" : "bg-homenageado"
+          }`}
+        >
           <div
-            className="bg-hero"
-            data-parallax="scroll"
-            data-image-src="/bg-hero.jpg"
+            className="container d-flex justify-content-center mt-3 position-relative"
+            style={{ zIndex: 10, flex: "0 0 auto" }}
           >
-            <div className="container d-flex justify-content-center align-items-center">
-              <Image
-                className="bg-hero-marca"
-                src={marca}
-                alt="marca são joão"
-              ></Image>
-            </div>
-            <button type="button" id="btn-arrow" className="arrow-down">
-              <i className="bx bx-chevron-down bx-fade-down display-1 text-white"></i>
-            </button>
-          </div>
-        </section>
-        <div className="divisoria"></div>
-        <section id="apresentacao">
-          <div className="container d-flex w-100 justify-content-center align-items-center">
-            <div className="d-flex flex-column justify-content-center align-items-center text-center my-5 text-white">
-              <h1 className="m-titulo-secao mb-4">O SÃO JOÃO NA SERRA NEGRA</h1>
-              <p className="m-apresentacao-texto">
-                Distante 100 km do Recife, o município de Bezerros, no Agreste,
-                também é conhecido como um dos polos juninos mais autênticos do
-                interior, mantendo viva a tradição do forró pé de serra. O São
-                João mais frio, mais alto e mais aconchegante do mundo, na Serra
-                Negra, tem como tema "DAQUI DO ALTO, TUDO É MAIS BONITO!", uma
-                referência às belas paisagens naturais, ao sabor peculiar das
-                comidas típicas, a cultura dos grupos culturais e os pontos
-                turísticos que atraem milhares de pessoas todos os anos. São
-                aproximadamente 10 km entre a cidade e o Pólo Cultural. Com
-                temperatura média de 16 graus e sensação térmica que chega a 12
-                graus, o São João na Serra Negra tornou-se um evento consolidado
-                no calendário festivo do estado.
-              </p>
-              <h2 className="m-titulo-programacaotxt mb-4">
-                PATRIMÔNIO CULTURAL IMATERIAL
-              </h2>
-              <p className="m-apresentacao-texto">
-                O São João na Serra Negra é uma das festas mais tradicionais no
-                interior de Pernambuco, atraindo forrozeiros de todos os cantos
-                do Brasil e até do mundo. Embalada pelo ritmo do forró
-                autêntico, a festa tornou-se Patrimônio Cultural Imaterial de
-                Pernambuco, a partir da Resolução Nº 1.897, aprovada em 19 de
-                abril de 2023, pela Assembléia Legislativa de Pernambuco
-                (Alepe).
-              </p>
+            <div className="toggle-container shadow-sm">
+              <button
+                className={`toggle-btn ${
+                  abaAtiva === "apresentacao" ? "ativo" : ""
+                }`}
+                onClick={() => setAbaAtiva("apresentacao")}
+              >
+                🎭 A FESTA
+              </button>
+              <button
+                className={`toggle-btn ${
+                  abaAtiva === "homenageado" ? "ativo" : ""
+                }`}
+                onClick={() => setAbaAtiva("homenageado")}
+              >
+                🎉 HOMENAGEADA
+              </button>
             </div>
           </div>
-        </section>
-        <div className="divisoria"></div>
-        <section id="clipe">
-          <div
-            id="container-video"
-            className="d-flex justify-content-center align-items-center container-video"
-            data-parallax="scroll"
-            data-image-src="/bg-balao.jpg"
-          >
-            <button
-              id="btn-play-video"
-              type="button"
-              className="m-btn-play-video"
-            >
-              <i className="bx bx-play-circle bx-tada display-1 text-white"></i>
-            </button>
-          </div>
-        </section>
 
-        <div className="divisoria"></div>
+          <div className="container conteudo-fixo w-100 flex-grow-1 d-flex justify-content-center position-relative">
+            {abaAtiva === "apresentacao" && (
+              <div className="fade-in-animation w-100">
+                <div className="row align-items-center justify-content-center">
+                  <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0">
+                    <div className="logog mx-auto mb-3"></div>
+                    <p className="m-apresentacao-texto">
+                      Bem-vindos ao maior e melhor carnaval do interior do
+                      Brasil: o Carnaval do Papangu em Bezerros - Pernambuco.
+                      Repleto de “História, Movimento e Encanto”, o nosso
+                      carnaval é autêntico, multicultural, seguro, familiar,
+                      inclusivo, sustentável e diverso.
+                    </p>
+                    <p className="m-apresentacao-texto">
+                      Você é nosso convidado especial para conhecer de perto a
+                      magia dos nossos papangus.
+                      <strong> BEZERROS ESPERA POR VOCÊ!!! </strong>
+                    </p>
+                    <div className="button-container justify-content-center mt-3">
+                      <a className="m-btn-historia" href="/historia">
+                        HISTÓRIA
+                      </a>
+                      <a className="m-btn-historia" href="/servicos">
+                        SERVIÇOS
+                      </a>
+                      <a className="m-btn-historia" href="/faq">
+                        FAQ
+                      </a>
+                    </div>
+                  </div>
 
-        <section id="programacao">
-          <div className="">
-            <div className="m-container-palcos-serra d-flex justify-content-center align-items-center flex-column">
-              <div className="m-container-titulo">
-                <h2 className="m-titulo-secao mt-5 text-center">PROGRAMAÇÃO</h2>
-                <h3 className="m-titulo-programacao">SERRA NEGRA</h3>
+                  <div className="col-lg-6 col-12">
+                    <div className="video-wrapper shadow-lg">
+                      {!videoRodando ? (
+                        <div
+                          className="video-capa d-flex justify-content-center align-items-center flex-column"
+                          onClick={() => setVideoRodando(true)}
+                        >
+                          <button className="m-btn-play-video">
+                            <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              width="80"
+                              height="80"
+                              fill="white"
+                              className="bi bi-play-circle"
+                              viewBox="0 0 16 16"
+                            >
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z" />
+                              <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.89 2.59a.5.5 0 0 1 0 .814l-3.89 2.59a.5.5 0 0 1-.52-.038l-.001-4.016z" />
+                            </svg>
+                          </button>
+                          <span className="texto-ver-video mt-3">
+                            ASSISTA AO VÍDEO
+                          </span>
+                        </div>
+                      ) : (
+                        <iframe
+                          className="hero-video-frame"
+                          src="https://www.youtube.com/embed/U3bWmghjFoE?si=osIz3G4vE0rtyJRe?autoplay=1"
+                          title="Vídeo Carnaval Bezerros"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                          allowFullScreen
+                        ></iframe>
+                      )}
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="container mt-3">
-                <ul
-                  className="nav nav-tabs justify-content-center"
-                  role="tablist"
+            )}
+
+            {abaAtiva === "homenageado" && (
+              <div className="fade-in-animation w-100 h-100">
+                <div className="row align-items-center justify-content-center h-100">
+                  <div className="col-lg-12 col-12 d-flex justify-content-center">
+                    {" "}
+                    <div className="hero-homenageado-wrapper">
+                      <div className="hero-homenageado-foto"></div>
+
+                      <div className="hero-homenageado-card text-white text-center">
+                        <div className="homenageado-header">
+                          <div className="homenageado-nome">
+                            <h3>MILEIDE</h3>
+                          </div>
+
+                          <div className="homenageado-spacer"></div>
+
+                          <div className="homenageado-selo">
+                            <span className="badge-patrimonio">
+                              HOMENAGEADA 2026
+                            </span>
+                          </div>
+                        </div>
+
+                        <div className="hero-homenageado-texto">
+                          <p className="texto-artista">
+                            O Carnaval do Papangu 2026 presta homenagem a
+                            Mileide Santos, artista da terra que comanda o grupo
+                            FolcPopular há 25 anos. À frente de um projeto
+                            transformador, Mileide impacta a vida de pessoas
+                            apaixonadas pela dança e pela cultura popular, que
+                            ajudam a embalar o maior e melhor carnaval do
+                            interior do Brasil.
+                          </p>
+                          <p className="texto-artista">
+                            Bezerros lhe espera de braços abertos para curtir
+                            com a gente uma festa plural, feita para todos os
+                            públicos e para todas as formas de viver o Carnaval.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <button
+            type="button"
+            className="arrow-down"
+            onClick={handleScrollDown}
+          >
+            <i className="bx bx-chevron-down bx-fade-down display-1 text-white"></i>
+          </button>
+        </section>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
+        /*
+        <section
+          id="programacao"
+          className="py-5"
+          style={{ minHeight: "80vh" }}
+        >
+          <div className="container">
+            <h2 className="m-titulo-programacao mb-5 text-center">
+              PROGRAMAÇÃO OFICIAL
+            </h2>
+
+            <p className="programacao-aviso text-center mb-4">
+              Os horários das apresentações ainda serão divulgados oficialmente.
+            </p>
+
+            <div className="controls-container fade-in-animation">
+              {diasDisponiveis.map((data) => (
+                <button
+                  key={data}
+                  className={`tab-btn ${diaAtivo === data ? "active" : ""}`}
+                  onClick={() => setDiaAtivo(data)}
                 >
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link active m-button-programacao palcos"
-                      id="palcos-tab1"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab1-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab1-pane"
-                      aria-selected="true"
+                  {data}
+                </button>
+              ))}
+
+              <div className="filter-wrapper" ref={dropdownRef}>
+                <button
+                  className="filter-btn"
+                  onClick={() => setDropdownAberto(!dropdownAberto)}
+                >
+                  <i className="bx bx-filter-alt"></i>
+                  {palcoFiltro === "Todos" ? "TODOS OS PALCOS" : palcoFiltro}
+                  <i
+                    className={`bx bx-chevron-down ${dropdownAberto ? "bx-rotate-180" : ""}`}
+                    style={{ transition: "0.3s" }}
+                  ></i>
+                </button>
+
+                <ul
+                  className={`filter-dropdown ${dropdownAberto ? "show" : ""}`}
+                >
+                  {palcosDoDia.map((palco) => (
+                    <li
+                      key={palco}
+                      className={`filter-item ${palcoFiltro === palco ? "selected" : ""}`}
+                      onClick={() => {
+                        setPalcoFiltro(palco);
+                        setDropdownAberto(false);
+                      }}
                     >
-                      Palco Principal
-                    </button>
-                  </li>
-                  <li className="nav-item" role="presentation">
-                    <button
-                      className="nav-link m-button-programacao palcos"
-                      id="palcos-tab2"
-                      data-bs-toggle="tab"
-                      data-bs-target="#palcos-tab2-pane"
-                      type="button"
-                      role="tab"
-                      aria-controls="palcos-tab2-pane"
-                      aria-selected="false"
-                    >
-                      Palco Cultural
-                    </button>
-                  </li>
+                      {palco}
+                      {palcoFiltro === palco && <i className="bx bx-check"></i>}
+                    </li>
+                  ))}
                 </ul>
-
-                <div className="tab-content d-flex justify-content-center mb-5">
-                  <div
-                    className="tab-pane fade show active"
-                    id="palcos-tab1-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab1"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
-                      <CardPalco
-                        nome={[
-                          "rei do cangaço", "marcão noventa", "alcymar", "novinho da paraiba", "maciel melo",
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Sábado"
-                        data="14/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "pau no xote", "liv morais", "luiz fidelis", "santana", "fabio carneirinho",
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Domingo"
-                        data="15/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "daniel gouveia", "cristina amaral", "henrique barbosa", "lady falcão", "dudu do acordeon",
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Sábado"
-                        data="21/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "walter lins", "juarez", "higor henrique", "ciel santos", "cezzinha"
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Domingo"
-                        data="22/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "almir rouche", "assisão", "geraldinho lins", "nena queiroga", "irah caldeira"
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Segunda"
-                        data="23/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "luizinho moreno", "morganna bernardo", "mestrinho", "bruninho lima", "geraldo azevedo"
-                        ]}
-                        horario={["", " ", " ", " ", ""]}
-                        dia="Sábado"
-                        data="28/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "amazan", "anderson alves", "waldonys", "petrucio amorim", "Joyce Alane"
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Domingo"
-                        data="29/06"
-                      />
-                    </div>
-                  </div>
-                  <div
-                    className="tab-pane fade"
-                    id="palcos-tab2-pane"
-                    role="tabpanel"
-                    aria-labelledby="palcos-tab2"
-                    tabIndex="0"
-                  >
-                    <div className="d-flex justify-content-center flex-wrap">
-                      <CardPalco
-                        nome={[
-                          "quadrilha", "banda de pífanos", "trio pé de serra", "quadrilha folcpopular", "trio pé de serra"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Sábado"
-                        data="14/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "jamile", "clara elliys", "quadrilha", "zé barreto", "marcos montez"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Domingo"
-                        data="15/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "michel", "cabila tamborete de forró", "quadrilha misturant", "vitor ferrari", "elas cantam gonzaga"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Sábado"
-                        data="21/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "trio asa branca", "quadrilha", "papanguarte", "emerson cavalcanti", "elian do acordeon"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Domingo"
-                        data="22/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "samara", "trio lampião a gás", "farra dos tops", "quadrilha folcpopular", "batalhão 44"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Segunda"
-                        data="23/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "amanda leão", "dadau forró de 3", "eu, tu e elas", "quadrilha misturart", "trio pé de serra"
-                        ]}
-                        horario={[
-                          "", " ", "", "", ""
-                        ]}
-                        dia="Sábado"
-                        data="28/06"
-                      />
-                      <CardPalco
-                        nome={[
-                          "manoel da concertina", "os thalentos", "quadrilha riacho das almas", "quadrilha", "trio kabas da peste"
-                        ]}
-                        horario={["", " ", "", "", ""]}
-                        dia="Domingo"
-                        data="29/06"
-                      />
-                    </div>
-                  </div>
-                </div>
               </div>
             </div>
-                    <div className="divisoria"></div>
-            <div className="d-flex justify-content-center align-items-center flex-column m-container-palcos-cidade">
-              <h3 className="m-titulo-programacao">SÍTIO À CIDADE</h3>
-              <div className="container mt-3">
-                <div className="container-card">
-                  <div className="d-flex justify-content-center flex-wrap">
-                    <CardSitio
-                      nome={[
-                        " EM BREVE!",
-                      ]}
-                      horario={[" "]}
-                      dia="Sítio dos Remédios"
-                      data="06/06"
-                    />
 
-                    <CardSitio
-                      nome={[
-                        "EM BREVE!",
-                      ]}
-                      horario={[""]}
-                      dia="Areias"
-                      data="11/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "EM BREVE!",
-                      ]}
-                      horario={[" "]}
-                      dia="Cajazeiras"
-                      data="13/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "EM BREVE!",
-                      ]}
-                      horario={[" "]}
-                      dia="Boas Novas"
-                      data="17/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "EM BREVE!",
-                      ]}
-                      horario={[" "]}
-                      dia="Encruzilhada"
-                      data="18/06"
-                    />
-                    <CardSitio
-                      nome={[
-                        "EM BREVE!",
-                      ]}
-                      horario={["19:00", "20:00", "21:30"]}
-                      dia="Sapucarana"
-                      data="26/06"
-                    />
+            <div className="programacao-content">
+              {Object.keys(eventosPorPalco).length > 0 ? (
+                Object.keys(eventosPorPalco).map((palco) => (
+                  <div key={palco} className="palco-section fade-in-animation">
+                    <h3 className="palco-title">
+                      {nomesOficiaisPalcos[palco] ? (
+                        <>
+                          {nomesOficiaisPalcos[palco]}{" "}
+                          <br className="d-md-none" />
+                          <span
+                            style={{
+                              fontSize: "0.6em",
+                              opacity: 0.8,
+                              fontWeight: "normal",
+                              marginLeft: "10px",
+                            }}
+                          >
+                            ({palco})
+                          </span>
+                        </>
+                      ) : (
+                        palco
+                      )}
+                    </h3>
 
-                    <CardCidade
-                      nome={["EM BREVE!"]}
-                      horario={[" "]}
-                      dia="Centro da Cidade"
-                      data="07/07"
-                    />
+                    <div className="cards-grid">
+                      {eventosPorPalco[palco].map((evento) => (
+                        <div key={evento.id} className="prog-card">
+                          <div className="card-header-time">
+                            <span className="time-badge">
+                              <i className="bx bx-time-five"></i>{" "}
+                              {evento.horario}
+                            </span>
+                            {evento.tag && (
+                              <span className="genre-badge">{evento.tag}</span>
+                            )}
+                          </div>
+                          <div className="card-body">
+                            <h4 className="artist-name">{evento.artista}</h4>
+                          </div>
+                          <div className="card-footer">
+                            <i className="bx bx-calendar"></i> {evento.data}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
+                ))
+              ) : (
+                <div className="text-center text-white mt-5">
+                  <p>Nenhuma programação encontrada para este filtro.</p>
                 </div>
-              </div>
-              <div className="divisoria"></div>
+              )}
             </div>
-
-          
-
-          
           </div>
         </section>
+        {/* 
+        <section id="blocos" className="py-5" style={{ minHeight: "80vh" }}>
+          <div className="container">
+            <h2 className="m-titulo-programacao mb-5 text-center text-white">
+              BLOCOS
+            </h2>
 
-       
-       
-        <section id="mapa"> 
+            <div
+              className="tabs-container fade-in-animation mb-4"
+              style={{ gap: "10px" }}
+            >
+              {datasUnicasBlocos.map((data) => (
+                <button
+                  key={data}
+                  className={`tab-btn ${dataBlocoAtiva === data ? "active-b" : ""}`}
+                  onClick={() => setDataBlocoAtiva(data)}
+                  style={{ fontWeight: "bold", minWidth: "80px" }}
+                >
+                  {data}
+                </button>
+              ))}
+            </div>
+
+            <div className="blocos-content fade-in-animation">
+              {blocosFiltrados.length > 0 ? (
+                <div className="blocos-grid">
+                  {blocosFiltrados.map((bloco) => (
+                    <div key={bloco.id} className="bloco-card">
+                      <div className="bloco-header">
+                        <i className="bx bx-time-five"></i>
+                        <span>{bloco.horario}</span>
+                      </div>
+
+                      <div className="bloco-body">
+                        <h4 className="bloco-nome">{bloco.nome}</h4>
+                        {bloco.descricao && (
+                          <p className="bloco-desc">{bloco.descricao}</p>
+                        )}
+                      </div>
+
+                      <div className="bloco-footer">
+                        <i className="bx bxs-map-pin bx-sm"></i>
+                        <span className="local-text">{bloco.local}</span>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="text-center text-white mt-5">
+                  <p>Nenhum bloco cadastrado para esta data.</p>
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+        */}
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+        </div>
+        <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
-            <h2 className="m-titulo-secao-linha mt-5 mb-5">MAPA</h2>
+            <h2 className="m-titulo-secao mt-4 mb-4">
+              <div className="ilustracao mapa"></div>
+              MAPA
+            </h2>
             <iframe
               loading="lazy"
-              className="container mb-5"
-              width="100%"
-              height="100%"
+              className="mb-5 map-frame"
               src="https://www.google.com/maps/d/u/0/embed?mid=17ylFCMfPZAy4kWIwmMJBi6WriHAnsZg&ehbc=2E312F"
             ></iframe>
           </div>
         </section>
-        <div className="divisoria"></div>
-       <section id="faq" className="pb-5">
-  <div className="container d-flex justify-content-center align-items-center flex-column">
-    <h2 className="m-titulo-secao-maior mt-5 mb-5">
-      PERGUNTAS E RESPOSTAS
-    </h2>
-    <h2 className="m-titulo-secao-menor mt-5 mb-5">FAQ</h2>
-    <div className="container accordion accordion-flush" id="accordionFlushExample">
-    
-      <div className="accordion-item">
-        <h2 className="accordion-header" id="flush-heading14">
-          <button
-            className="accordion-button collapsed text-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapse14"
-            aria-expanded="false"
-            aria-controls="flush-collapse14"
-          >
-            Preciso pagar ingresso para participar dos shows?
-          </button>
-        </h2>
-        <div
-          id="flush-collapse14"
-          className="accordion-collapse collapse"
-          aria-labelledby="flush-heading14"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div className="accordion-body">
-            Não! O São João na Serra Negra é um evento gratuito e aberto ao público. Todos os shows e atrações culturais são acessíveis sem cobrança de ingresso.
-          </div>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
-      </div>
-
-      <div className="accordion-item">
-        <h2 className="accordion-header" id="flush-heading15">
-          <button
-            className="accordion-button collapsed text-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapse15"
-            aria-expanded="false"
-            aria-controls="flush-collapse15"
-          >
-            Como chegar à Serra Negra durante o evento?
-          </button>
-        </h2>
-        <div
-          id="flush-collapse15"
-          className="accordion-collapse collapse"
-          aria-labelledby="flush-heading15"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div className="accordion-body">
-            O acesso pode ser feito por transporte próprio ou pelas vans durante os dias de festa. Informações sobre os horários e pontos de embarque são divulgadas nas redes sociais do evento.
+        <section id="patrocinio" className="py-4">
+          <div className="container d-flex justify-content-center">
+            <Image
+              src="/regua.png"
+              alt="Patrocinadores, Apoio e Realização"
+              width={1200}
+              height={300}
+              className="img-fluid"
+              style={{
+                width: "100%",
+                height: "auto",
+                maxWidth: "800px",
+              }}
+            />
           </div>
+        </section>
+        <div className="divisoria-overlap">
+          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
-      </div>
-
-      <div className="accordion-item">
-        <h2 className="accordion-header" id="flush-heading16">
-          <button
-            className="accordion-button collapsed text-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapse16"
-            aria-expanded="false"
-            aria-controls="flush-collapse16"
-          >
-            O evento é seguro para famílias e crianças?
-          </button>
-        </h2>
-        <div
-          id="flush-collapse16"
-          className="accordion-collapse collapse"
-          aria-labelledby="flush-heading16"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div className="accordion-body">
-            Sim. O São João na Serra Negra conta com segurança reforçada, presença da Guarda Municipal, Polícia Militar, equipes de saúde e estrutura voltada para receber todos os públicos com conforto e tranquilidade.
-          </div>
-        </div>
-      </div>
-
-      <div className="accordion-item">
-        <h2 className="accordion-header" id="flush-heading17">
-          <button
-            className="accordion-button collapsed text-white"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#flush-collapse17"
-            aria-expanded="false"
-            aria-controls="flush-collapse17"
-          >
-            Vai ter espaço para artesanato e comidas típicas?
-          </button>
-        </h2>
-        <div
-          id="flush-collapse17"
-          className="accordion-collapse collapse"
-          aria-labelledby="flush-heading17"
-          data-bs-parent="#accordionFlushExample"
-        >
-          <div className="accordion-body">
-            Sim! A festa valoriza a cultura local, com feirinhas de artesanato, comidas típicas, bebidas e muito forró pé de serra. É uma oportunidade de vivenciar o melhor do São João tradicional.
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-        <div className="divisoria"></div>
-
-      
       </main>
       <Footer />
     </>

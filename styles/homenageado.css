@@ -1,0 +1,131 @@
+.hero-homenageado-card {
+  margin-top: 80px;
+  background-color: #f5821f;
+  border-radius: 28px;
+  padding: 140px 30px 20px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+  margin-bottom: 40px;
+  margin-top: 7vw;
+}
+
+.hero-homenageado-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-homenageado-foto {
+  position: absolute;
+  margin-top: 2vw;
+  top: -7.7vw;
+  width: 260px;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  background-image: url("../public/mileidefoto.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 5;
+}
+.hero-homenageado-nome {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  font-family: var(--fonte-principal);
+}
+
+.hero-homenageado-tag {
+  background: #ed1a3b;
+  color: white;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+}
+
+.hero-homenageado-texto {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-homenageado-texto .texto-artista {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+  font-family: var(--fonte-apoio);
+  color: white;
+}
+
+.homenageado-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -110px;
+  margin-bottom: 40px;
+  position: relative;
+  z-index: 10;
+}
+
+.homenageado-nome h3 {
+  font-family: var(--fonte-principal), sans-serif;
+  font-size: 3rem;
+  color: #fff;
+  margin: 0;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: right;
+}
+
+.homenageado-spacer {
+  width: 290px;
+  height: 1px;
+  flex-shrink: 0;
+}
+
+.badge-patrimonio {
+  background: #ed1a3b;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #fff;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  white-space: nowrap;
+}
+
+@media (max-width: 991px) {
+  .hero-homenageado-card {
+    padding: 120px 20px 20px;
+    margin-top: 130px;
+    margin-bottom: 0;
+  }
+
+  .hero-homenageado-foto {
+    width: 250px;
+    top: -17vw;
+  }
+
+  .homenageado-header {
+    flex-direction: column;
+    margin-top: -20px;
+    gap: 15px;
+  }
+
+  .homenageado-spacer {
+    display: none;
+  }
+
+  .homenageado-nome h3 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}

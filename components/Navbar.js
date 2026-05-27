@@ -1,13 +1,78 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import marca from "../public/marca.png";
 import Link from "next/link";
+import { artistas } from "./data/artistasConfirmados";
+import marca from "../public/logo-grande.png";
+
+// --- ALGORITMOS DE INTELIGÊNCIA DA BUSCA ---
+
+// 1. Normaliza: Remove acentos, caracteres especiais e deixa minúsculo
+const normalize = (str) => {
+  return str
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .toLowerCase()
+    .trim();
+};
+
+// 2. Levenshtein Distance: Calcula a "distância" entre duas palavras
+// Retorna quantos caracteres precisam ser mudados para A virar B
+const calculateLevenshtein = (a, b) => {
+  const matrix = [];
+
+  // Se uma string for vazia, a distância é o tamanho da outra
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+
+  for (let i = 0; i <= b.length; i++) {
+    matrix[i] = [i];
+  }
+  for (let j = 0; j <= a.length; j++) {
+    matrix[0][j] = j;
+  }
+
+  // Preenche a matriz
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      if (b.charAt(i - 1) === a.charAt(j - 1)) {
+        matrix[i][j] = matrix[i - 1][j - 1];
+      } else {
+        matrix[i][j] = Math.min(
+          matrix[i - 1][j - 1] + 1, // Substituição
+          Math.min(
+            matrix[i][j - 1] + 1, // Inserção
+            matrix[i - 1][j] + 1, // Remoção
+          ),
+        );
+      }
+    }
+  }
+
+  return matrix[b.length][a.length];
+};
+
+const isMatch = (term, target) => {
+  const termNorm = normalize(term);
+  const targetNorm = normalize(target);
+
+  if (targetNorm.includes(termNorm)) return true;
+
+  if (termNorm.length > 3) {
+    const distance = calculateLevenshtein(termNorm, targetNorm);
+    const threshold = termNorm.length > 6 ? 3 : 2;
+    return distance <= threshold;
+  }
+
+  return false;
+};
 
 export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
   const [isVisible, setIsVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [termoBusca, setTermoBusca] = useState("");
+
   const router = useRouter();
 
   const toggleMenu = () => {
@@ -18,62 +83,184 @@ export default function Navbar() {
     setIsMenuOpen(false);
   };
 
+  const handleSearchFocus = (e) => {
+    if (e.type === "keydown" && e.key !== "Enter") return;
+
+    e.preventDefault();
+    const termo = termoBusca;
+
+    if (!termo.trim()) return;
+
+    closeMenu();
+
+    // --- MAPA DE INTENÇÕES ---
+    const searchMap = [
+      {
+        route: "/historia",
+        keywords: [
+          "historia",
+          "origem",
+          "papangu",
+          "cultura",
+          "antigo",
+          "mascara",
+        ],
+      },
+      {
+        route: "/servicos",
+        keywords: [
+          "servico",
+          "banheiro",
+          "seguranca",
+          "policia",
+          "saude",
+          "samu",
+          "achados",
+          "perdidos",
+          "comida",
+          "beber",
+        ],
+      },
+      {
+        route: "/faq",
+        keywords: [
+          "faq",
+          "duvida",
+          "pergunta",
+          "pode levar",
+          "horario",
+          "regras",
+          "cooler",
+        ],
+      },
+      {
+        route: "/#baile",
+        keywords: ["baile", "municipal", "clube", "ingresso", "festa"],
+      },
+      {
+        route: "/#blocos",
+        keywords: ["bloco", "cortejo", "troca", "agremiacao"],
+      },
+      {
+        route: "/#mapa",
+        keywords: [
+          "mapa",
+          "local",
+          "onde",
+          "rua",
+          "avenida",
+          "polo",
+          "localizacao",
+        ],
+      },
+      {
+        route: "/#blocos",
+        keywords: ["blocos", "bloco", "cortejo"],
+      },
+    ];
+
+    for (const item of searchMap) {
+      if (item.keywords.some((keyword) => isMatch(termo, keyword))) {
+        router.push(item.route);
+        setTermoBusca("");
+        return;
+      }
+    }
+
+    const artistaEncontrado = artistas.find((a) => isMatch(termo, a.nome));
+
+    const termosGenericProg = [
+      "atracao",
+      "banda",
+      "show",
+      "cantor",
+      "palco",
+      "programacao",
+      "agenda",
+    ];
+    const ehBuscaGenerica = termosGenericProg.some((k) => isMatch(termo, k));
+
+    if (ehBuscaGenerica || artistaEncontrado) {
+      const queryBusca = artistaEncontrado
+        ? artistaEncontrado.nome
+        : termoBusca;
+
+      router.push({
+        pathname: "/",
+        query: { busca: queryBusca },
+        hash: "programacao",
+      });
+      setTermoBusca("");
+      return;
+    }
+
+    alert(
+      `Não encontramos resultados para "${termoBusca}", tente com outro termo.`,
+    );
+  };
+
   useEffect(() => {
     let lastScrollY = window.scrollY;
-    let timeoutId;
+    let ticking = false;
 
-    const handleScroll = () => {
+    const updateNavbar = () => {
       const currentScrollY = window.scrollY;
 
-      if (currentScrollY > lastScrollY) {
+      if (currentScrollY > lastScrollY && currentScrollY > 100) {
         setIsVisible(false);
       } else {
         setIsVisible(true);
       }
-
       lastScrollY = currentScrollY;
 
       const sections = document.querySelectorAll("section");
       let currentSection = "";
+      const scrollMiddle = window.scrollY + window.innerHeight / 3;
+
       sections.forEach((section) => {
-        const sectionTop = section.offsetTop - 120;
+        const sectionTop = section.offsetTop;
         const sectionHeight = section.clientHeight;
+
         if (
-          window.scrollY >= sectionTop &&
-          window.scrollY < sectionTop + sectionHeight
+          scrollMiddle >= sectionTop &&
+          scrollMiddle < sectionTop + sectionHeight
         ) {
           currentSection = section.getAttribute("id");
         }
       });
-      setActiveSection(currentSection);
 
-      clearTimeout(timeoutId);
-      timeoutId = setTimeout(() => {
-        setIsVisible(true);
-      }, 500);
+      if (currentSection !== activeSection) {
+        setActiveSection(currentSection);
+      }
+
+      ticking = false;
     };
 
-    window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-      clearTimeout(timeoutId);
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(updateNavbar);
+        ticking = true;
+      }
     };
-  }, []);
+
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [activeSection]);
 
   return (
     <header>
       <nav
         id="navbar"
-        className={`navbar navbar-expand-lg fixed-top bg-white ${
+        className={`navbar navbar-expand-lg fixed-top ${
           isVisible ? "visible" : "hidden"
         }`}
       >
         <div className="container">
-          <a href="/">
+          <a href="/" className="navbar-brand">
             <Image
               className="m-navbar-marca"
               src={marca}
-              alt="marca são joão"
+              alt="marca carnaval"
               height={85}
             />
           </a>
@@ -93,48 +280,68 @@ export default function Navbar() {
             className={`navbar-collapse collapse ${isMenuOpen ? "show" : ""}`}
             id="navbar-collapse"
           >
-            <ul className="navbar-nav ms-auto align-items-center">
-              {[
-                { id: "apresentacao", label: "O SÃO JOÃO" },
-                { id: "programacao", label: "PROGRAMAÇÃO" },
-                { id: "mapa", label: "MAPA" },
-                { id: "faq", label: "FAQ" },
-              ].map(({ id, label }) => (
-                <li
-                  key={id}
-                  className={`nav-item m-2 ${
-                    activeSection === id ? "active" : ""
-                  }`}
-                >
-                  <a
-                    href={`/../#${id}`}
-                    className="text-nav p-2"
-                    onClick={() => {
-                      setActiveSection(id);
-                      closeMenu();
-                    }}
-                  >
-                    {label}
-                  </a>
-                </li>
-              ))}
-
+            <ul className="navbar-nav me-auto align-items-center">
               <li
-                className={`nav-item m-2 ${
-                  router.pathname === "/vitrine-criativa" ? "active" : ""
-                }`}
+                className={`nav-item m-2 ${activeSection === "programacao" ? "active" : ""}`}
               >
                 <a
-                  href="/vitrine-criativa"
+                  href="/../#programacao"
                   className="text-nav p-2"
-                  onClick={closeMenu}
+                  onClick={() => {
+                    setActiveSection("programacao");
+                    closeMenu();
+                  }}
                 >
-                  VITRINE CRIATIVA
+                  ATRAÇÕES
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${activeSection === "blocos" ? "active" : ""}`}
+              >
+                <a
+                  href="/../#blocos"
+                  className="text-nav p-2"
+                  onClick={() => {
+                    setActiveSection("blocos");
+                    closeMenu();
+                  }}
+                >
+                  BLOCOS
+                </a>
+              </li>
+              <li
+                className={`nav-item m-2 ${activeSection === "mapa" ? "active" : ""}`}
+              >
+                <a
+                  href="/../#mapa"
+                  className="text-nav p-2"
+                  onClick={() => {
+                    setActiveSection("mapa");
+                    closeMenu();
+                  }}
+                >
+                  MAPA
                 </a>
               </li>
             </ul>
 
-            <ul className="navbar-nav d-flex justify-content-center flex-row align-items-center ms-auto m-navbar-icones">
+            <div className="search-pill-container">
+              <div className="search-pill">
+                <input
+                  type="text"
+                  placeholder="Buscar..."
+                  className="search-input"
+                  value={termoBusca}
+                  onChange={(e) => setTermoBusca(e.target.value)}
+                  onKeyDown={handleSearchFocus}
+                />
+                <button className="search-btn" onClick={handleSearchFocus}>
+                  <i className="bx bx-search bx-sm"></i>
+                </button>
+              </div>
+            </div>
+
+            <ul className="navbar-nav ms-auto d-flex justify-content-center flex-row align-items-center m-navbar-icones">
               <li className="nav-item m-2">
                 <Link
                   href="https://www.facebook.com/saojoaonaserranegra/"
@@ -159,23 +366,6 @@ export default function Navbar() {
           </div>
         </div>
       </nav>
-
-      <style jsx>{`
-        #navbar {
-          transition: transform 0.3s ease-in-out;
-          transform: translateY(0);
-        }
-        #navbar.hidden {
-          transform: translateY(-100%);
-        }
-        #navbar.visible {
-          transform: translateY(0);
-        }
-        .nav-item.active a {
-          font-size: larger;
-          font-weight: bold;
-        }
-      `}</style>
     </header>
   );
 }

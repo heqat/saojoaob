@@ -1,0 +1,225 @@
+/* SEÇÃO PRINCIPAL */
+#servicos-uteis {
+  padding-top: 180px;
+  padding-bottom: 80px;
+  font-family: var(--fonte-apoio);
+  background-image: url("../public/bgazul3.jpg");
+  background-repeat: repeat;
+  background-size: 50%;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-title {
+  font-family: var(--fonte-principal);
+  font-size: 3rem;
+  color: #ed1a3b;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 0px white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* GRID */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 60px 30px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* CARTÃO */
+.service-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  padding: 35px 25px 25px 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: visible;
+  margin-top: 5px;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(237, 26, 59, 0.15);
+  border-color: #ed1a3b;
+  z-index: 5;
+}
+
+/* ELEMENTO FLUTUANTE (BASE) */
+.card-element {
+  position: absolute;
+  width: 130px;
+  /* BEM GRANDE */
+  height: 130px;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 8px rgba(0, 0, 0, 0.25));
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* --- POSIÇÕES ESPECÍFICAS (VARIAÇÕES) --- */
+
+.card-v1 .card-element {
+  top: 0px;
+  right: -20px;
+  transform: rotate(-15deg);
+}
+
+.card-v1:hover .card-element {
+  transform: scale(1.15) rotate(-25deg) translateY(-10px);
+}
+
+.card-v2 .card-element {
+  top: -40px;
+  right: -0px;
+  transform: rotate(15deg);
+}
+
+.card-v2:hover .card-element {
+  transform: scale(1.15) rotate(25deg) translateX(10px);
+}
+
+.card-v3 .card-element {
+  top: -40px;
+  right: -10px;
+  transform: rotate(-5deg);
+}
+
+.card-v3:hover .card-element {
+  transform: scale(1.15) rotate(-15deg) translateY(-5px);
+}
+
+.card-v4 .card-element {
+  top: -40px;
+  right: 10px;
+  transform: rotate(25deg);
+}
+
+.card-v4:hover .card-element {
+  transform: scale(1.15) rotate(35deg);
+}
+
+.card-v5 .card-element {
+  top: -55px;
+  right: -5px;
+  transform: rotate(-10deg);
+}
+
+.card-v5:hover .card-element {
+  transform: scale(1.15) rotate(-20deg);
+}
+
+.card-v6 .card-element {
+  width: 140px;
+  height: 140px;
+  top: -70px;
+  right: -20px;
+  transform: rotate(5deg);
+}
+
+.card-v6:hover .card-element {
+  transform: scale(1.2) rotate(0deg);
+}
+
+/* TEXTOS */
+.nome-servico {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ed1a3b;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  width: 70%;
+  /* Espaço para a imagem não cobrir texto */
+  line-height: 1.2;
+  position: relative;
+  z-index: 1;
+}
+
+.texto-servico {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #444;
+  text-align: left;
+  width: 100%;
+}
+
+/* EMERGÊNCIA CARD */
+.card-emergency {
+  background: linear-gradient(135deg, #ed1a3b, #c4122d);
+  grid-column: 1 / -1;
+  margin-top: 5px;
+}
+
+.card-emergency .nome-servico {
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.card-emergency .texto-servico {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.emergency-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+.emergency-item {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  border: 1.5px solid rgba(145, 145, 145, 0.9);
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2.2rem;
+  }
+
+  #servicos-uteis {
+    padding-top: 160px;
+  }
+
+  .services-grid {
+    gap: 40px 20px;
+  }
+
+  .card-emergency {
+    grid-column: auto;
+  }
+
+  /* Ajuste mobile dos elementos */
+  .card-element {
+    width: 100px !important;
+    height: 100px !important;
+    top: -25px !important;
+    right: 0px !important;
+  }
+}

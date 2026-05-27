@@ -1,4 +1,3 @@
-
 :root {
   --cor-vermelho-escuro: #9e0000;
   --cor-vermelho: #d10404;
@@ -12,18 +11,18 @@
   --cor-branco: #ffffff;
   --cor-cinza-escuro: #333333;
 
-  --fonte-principal: "Palamecia", sans-serif;
-  --fonte-apoio: "Morl", sans-serif;
+  --fonte-principal: "BabySchool", sans-serif;
+  --fonte-apoio: "Gabarito", sans-serif;
 }
 
 @font-face {
-  font-family: "Palamecia";
-  src: url("../assets/fonts/palamecia-titling.ttf");
+  font-family: "BabySchool";
+  src: url("../assets/fonts/BabySchoolItalic.ttf");
 }
 
 @font-face {
-  font-family: "Morl";
-  src: url("../assets/fonts/MorlRounded-Regular.otf");
+  font-family: "Gabarito";
+  src: url("../assets/fonts/Gabarito.ttf");
 }
 
 * {

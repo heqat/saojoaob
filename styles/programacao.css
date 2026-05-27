@@ -1,0 +1,234 @@
+/* Container das Abas de Dias */
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.tab-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-family: "Gabarito", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.tab-btn.active {
+  background: #ec671a; /* Laranja da marca */
+  border-color: #ec671a;
+  box-shadow: 0 4px 15px rgba(236, 103, 26, 0.4);
+  transform: scale(1.05);
+}
+
+/* Título do Palco */
+.palco-title {
+  color: #fff;
+  font-family: "BabySchool", sans-serif; /* Fonte do título */
+  font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  border-left: 5px solid #ec671a;
+  padding-left: 15px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Grid de Cards */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 3rem;
+}
+
+/* O Card Moderno */
+.prog-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  border-left: 8px solid #ec671a; /* Detalhe colorido na esquerda */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.prog-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.card-header-time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.time-badge {
+  background: #ec671a;
+  color: #222;
+  font-weight: 800;
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+}
+
+.genre-badge {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+  font-weight: bold;
+}
+
+.artist-name {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.2;
+  font-family: "Gabarito", sans-serif;
+}
+
+.card-footer {
+  margin-top: 15px;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 0.85rem;
+  color: #555;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Container que agrupa os Dias e o Filtro */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+  position: relative; /* Necessário para contexto de empilhamento */
+  z-index: 20;
+}
+
+/* --- ESTILO DO DROPDOWN (FILTRO) --- */
+/* --- ESTILO DO DROPDOWN (FILTRO) --- */
+
+.filter-wrapper {
+  position: relative; /* Contexto para o absoluto */
+  display: inline-block; /* Garante que o wrapper tenha o tamanho exato do botão */
+}
+
+/* Botão do Filtro (Pílula) */
+.filter-btn {
+  background: #ec671a;
+  color: white;
+  border: none;
+  padding: 10px 20px; /* Ajuste leve no padding */
+  border-radius: 50px;
+  font-family: "Gabarito", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Garante espaço entre texto e seta */
+  gap: 10px;
+  box-shadow: 0 4px 15px rgba(236, 103, 26, 0.3);
+  transition: all 0.3s ease;
+  min-width: 160px; /* Define uma largura mínima para o botão não ficar minúsculo */
+}
+
+.filter-btn:hover {
+  background: #d6560e;
+  transform: translateY(-2px);
+}
+
+/* A Lista Suspensa (Flutuante) */
+.filter-dropdown {
+  position: absolute;
+  top: calc(100% + 8px); /* Distância fixa e precisa do topo */
+  left: 0; /* Alinha a esquerda da lista com a esquerda do botão */
+
+  /* LÓGICA DE TAMANHO CORRIGIDA */
+  min-width: 100%; /* A lista nunca será mais estreita que o botão */
+  width: max-content; /* A lista cresce se o texto dentro for longo */
+  max-width: 90vw; /* Segurança para celular: não estoura a tela */
+
+  background: rgba(255, 255, 255, 0.98); /* Fundo mais sólido para leitura */
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Borda sutil */
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 8px 0;
+  list-style: none;
+  z-index: 100;
+
+  /* Animação */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1); /* Animação mais suave */
+}
+
+/* Classe para mostrar o menu */
+.filter-dropdown.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Itens da Lista */
+.filter-item {
+  padding: 10px 20px;
+  color: #444;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+}
+
+.filter-item:hover {
+  background: #fdf0e7; /* Laranja bem clarinho no hover */
+  color: #ec671a;
+}
+
+.filter-item.selected {
+  background: rgba(236, 103, 26, 0.1);
+  color: #ec671a;
+}
+
+.filter-item i {
+  font-size: 1.1rem;
+  margin-left: 10px;
+}
+
+.programacao-aviso {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 1rem;
+  font-weight: 500;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}

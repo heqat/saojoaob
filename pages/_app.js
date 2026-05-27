@@ -4,16 +4,15 @@ import "../styles/global.css";
 import "../styles/navbar.css";
 import "../styles/footer.css";
 import "../styles/index.css";
-import "../styles/card.css";
-
+import "../styles/homenageado.css";
+import "../styles/historia.css";
+import "../styles/servicos.css";
+import "../styles/faq.css";
+import "../styles/programacao.css";
+import "../styles/blocos.css";
 import Head from "next/head";
-import { useEffect } from "react";
 
 export default function App({ Component, pageProps }) {
-  useEffect(() => {
-    import("bootstrap/dist/js/bootstrap");
-  }, []);
-
   return (
     <>
       <Head>

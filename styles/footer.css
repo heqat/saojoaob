@@ -1,10 +1,11 @@
 .m-footer {
   background-color: white;
+  margin-top: 30px;
 }
 
 .m-titulo-informacoes {
   font-family: var(--fonte-principal);
-  color: var(--cor-verde-escuro);
+  color: #068f92;
   font-size: 1rem;
 }
 
@@ -14,11 +15,11 @@
   display: block;
   width: 30px;
   height: 1px;
-  background-color: var(--cor-verde-escuro);
+  background-color: #068f92;
 }
 
 .m-texto-informacoes {
-  color: var(--cor-verde-escuro);
+  color: #068f92;
   font-family: var(--fonte-apoio);
   font-size: 0.8rem;
 }
@@ -58,8 +59,18 @@
 }
 
 @media (max-width: 575px) {
-  .m-marca {
-    display: flex;
-    justify-content: center;
+  .divisoria-overlap {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin-bottom: -2vw;
+    margin-top: -2vw;
+  }
+
+  .divisoria-overlap img {
+    width: 100%;
+    height: 2rem;
+    display: block;
+    filter: drop-shadow(0px 10px 10px rgba(0, 0, 0, 0.3));
   }
 }
