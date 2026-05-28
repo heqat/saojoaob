@@ -312,13 +312,13 @@ export default function Navbar() {
               </li>
 
               <li
-                className={`nav-item m-2 ${activeSection === "vitrine" ? "active" : ""}`}
+                className={`nav-item m-2 ${activeSection === "vitrine-criativa" ? "active" : ""}`}
               >
                 <a
                   href="/../vitrine-criativa"
                   className="text-nav p-2"
                   onClick={() => {
-                    setActiveSection("vitrine");
+                    setActiveSection("vitrine-criativa");
                     closeMenu();
                   }}
                 >

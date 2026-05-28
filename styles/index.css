@@ -269,7 +269,6 @@
 
 .m-apresentacao-texto,
 .m-apresentacao-botao,
-.m-baile-texto,
 .texto-artista {
   font-size: 1.1rem;
   font-family: var(--fonte-apoio);
@@ -279,60 +278,6 @@
   text-align: justify;
   margin-bottom: 1rem;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-}
-
-/* SEÇÃO BAILE MUNICIPAL */
-#baile {
-  background-image: url("../public/bgamarelo1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  height: 100vh;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  align-items: center;
-  scroll-margin-top: 80px;
-}
-
-#baile::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.25),
-    rgba(0, 0, 0, 0.1)
-  );
-  backdrop-filter: blur(2px);
-  z-index: 1;
-  pointer-events: none;
-}
-
-.baile-viewport {
-  width: 100%;
-  overflow: hidden;
-  min-height: auto;
-  transition: height 0.4s ease-in-out;
-}
-
-.baile-slider-wrapper {
-  display: flex;
-  width: 200%;
-  height: 100%;
-  transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-  position: relative;
-  z-index: 2;
-}
-
-.baile-slide {
-  width: 50%;
-  min-height: 90vh;
-  padding: 40px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-shrink: 0;
 }
 
 /* ELEMENTOS GERAIS */
@@ -364,161 +309,6 @@
 .btn-corner-toggle:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(255, 128, 8, 0.5);
-}
-
-.logo-baile {
-  width: 100%;
-  max-width: 450px;
-  height: 200px;
-  background-image: url("../public/marcabaile.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  margin-bottom: 1.5rem;
-  filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
-}
-.m-baile-texto {
-  color: white;
-  font-weight: 500;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-shadow: 0 2px 4px rgba(0, 50, 100, 0.3);
-  margin-bottom: 2rem;
-  max-width: 90%;
-  text-align: justify;
-}
-
-.button-container-baile {
-  margin-bottom: 20px;
-}
-
-.m-btn-baile {
-  padding: 1rem 2.2rem;
-  color: #f38d29;
-  text-decoration: none;
-  border-radius: 50px;
-  background: white;
-  border: 2px solid #f38d29;
-  transition: 0.3s;
-  font-weight: 800;
-  text-transform: uppercase;
-  display: inline-block;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.m-btn-baile.destaque {
-  border: none;
-  color: white;
-  background: #f38d29;
-  box-shadow: 0 5px 20px rgba(248, 174, 27, 0.4);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.m-btn-baile.destaque:hover {
-  transform: translateY(-3px);
-  background: linear-gradient(135deg, #ff8008 0%, #ffc837 100%);
-  box-shadow: 0 8px 25px rgba(255, 128, 8, 0.5);
-}
-
-.m-btn-baile:not(.destaque):hover {
-  background: white;
-  color: #004e92;
-  border-color: white;
-  transform: translateY(-3px);
-}
-
-.m-btn-baile:hover {
-  background: white;
-  color: #3468b1;
-  border-color: white;
-  transform: translateY(-3px);
-}
-
-.baile-lineup-card {
-  width: 40vw;
-  height: 60vw;
-  margin: 0 auto;
-  background-image: url("../public/prog.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-}
-
-.baile-lineup-card:hover {
-  transform: rotate(0deg) scale(1.02);
-}
-
-.lineup-header {
-  background: rgba(0, 0, 0, 0.25);
-  padding: 18px;
-  text-align: center;
-  color: #00ffcc;
-  font-family: var(--fonte-principal);
-  font-size: 1.6rem;
-  letter-spacing: 1px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.lineup-list {
-  padding: 25px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
-.lineup-list span {
-  font-family: "Gabarito", sans-serif;
-  font-weight: 700;
-  font-size: 1.2rem;
-  color: #e0f7fa;
-  text-transform: uppercase;
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.15);
-  padding: 12px 0;
-  width: 100%;
-  text-align: center;
-}
-
-.lineup-list span:hover {
-  color: #00ffcc;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.lineup-list span:last-child {
-  border-bottom: none;
-}
-
-.lineup-footer {
-  text-align: center;
-  padding: 15px;
-  font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  background: rgba(0, 0, 0, 0.2);
-}
-
-.baile-card-vidro {
-  background: rgba(243, 141, 41, 0.85);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(236, 103, 26, 0.2);
-  border-radius: 30px;
-  padding: 40px;
-  width: 90%;
-  max-width: 1000px;
-  box-shadow: 0 20px 60px rgba(0, 10, 30, 0.6);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 400px;
-}
-
-.baile-controls {
-  margin-bottom: 40px;
-}
-.baile-tab-content {
-  width: 100%;
-  animation: fadeInSuave 0.5s ease;
 }
 
 .detalhes-duas-colunas {
@@ -902,39 +692,8 @@
     font-size: 1.5rem;
   }
 
-  .baile-slider-wrapper {
-    height: auto;
-  }
-
-  .baile-slide {
-    height: auto;
-  }
-
-  .logo-baile {
-    background-position: center;
-    margin: 0 auto 1.5rem auto;
-    height: 45vw;
-    width: 100%;
-  }
-  .m-baile-texto {
-    text-align: center;
-    max-width: 100%;
-  }
-  .button-container-baile {
-    justify-content: center;
-  }
   .col-lg-6 {
     text-align: center;
-  }
-
-  .baile-lineup-card {
-    width: 100vw;
-    height: 90vw;
-  }
-
-  .baile-card-vidro {
-    padding: 20px;
-    min-height: auto;
   }
 
   .detalhes-duas-colunas {
@@ -998,36 +757,5 @@
 
   .bloco-aviso {
     font-size: 1.2rem;
-  }
-
-  #baile {
-    height: auto !important;
-    min-height: auto !important;
-    overflow: visible !important;
-  }
-
-  .baile-slide {
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    align-items: center !important;
-    height: auto !important;
-    min-height: auto !important;
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-
-  .baile-slide .container,
-  .baile-slide .baile-card-vidro {
-    margin-top: 0 !important;
-    margin-bottom: 0 !important;
-    height: auto !important;
-  }
-
-  .baile-card-vidro {
-    width: 90% !important;
-    max-width: 400px;
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
 }

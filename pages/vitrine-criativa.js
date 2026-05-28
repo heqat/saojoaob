@@ -14,13 +14,6 @@ export default function VitrineCriativa() {
 
       <main className="vitrine-page">
         <div className="vitrine-container">
-          <div className="vitrine-header">
-            <h1 className="vitrine-title">Vitrine Criativa</h1>
-            <p className="vitrine-subtitle">
-              Tradição, Arte e Empreendedorismo
-            </p>
-          </div>
-
           <div className="vitrine-content-wrapper">
             {/* Coluna 1: Texto e Botão */}
             <div className="vitrine-info-card fade-in-animation">

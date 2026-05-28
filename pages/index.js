@@ -89,7 +89,6 @@ export default function Home() {
     .filter((item) => item.data === dataBlocoAtiva)
     .sort((a, b) => a.horario.localeCompare(b.horario));
 
-  // NOVO: Efeito 2: Fechar dropdown ao clicar fora
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -183,9 +182,9 @@ export default function Home() {
                     </p>
 
                     <div className="button-container justify-content-center mt-2">
-                      <a className="m-btn-historia" href="/historia">
+                      {/* <a className="m-btn-historia" href="/historia">
                         HISTÓRIA
-                      </a>
+                      </a> */}
                       <a className="m-btn-historia" href="/servicos">
                         SERVIÇOS
                       </a>
@@ -478,9 +477,11 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
+        {/* 
         <div className="divisoria-overlap">
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
+       
         <section id="patrocinio" className="py-4">
           <div className="container d-flex justify-content-center">
             <Image
@@ -497,6 +498,7 @@ export default function Home() {
             />
           </div>
         </section>
+         */}
         <div className="divisoria-overlap">
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
