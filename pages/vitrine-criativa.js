@@ -1,44 +1,76 @@
 import Head from "next/head";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import CarouselComponent from "../components/CarouselComponent";
-import styles from "../styles/styles.module.css";
 
-export default function VitrineCria() {
+export default function VitrineCriativa() {
   return (
     <>
       <Head>
-        <title>Vitrine Criativa</title>
-        <meta name="title" content="Vitrine Criativa" />
+        <title>Vitrine Criativa - São João na Serra Negra</title>
+        <meta name="title" content="Vitrine Criativa - São João" />
       </Head>
 
       <Navbar />
 
-      <main className={styles.responsiveMain}>
-        <div className={styles.textContainer}>
-          <h1 className={styles.title}>Vitrine Criativa</h1>
-          <p className={`${styles.justificado} ${styles.text}`}>
-            A Vitrine Criativa é uma iniciativa da Secretaria de Planejamento e Inovação de Bezerros, realizada em parceria com a Secretaria de Turismo e Cultura de Bezerros e o SEBRAE/PE. O projeto tem como objetivo promover a exposição e a comercialização de obras do artesanato local, fortalecendo a identidade cultural e impulsionando o desenvolvimento econômico do município.
+      <main className="vitrine-page">
+        <div className="vitrine-container">
+          <div className="vitrine-header">
+            <h1 className="vitrine-title">Vitrine Criativa</h1>
+            <p className="vitrine-subtitle">
+              Tradição, Arte e Empreendedorismo
+            </p>
+          </div>
 
-            Desde 2022, o projeto já realizou mais de 20 edições, inseridas nos principais eventos do calendário bezerrense, como o Carnaval, o São João e o Circuito das Estações. A ação oferece aos artesãos oportunidades de visibilidade, integração e conexão com novos públicos e mercados.<br /><br />
+          <div className="vitrine-content-wrapper">
+            {/* Coluna 1: Texto e Botão */}
+            <div className="vitrine-info-card fade-in-animation">
+              <p>
+                A <strong>Vitrine Criativa</strong> é uma iniciativa da
+                Secretaria de Planejamento e Inovação de Bezerros, realizada em
+                parceria com a Secretaria de Turismo e Cultura de Bezerros e o
+                SEBRAE/PE. O projeto tem como objetivo promover a exposição e a
+                comercialização de obras do artesanato local, fortalecendo a
+                identidade cultural e impulsionando o desenvolvimento econômico
+                do município.
+              </p>
+              <p>
+                Durante o São João na Serra Negra, um dos eventos mais
+                tradicionais do município, a Vitrine se destaca como espaço
+                estratégico para apresentação e venda das peças artesanais,
+                atraindo visitantes de diversas regiões do Brasil e até do
+                exterior.
+              </p>
+              <p>
+                A <strong>Vitrine Criativa – Edição São João 2026</strong> está
+                localizada no Polo de Eventos da Serra Negra. Conheça os
+                expositores e venha prestigiar o talento e a originalidade dos
+                nossos artesãos.
+              </p>
 
-            Durante o São João na Serra Negra, um dos eventos mais tradicionais do município, a Vitrine Criativa se destaca como espaço estratégico para apresentação e venda das peças artesanais, atraindo visitantes de diversas regiões do Brasil e até do exterior. A ação fortalece a cadeia produtiva do artesanato, incentiva a criação de novos produtos e fomenta a inovação no setor.<br /><br />
+              <a href="/#mapa" className="vitrine-btn-mapa">
+                <i className="bx bx-map"></i> Ver no Mapa
+              </a>
+            </div>
 
-            Mais que um espaço de vendas, a Vitrine Criativa consolida-se como política pública de valorização cultural, incentivo ao empreendedorismo e fortalecimento da economia criativa.<br /><br />
-
-            A Vitrine Criativa – Edição São João 2025 está localizada no Polo de Eventos da Serra Negra. Acesse o
-            <a href="/#mapa" className={`${styles.mapaCor} map-link`}>
-              {" "}
-               mapa
-            </a>, conheça os expositores e venha prestigiar o talento e a originalidade dos nossos artesãos.<br /><br />
-          </p>
-        </div>
-        <div className={styles.carouselContainer}>
-          <CarouselComponent />
+            {/* Coluna 2: Galeria Mosaico (Bento Grid) */}
+            <div className="vitrine-bento-grid fade-in-animation">
+              <div className="bento-item bento-large">
+                <img src="/vitrine1.jpg" alt="Artesanato em Destaque" />
+              </div>
+              <div className="bento-item">
+                <img src="/vitrine2.jpg" alt="Arte Local 1" />
+              </div>
+              <div className="bento-item">
+                <img src="/vitrine3.jpg" alt="Arte Local 2" />
+              </div>
+            </div>
+          </div>
         </div>
       </main>
 
-      <div className="divisoria"></div>
+      <div className="divisoria-overlap">
+        <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
+      </div>
       <Footer />
     </>
   );

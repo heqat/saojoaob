@@ -9,16 +9,6 @@ import { artistas } from "../components/data/artistasConfirmados";
 import { programacaoGeral } from "../components/programacaoCompleta";
 import { blocosData } from "../components/blocosData";
 
-import marca from "../public/marcasembezerros.png";
-import marcaFundarpe from "../public/marca-fundarpe.png";
-import marcaEmpetur from "../public/marca-empetur.png";
-import marcaSecCultura from "../public/marca-seccultura.png";
-import marcaSecTurismo from "../public/marca-secturismo.png";
-import marcaDtel from "../public/marca-dtel.png";
-import marcaSesc from "../public/marca-sesc.png";
-import marcaCoca from "../public/marca-cocacola.png";
-import marcaPitu from "../public/marca-pitu.png";
-import marcaDevassa from "../public/marca-devassa.png";
 import marcaPrefeitura from "../public/marca-prefeitura.png";
 
 export default function Home() {
@@ -120,8 +110,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Carnaval 2026 - Bezerros-PE</title>
-        <meta name="title" content="Carnaval 2026 - Bezerros-PE"></meta>
+        <title>São João 2026 - Bezerros-PE</title>
+        <meta name="title" content="São João 2026 - Bezerros-PE"></meta>
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
@@ -155,11 +145,11 @@ export default function Home() {
               </button>
               <button
                 className={`toggle-btn ${
-                  abaAtiva === "homenageado" ? "ativo" : ""
+                  abaAtiva === "embaixador" ? "ativo" : ""
                 }`}
-                onClick={() => setAbaAtiva("homenageado")}
+                onClick={() => setAbaAtiva("embaixador")}
               >
-                🎉 HOMENAGEADA
+                🎉 EMBAIXADOR
               </button>
             </div>
           </div>
@@ -168,21 +158,31 @@ export default function Home() {
             {abaAtiva === "apresentacao" && (
               <div className="fade-in-animation w-100">
                 <div className="row align-items-center justify-content-center">
-                  <div className="col-lg-6 col-12 text-white text-center mb-4 mb-lg-0">
-                    <div className="logog mx-auto mb-3"></div>
+                  <div className="col-lg-6 col-12 text-white text-center mb-3 mb-lg-0">
+                    <div className="logog mx-auto mb-1"></div>
+
                     <p className="m-apresentacao-texto">
-                      Bem-vindos ao maior e melhor carnaval do interior do
-                      Brasil: o Carnaval do Papangu em Bezerros - Pernambuco.
-                      Repleto de “História, Movimento e Encanto”, o nosso
-                      carnaval é autêntico, multicultural, seguro, familiar,
-                      inclusivo, sustentável e diverso.
+                      Distante 100 km do Recife, o município de Bezerros, no
+                      Agreste, também é conhecido como um dos polos juninos mais
+                      autênticos do interior, mantendo viva a tradição do forró
+                      pé de serra. O São João mais frio, mais alto e mais
+                      aconchegante do mundo, na Serra Negra, tem como tema
+                      "DAQUI DO ALTO, TUDO É MAIS BONITO!", uma referência às
+                      belas paisagens naturais, ao sabor peculiar das comidas
+                      típicas, a cultura dos grupos culturais e os pontos
+                      turísticos que atraem milhares de pessoas todos os anos.
                     </p>
+
                     <p className="m-apresentacao-texto">
-                      Você é nosso convidado especial para conhecer de perto a
-                      magia dos nossos papangus.
-                      <strong> BEZERROS ESPERA POR VOCÊ!!! </strong>
+                      São aproximadamente 10 km entre a cidade e o Pólo
+                      Cultural. Com temperatura média de 16 graus e sensação
+                      térmica que chega a 12 graus, o São João na Serra Negra
+                      tornou-se um evento consolidado no calendário festivo do
+                      estado.
+                      <strong> A SERRA NEGRA ESPERA POR VOCÊ!!! </strong>
                     </p>
-                    <div className="button-container justify-content-center mt-3">
+
+                    <div className="button-container justify-content-center mt-2">
                       <a className="m-btn-historia" href="/historia">
                         HISTÓRIA
                       </a>
@@ -223,7 +223,7 @@ export default function Home() {
                         <iframe
                           className="hero-video-frame"
                           src="https://www.youtube.com/embed/U3bWmghjFoE?si=osIz3G4vE0rtyJRe?autoplay=1"
-                          title="Vídeo Carnaval Bezerros"
+                          title="Vídeo São João Bezerros"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
                         ></iframe>
@@ -234,7 +234,7 @@ export default function Home() {
               </div>
             )}
 
-            {abaAtiva === "homenageado" && (
+            {abaAtiva === "embaixador" && (
               <div className="fade-in-animation w-100 h-100">
                 <div className="row align-items-center justify-content-center h-100">
                   <div className="col-lg-12 col-12 d-flex justify-content-center">
@@ -292,7 +292,6 @@ export default function Home() {
         <div className="divisoria-overlap">
           <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
         </div>
-        /*
         <section
           id="programacao"
           className="py-5"

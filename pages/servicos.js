@@ -6,10 +6,10 @@ export default function ServicosUteis() {
   return (
     <>
       <Head>
-        <title>Nossos Serviços - Carnaval do Papangu 2026</title>
+        <title>Nossos Serviços - São João na Serra Negra 2026</title>
         <meta
           name="title"
-          content="Nossos Serviços - Carnaval do Papangu 2026"
+          content="Nossos Serviços - São João na Serra Negra 2026"
         />
       </Head>
 
@@ -19,84 +19,89 @@ export default function ServicosUteis() {
         <section id="servicos-uteis">
           <div className="services-grid">
             {/* ITEM 1 - VITRINE */}
-            <div className="service-card card-v1">
+            <div className="service-card">
               <img
-                src="/ppg1.png"
-                className="card-element"
-                alt="Elemento Decorativo"
+                src="/BANDEIRA-01.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
               />
               <p className="nome-servico">VITRINE CRIATIVA</p>
               <p className="texto-servico">
                 Espaço dedicado para a comercialização do artesanato local, com
-                foco em produtos voltados para as festividades carnavalescas ou
-                de grande apelo cultural. A ação é apoiada pela Sala do
-                Empreendedor de Bezerros, em parceria com o SEBRAE.
+                foco em produtos de grande apelo cultural. A ação é apoiada pela
+                Sala do Empreendedor de Bezerros, em parceria com o SEBRAE.
                 <br />
                 <br />
-                <strong>Local:</strong> Rua Dr. José Mariano, ao lado da Praça
-                da Bandeira e da Igreja Matriz.
+                <strong>Local:</strong> Polo de Eventos da Serra Negra.
               </p>
             </div>
 
             {/* ITEM 2 - CAT */}
-            <div className="service-card card-v2">
-              <img src="/ppg2.png" className="card-element" alt="Papangu" />
+            <div className="service-card">
+              <img
+                src="/BANDEIRA-02.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
+              />
               <p className="nome-servico">CENTRO DE TURISMO (CAT)</p>
               <p className="texto-servico">
                 O Centro de Atendimento ao Turista é um ponto de apoio e
-                informação ao visitante durante os quatro dias de carnaval.
+                informação ao visitante durante os dias de festa.
                 <br />
                 <br />
-                <strong>Local:</strong> Junto à Vitrine Criativa, ao lado da
-                Praça da Bandeira e da Igreja Matriz.
+                <strong>Local:</strong> Entrada do Polo Cultural.
               </p>
             </div>
 
             {/* ITEM 3 - RECICLAR */}
-            <div className="service-card card-v3">
-              <img src="/ppg3.png" className="card-element" alt="Eco Folia" />
+            <div className="service-card">
+              <img
+                src="/BANDEIRA-03.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
+              />
               <p className="nome-servico">RECICLAR É MASSA</p>
               <p className="texto-servico">
-                Projeto do Eco Folia voltado à educação ambiental, incentivo à
-                reciclagem e apoio aos recicladores que atuam durante os dias de
-                carnaval, coletando e separando o lixo gerado pelos foliões.
+                Projeto voltado à educação ambiental, incentivo à reciclagem e
+                apoio aos recicladores que atuam durante os dias de São João,
+                coletando e separando o lixo gerado pelos forrozeiros.
                 <br />
                 <br />
-                <strong>Local:</strong> Ao lado do CAT, no corredor de estandes
-                de serviços e artesanato.
+                <strong>Local:</strong> Corredor de estandes de serviços.
                 <br />
                 <strong>Horário:</strong> 09h às 22h.
               </p>
             </div>
 
             {/* ITEM 4 - CIDADANIA */}
-            <div className="service-card card-v4">
-              <img src="/ppg4.png" className="card-element" alt="Cidadania" />
+            <div className="service-card">
+              <img
+                src="/BANDEIRA-01.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
+              />
               <p className="nome-servico">CENTRAL CIDADANIA</p>
               <p className="texto-servico">
                 Oferece serviços sociais com equipe psicossocial para receber
                 denúncias e orientar sobre violação de direitos (mulher, idoso,
-                criança, LGBTQIAPN+). Também disponibiliza materiais de
-                sensibilização e prevenção das campanhas do ciclo carnavalesco.
+                criança, LGBTQIAPN+).
                 <br />
-                <br />
-                <strong>Local:</strong> Rua Dr. José Mariano, junto à Vitrine
-                Criativa, ao lado da Praça da Bandeira.
                 <br />
                 <strong>Contato:</strong> (81) 99970-2943.
               </p>
             </div>
 
             {/* ITEM 5 - SAÚDE */}
-            <div className="service-card card-v5">
-              <img src="/ppg5.png" className="card-element" alt="Saúde" />
+            <div className="service-card">
+              <img
+                src="/BANDEIRA-02.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
+              />
               <p className="nome-servico">SAÚDE E VIGILÂNCIA</p>
               <p className="texto-servico">
                 As urgências relacionadas à saúde devem ser encaminhadas ao
-                ponto de atendimento específico durante o carnaval.
-                <br />
-                <strong>Ponto de Atendimento:</strong> Rua da Matriz, em frente
-                às Lojas Americanas.
+                ponto de atendimento específico na Serra Negra.
                 <br />
                 <br />
                 <strong>Vigilância:</strong> Fiscaliza normas sanitárias e de
@@ -108,13 +113,7 @@ export default function ServicosUteis() {
             </div>
 
             {/* ITEM 6 - EMERGÊNCIA */}
-            <div className="service-card card-emergency card-v6">
-              <img
-                src="/ppg6.png"
-                className="card-element"
-                style={{ filter: "brightness(0) invert(1)" }}
-                alt="Emergência"
-              />
+            <div className="service-card card-emergency">
               <p className="nome-servico">NÚMEROS ÚTEIS</p>
               <div className="emergency-list">
                 <div className="emergency-item">SAMU: 192</div>
@@ -127,12 +126,9 @@ export default function ServicosUteis() {
             </div>
           </div>
         </section>
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
-        <div className="divisoria"></div>
+
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }

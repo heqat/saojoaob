@@ -295,20 +295,7 @@ export default function Navbar() {
                   ATRAÇÕES
                 </a>
               </li>
-              <li
-                className={`nav-item m-2 ${activeSection === "blocos" ? "active" : ""}`}
-              >
-                <a
-                  href="/../#blocos"
-                  className="text-nav p-2"
-                  onClick={() => {
-                    setActiveSection("blocos");
-                    closeMenu();
-                  }}
-                >
-                  BLOCOS
-                </a>
-              </li>
+
               <li
                 className={`nav-item m-2 ${activeSection === "mapa" ? "active" : ""}`}
               >
@@ -321,6 +308,21 @@ export default function Navbar() {
                   }}
                 >
                   MAPA
+                </a>
+              </li>
+
+              <li
+                className={`nav-item m-2 ${activeSection === "vitrine" ? "active" : ""}`}
+              >
+                <a
+                  href="/../vitrine-criativa"
+                  className="text-nav p-2"
+                  onClick={() => {
+                    setActiveSection("vitrine");
+                    closeMenu();
+                  }}
+                >
+                  VITRINE CRIATIVA
                 </a>
               </li>
             </ul>

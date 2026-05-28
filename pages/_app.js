@@ -10,6 +10,7 @@ import "../styles/servicos.css";
 import "../styles/faq.css";
 import "../styles/programacao.css";
 import "../styles/blocos.css";
+import "../styles/vitrine.css";
 import Head from "next/head";
 
 export default function App({ Component, pageProps }) {
