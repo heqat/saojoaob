@@ -77,9 +77,7 @@
 .hero-interativo .col-lg-6.text-white {
   margin-top: -2rem;
 }
-.logog {
-  margin-top: -1rem;
-}
+
 .button-container {
   margin-bottom: 2rem;
 }
@@ -170,17 +168,13 @@
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-/* ELEMENTOS GRÁFICOS E LOGOS */
-.logog {
-  width: 280px;
-  height: 180px;
-  margin: 0 auto;
-  background-image: url("../public/logo-grande.png");
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
+.img-logo-principal {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
 
+  display: block;
+}
 /* BOTÕES E CONTROLES (Toggle) */
 .button-container {
   display: flex;
@@ -661,11 +655,6 @@
     min-height: 100vh;
     padding-top: 120px;
     padding-bottom: 5rem;
-  }
-  .logog {
-    width: 220px;
-    height: 130px;
-    margin: 0 auto 1rem auto;
   }
   .m-apresentacao-texto {
     text-align: center;

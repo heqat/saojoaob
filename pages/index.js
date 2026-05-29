@@ -111,14 +111,7 @@ export default function Home() {
       <Head>
         <title>São João 2026 - Bezerros-PE</title>
         <meta name="title" content="São João 2026 - Bezerros-PE"></meta>
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        />
-        <link
-          href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
-          rel="stylesheet"
-        />
+        <link rel="preload" href="/logo-grande.png" as="image" />
       </Head>
 
       <Navbar />
@@ -158,8 +151,15 @@ export default function Home() {
               <div className="fade-in-animation w-100">
                 <div className="row align-items-center justify-content-center">
                   <div className="col-lg-6 col-12 text-white text-center mb-3 mb-lg-0">
-                    <div className="logog mx-auto mb-1"></div>
-
+                    <Image
+                      src="/logo-grande.png"
+                      alt="Logo São João na Serra Negra"
+                      width={250}
+                      height={130}
+                      priority
+                      loading="eager"
+                      className="mx-auto mb-1 img-logo-principal"
+                    />
                     <p className="m-apresentacao-texto">
                       Distante 100 km do Recife, o município de Bezerros, no
                       Agreste, também é conhecido como um dos polos juninos mais

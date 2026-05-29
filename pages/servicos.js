@@ -18,24 +18,6 @@ export default function ServicosUteis() {
       <main>
         <section id="servicos-uteis">
           <div className="services-grid">
-            {/* ITEM 1 - VITRINE */}
-            <div className="service-card">
-              <img
-                src="/BANDEIRA-01.png"
-                className="card-bandeira"
-                alt="Bandeirinhas"
-              />
-              <p className="nome-servico">VITRINE CRIATIVA</p>
-              <p className="texto-servico">
-                Espaço dedicado para a comercialização do artesanato local, com
-                foco em produtos de grande apelo cultural. A ação é apoiada pela
-                Sala do Empreendedor de Bezerros, em parceria com o SEBRAE.
-                <br />
-                <br />
-                <strong>Local:</strong> Polo de Eventos da Serra Negra.
-              </p>
-            </div>
-
             {/* ITEM 2 - CAT */}
             <div className="service-card">
               <img
@@ -112,7 +94,7 @@ export default function ServicosUteis() {
               </p>
             </div>
 
-            {/* ITEM 6 - EMERGÊNCIA */}
+            {/* ITEM 6 - EMERGÊNCIA 
             <div className="service-card card-emergency">
               <p className="nome-servico">NÚMEROS ÚTEIS</p>
               <div className="emergency-list">
@@ -123,7 +105,9 @@ export default function ServicosUteis() {
                 <div className="emergency-item">BOMBEIROS: 193</div>
                 <div className="emergency-item">POLÍCIA: 190</div>
               </div>
+              
             </div>
+            */}
           </div>
         </section>
 
