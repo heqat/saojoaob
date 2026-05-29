@@ -61,9 +61,8 @@ export default function VitrineCriativa() {
         </div>
       </main>
 
-      <div className="divisoria-overlap">
-        <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-      </div>
+      <div className="divisoria"></div>
+
       <Footer />
     </>
   );

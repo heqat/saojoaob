@@ -11,18 +11,18 @@
   --cor-branco: #ffffff;
   --cor-cinza-escuro: #333333;
 
-  --fonte-principal: "BabySchool", sans-serif;
-  --fonte-apoio: "Gabarito", sans-serif;
+  --fonte-principal: "Cactus", sans-serif;
+  --fonte-apoio: "MorlRounded", sans-serif;
 }
 
 @font-face {
-  font-family: "BabySchool";
-  src: url("../assets/fonts/BabySchoolItalic.ttf");
+  font-family: "Cactus";
+  src: url("../assets/fonts/CactusRegular.otf");
 }
 
 @font-face {
-  font-family: "Gabarito";
-  src: url("../assets/fonts/Gabarito.ttf");
+  font-family: "MorlRounded";
+  src: url("../assets/fonts/MorlRounded-Regular.otf");
 }
 
 * {

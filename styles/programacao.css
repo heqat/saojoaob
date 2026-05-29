@@ -13,7 +13,7 @@
   color: white;
   padding: 10px 25px;
   border-radius: 50px;
-  font-family: "Gabarito", sans-serif;
+  font-family: var(--fonte-apoio);
   font-weight: bold;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -34,7 +34,7 @@
 /* Título do Palco */
 .palco-title {
   color: #fff;
-  font-family: "BabySchool", sans-serif; /* Fonte do título */
+  font-family: var(--fonte-principal); /* Fonte do título */
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -103,7 +103,7 @@
   color: #1a1a1a;
   margin: 0;
   line-height: 1.2;
-  font-family: "Gabarito", sans-serif;
+  font-family: var(--fonte-apoio);
 }
 
 .card-footer {
@@ -144,7 +144,7 @@
   border: none;
   padding: 10px 20px; /* Ajuste leve no padding */
   border-radius: 50px;
-  font-family: "Gabarito", sans-serif;
+  font-family: var(--fonte-apoio);
   font-weight: bold;
   cursor: pointer;
   display: flex;

@@ -110,6 +110,7 @@ export default function ServicosUteis() {
             */}
           </div>
         </section>
+        <div className="divisoria"></div>
 
         <Footer />
       </main>

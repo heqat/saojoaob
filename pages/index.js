@@ -288,9 +288,8 @@ export default function Home() {
             <i className="bx bx-chevron-down bx-fade-down display-1 text-white"></i>
           </button>
         </section>
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
+        <div className="divisoria"></div>
+
         <section
           id="programacao"
           className="py-5"
@@ -461,9 +460,8 @@ export default function Home() {
           </div>
         </section>
         */}
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
+        <div className="divisoria"></div>
+
         <section id="mapa">
           <div className="d-flex flex-column justify-content-center align-items-center m-container-mapa">
             <h2 className="m-titulo-secao mt-4 mb-4">
@@ -499,9 +497,7 @@ export default function Home() {
           </div>
         </section>
          */}
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
+        <div className="divisoria"></div>
       </main>
       <Footer />
     </>
