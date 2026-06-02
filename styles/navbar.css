@@ -5,7 +5,7 @@
   background-position: center;
   background-attachment: fixed;
   transition: transform 0.3s ease-in-out;
-  padding-bottom: 5px;
+  padding-bottom: 2px;
 }
 
 #navbar.hidden {
