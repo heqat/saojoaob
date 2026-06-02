@@ -161,24 +161,24 @@ export default function Home() {
                       className="mx-auto mb-1 img-logo-principal"
                     />
                     <p className="m-apresentacao-texto">
-                      Distante 100 km do Recife, o município de Bezerros, no
-                      Agreste, também é conhecido como um dos polos juninos mais
-                      autênticos do interior, mantendo viva a tradição do forró
-                      pé de serra. O São João mais frio, mais alto e mais
-                      aconchegante do mundo, na Serra Negra, tem como tema
-                      "DAQUI DO ALTO, TUDO É MAIS BONITO!", uma referência às
-                      belas paisagens naturais, ao sabor peculiar das comidas
-                      típicas, a cultura dos grupos culturais e os pontos
-                      turísticos que atraem milhares de pessoas todos os anos.
+                      “Daqui do alto, tudo é mais bonito!” - É com essa certeza
+                      que Bezerros promove mais uma edição do São João mais
+                      autêntico do interior, com valorização da arte, cultura,
+                      história e tradição. O São João na Serra Negra atrai,
+                      todos os anos, milhares de turistas, visitantes e
+                      forrozeiros de Pernambuco, do Brasil e do mundo que buscam
+                      aproveitar a tradicionalidade do forró pé-de-serra,
+                      atrelado ao clima frio, alto e aconchegante que só a Serra
+                      Negra sabe oferecer. Com temperatura média de 16 graus e
+                      sensação térmica que chega a 12 graus, a festividade conta
+                      com oito dias de festas, nas datas de 13, 14, 20, 21, 23,
+                      24, 27 e 28 de junho.
                     </p>
 
                     <p className="m-apresentacao-texto">
-                      São aproximadamente 10 km entre a cidade e o Pólo
-                      Cultural. Com temperatura média de 16 graus e sensação
-                      térmica que chega a 12 graus, o São João na Serra Negra
-                      tornou-se um evento consolidado no calendário festivo do
-                      estado.
-                      <strong> A SERRA NEGRA ESPERA POR VOCÊ!!! </strong>
+                      Bezerros espera por você de braços abertos para vivenciar
+                      o São João mais alto, mais frio e mais aconchegante do
+                      mundo!!!
                     </p>
 
                     <div className="button-container justify-content-center mt-2">
@@ -221,7 +221,7 @@ export default function Home() {
                       ) : (
                         <iframe
                           className="hero-video-frame"
-                          src="https://www.youtube.com/embed/U3bWmghjFoE?si=osIz3G4vE0rtyJRe?autoplay=1"
+                          src="https://www.youtube.com/embed/arN2FUfL4gU?si=cqnBlgDQFbUCCR4z&autoplay=1"
                           title="Vídeo São João Bezerros"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                           allowFullScreen
@@ -244,32 +244,32 @@ export default function Home() {
                       <div className="hero-homenageado-card text-white text-center">
                         <div className="homenageado-header">
                           <div className="homenageado-nome">
-                            <h3>MILEIDE</h3>
+                            <h3>SANTANNA</h3>
+                            <div className="homenageado-titulo">O Cantador</div>
                           </div>
 
                           <div className="homenageado-spacer"></div>
 
                           <div className="homenageado-selo">
                             <span className="badge-patrimonio">
-                              HOMENAGEADA 2026
+                              EMBAIXADOR 2026
                             </span>
                           </div>
                         </div>
 
                         <div className="hero-homenageado-texto">
                           <p className="texto-artista">
-                            O Carnaval do Papangu 2026 presta homenagem a
-                            Mileide Santos, artista da terra que comanda o grupo
-                            FolcPopular há 25 anos. À frente de um projeto
-                            transformador, Mileide impacta a vida de pessoas
-                            apaixonadas pela dança e pela cultura popular, que
-                            ajudam a embalar o maior e melhor carnaval do
-                            interior do Brasil.
-                          </p>
-                          <p className="texto-artista">
-                            Bezerros lhe espera de braços abertos para curtir
-                            com a gente uma festa plural, feita para todos os
-                            públicos e para todas as formas de viver o Carnaval.
+                            O Embaixador Oficial do São João na Serra Negra em
+                            2026 é o artista Santanna - O Cantador. Nascido em
+                            Juazeiro do Norte, no Ceará, em 29 de fevereiro de
+                            1960, Cícero Pereira de Souza, consagrado como
+                            Santanna, nosso embaixador representa a música
+                            nordestina na autenticidade e originalidade do
+                            verdadeiro forró. Cantor e compositor, com mais de
+                            100 mil cópias vendidas do CD “Xote Pé de Serra”,
+                            Santanna é considerado um dos maiores artistas
+                            brasileiro do forró, tendo suas canções celebradas
+                            em várias regiões do país.
                           </p>
                         </div>
                       </div>

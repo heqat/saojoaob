@@ -3,7 +3,7 @@
   padding-top: 150px;
   padding-bottom: 80px;
   font-family: var(--fonte-apoio);
-  background-image: url("../public/bgazul3.jpg");
+  background-image: url("../public/bgazul2.jpg");
   background-repeat: repeat;
   background-size: 100%;
   background-position: center;
@@ -37,7 +37,7 @@
   gap: 20px;
 }
 
-/* O CARTÃO (ACORDEÃO) */
+/* O CARTÃO */
 .faq-item {
   background: rgba(255, 255, 255, 0.85);
   backdrop-filter: blur(12px);
@@ -55,14 +55,14 @@
   border-color: #f5821f;
 }
 
-/* ESTADO ATIVO (ABERTO) */
+/* ESTADO ATIVO */
 .faq-item.active {
   background: white;
-  border-color: #ed1a3b;
+  border-color: #fd4600;
   box-shadow: 0 10px 25px rgba(237, 26, 59, 0.15);
 }
 
-/* A PERGUNTA (CABEÇALHO CLICÁVEL) */
+/* A PERGUNTA */
 .faq-question {
   width: 100%;
   padding: 20px 25px;
@@ -84,10 +84,9 @@
 }
 
 .faq-item.active .question-text {
-  color: #ed1a3b;
+  color: #fd4600;
 }
 
-/* ÍCONE (+ / -) */
 .icon-toggle {
   font-size: 1.5rem;
   color: #f5821f;
@@ -98,8 +97,8 @@
 }
 
 .faq-item.active .icon-toggle {
-  transform: rotate(135deg); /* Gira e vira um X */
-  color: #ed1a3b;
+  transform: rotate(135deg);
+  color: #fd4600;
 }
 
 /* A RESPOSTA */

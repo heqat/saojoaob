@@ -25,10 +25,12 @@ export default function ServicosUteis() {
                 className="card-bandeira"
                 alt="Bandeirinhas"
               />
-              <p className="nome-servico">CENTRO DE TURISMO (CAT)</p>
+              <p className="nome-servico">VITRINE CRIATIVA</p>
               <p className="texto-servico">
-                O Centro de Atendimento ao Turista é um ponto de apoio e
-                informação ao visitante durante os dias de festa.
+                Espaço dedicado para a comercialização do artesanato local, com
+                foco em produtos voltados para as festividades carnavalescas ou
+                de grande apelo cultural. A ação é apoiada pela Sala do
+                Empreendedor de Bezerros, em parceria com o SEBRAE.
                 <br />
                 <br />
                 <strong>Local:</strong> Entrada do Polo Cultural.
@@ -49,9 +51,7 @@ export default function ServicosUteis() {
                 coletando e separando o lixo gerado pelos forrozeiros.
                 <br />
                 <br />
-                <strong>Local:</strong> Corredor de estandes de serviços.
-                <br />
-                <strong>Horário:</strong> 09h às 22h.
+                Estará disponível durante todo o evento.
               </p>
             </div>
 
@@ -62,7 +62,7 @@ export default function ServicosUteis() {
                 className="card-bandeira"
                 alt="Bandeirinhas"
               />
-              <p className="nome-servico">CENTRAL CIDADANIA</p>
+              <p className="nome-servico">CENTRAL CIDADANIA/PLANTÃO SOCIAL</p>
               <p className="texto-servico">
                 Oferece serviços sociais com equipe psicossocial para receber
                 denúncias e orientar sobre violação de direitos (mulher, idoso,
@@ -94,20 +94,20 @@ export default function ServicosUteis() {
               </p>
             </div>
 
-            {/* ITEM 6 - EMERGÊNCIA 
-            <div className="service-card card-emergency">
-              <p className="nome-servico">NÚMEROS ÚTEIS</p>
-              <div className="emergency-list">
-                <div className="emergency-item">SAMU: 192</div>
-                <div className="emergency-item">
-                  SAMU LOCAL: (81)3727-8350 OU (81)98384-4303
-                </div>
-                <div className="emergency-item">BOMBEIROS: 193</div>
-                <div className="emergency-item">POLÍCIA: 190</div>
-              </div>
-              
+            <div className="service-card">
+              <img
+                src="/BANDEIRA-03.png"
+                className="card-bandeira"
+                alt="Bandeirinhas"
+              />
+              <p className="nome-servico">CAMAROTE DA ACESSIBILIDADE</p>
+              <p className="texto-servico">
+                O Espaço da Acessibilidade é uma área dedicada exclusivamente
+                para atender pessoas com alguma deficiência, gestantes e idosos.
+                O espaço assegura que o São João na Serra Negra seja inclusivo e
+                plural para todos os forrozeiros.
+              </p>
             </div>
-            */}
           </div>
         </section>
         <div className="divisoria"></div>

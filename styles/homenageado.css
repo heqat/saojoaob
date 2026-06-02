@@ -1,12 +1,12 @@
 .hero-homenageado-card {
-  margin-top: 80px;
-  background-color: #f5821f;
+  background-color: #2d4cff;
   border-radius: 28px;
   padding: 140px 30px 20px;
-  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7),
+  box-shadow:
+    0 25px 60px rgba(0, 0, 0, 0.7),
     inset 0 0 0 1px rgba(255, 255, 255, 0.05);
   margin-bottom: 40px;
-  margin-top: 7vw;
+  margin-top: 8vw;
 }
 
 .hero-homenageado-wrapper {
@@ -20,12 +20,12 @@
 
 .hero-homenageado-foto {
   position: absolute;
-  margin-top: 2vw;
-  top: -7.7vw;
-  width: 260px;
-  height: auto;
+  margin-top: 5vw;
+  top: -6.5vw;
+  width: 280px;
+  height: 280px;
   aspect-ratio: 3 / 4;
-  background-image: url("../public/mileidefoto.png");
+  background-image: url("../public/santannafoto.png");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -39,7 +39,7 @@
 }
 
 .hero-homenageado-tag {
-  background: #ed1a3b;
+  background: #ef6a0f;
   color: white;
   padding: 8px 18px;
   border-radius: 30px;
@@ -69,7 +69,7 @@
   align-items: center;
   width: 100%;
   margin-top: -110px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 10;
 }
@@ -79,8 +79,22 @@
   font-size: 3rem;
   color: #fff;
   margin: 0;
+  line-height: 0.9; /* novo */
   text-transform: uppercase;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-align: right;
+  margin-top: 20px;
+}
+
+.homenageado-titulo {
+  display: block;
+  margin-top: -2px;
+  font-family: var(--fonte-principal), sans-serif;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 2px;
+  text-transform: uppercase;
   text-align: right;
 }
 
@@ -91,7 +105,7 @@
 }
 
 .badge-patrimonio {
-  background: #ed1a3b;
+  background: #ef6a0f;
   padding: 8px 20px;
   border-radius: 50px;
   font-weight: 800;
@@ -111,7 +125,7 @@
 
   .hero-homenageado-foto {
     width: 250px;
-    top: -17vw;
+    top: -14vw;
   }
 
   .homenageado-header {
