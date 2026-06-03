@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar";
 import { artistas } from "../components/data/artistasConfirmados";
 import { programacaoGeral } from "../components/programacaoCompleta";
 import { blocosData } from "../components/blocosData";
+import { sitioCidade, cidade } from "../components/sitioCidade";
 
 import marcaPrefeitura from "../public/marca-prefeitura.png";
 
@@ -28,6 +29,8 @@ export default function Home() {
   const [busca, setBusca] = useState("");
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
   const [videoRodando, setVideoRodando] = useState(false);
+
+  const [abaSitioCidade, setAbaSitioCidade] = useState("sitio");
 
   const [diaAtivo, setDiaAtivo] = useState(programacaoGeral[0]?.data || "");
 
@@ -404,62 +407,92 @@ export default function Home() {
             </div>
           </div>
         </section>
-        {/* 
-        <section id="blocos" className="py-5" style={{ minHeight: "80vh" }}>
+
+        <div className="divisoria"></div>
+
+        <section id="sitio-cidade" className="py-5">
           <div className="container">
-            <h2 className="m-titulo-programacao mb-5 text-center text-white">
-              BLOCOS
+            <h2 className="m-titulo-programacao mb-5 text-center">
+              SÍTIO À CIDADE
             </h2>
 
-            <div
-              className="tabs-container fade-in-animation mb-4"
-              style={{ gap: "10px" }}
-            >
-              {datasUnicasBlocos.map((data) => (
-                <button
-                  key={data}
-                  className={`tab-btn ${dataBlocoAtiva === data ? "active-b" : ""}`}
-                  onClick={() => setDataBlocoAtiva(data)}
-                  style={{ fontWeight: "bold", minWidth: "80px" }}
-                >
-                  {data}
-                </button>
-              ))}
+            <div className="sitio-tabs">
+              <button
+                className={`tab-btn ${
+                  abaSitioCidade === "sitio" ? "active" : ""
+                }`}
+                onClick={() => setAbaSitioCidade("sitio")}
+              >
+                SÍTIOS
+              </button>
+
+              <button
+                className={`tab-btn ${
+                  abaSitioCidade === "cidade" ? "active" : ""
+                }`}
+                onClick={() => setAbaSitioCidade("cidade")}
+              >
+                CIDADE
+              </button>
             </div>
 
-            <div className="blocos-content fade-in-animation">
-              {blocosFiltrados.length > 0 ? (
-                <div className="blocos-grid">
-                  {blocosFiltrados.map((bloco) => (
-                    <div key={bloco.id} className="bloco-card">
-                      <div className="bloco-header">
-                        <i className="bx bx-time-five"></i>
-                        <span>{bloco.horario}</span>
-                      </div>
+            {abaSitioCidade === "sitio" && (
+              <div className="sitio-grid">
+                {sitioCidade.map((evento) => (
+                  <div key={evento.id} className="sitio-card">
+                    <div className="sitio-header">
+                      <span className="sitio-data">{evento.data}</span>
 
-                      <div className="bloco-body">
-                        <h4 className="bloco-nome">{bloco.nome}</h4>
-                        {bloco.descricao && (
-                          <p className="bloco-desc">{bloco.descricao}</p>
-                        )}
-                      </div>
-
-                      <div className="bloco-footer">
-                        <i className="bx bxs-map-pin bx-sm"></i>
-                        <span className="local-text">{bloco.local}</span>
-                      </div>
+                      <h3 className="sitio-local">
+                        <i className="bx bxs-map"></i>
+                        {evento.local}
+                      </h3>
                     </div>
-                  ))}
-                </div>
-              ) : (
-                <div className="text-center text-white mt-5">
-                  <p>Nenhum bloco cadastrado para esta data.</p>
-                </div>
-              )}
-            </div>
+
+                    <div className="sitio-programacao">
+                      {evento.programacao.length > 0 ? (
+                        evento.programacao.map((item, index) => (
+                          <div key={index} className="sitio-programacao-item">
+                            {/* AQUI ESTÁ A MUDANÇA: O Ícone de Relógio inserido junto ao horário */}
+                            <span className="sitio-hora">
+                              <i className="bx bx-time-five"></i> {item.horario}
+                            </span>
+
+                            <span className="sitio-atracao">
+                              {item.atracao}
+                            </span>
+                          </div>
+                        ))
+                      ) : (
+                        <div className="sitio-em-breve">
+                          Programação em breve
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+
+            {abaSitioCidade === "cidade" && (
+              <div className="sitio-grid">
+                {cidade.map((evento) => (
+                  <div key={evento.id} className="sitio-card">
+                    <div className="sitio-header">
+                      <h3 className="sitio-local">
+                        <i className="bx bxs-map"></i>
+                        {evento.local}
+                      </h3>
+                    </div>
+
+                    <div className="sitio-em-breve">Programação em breve</div>
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         </section>
-        */}
+
         <div className="divisoria"></div>
 
         <section id="mapa">

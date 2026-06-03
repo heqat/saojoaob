@@ -31,10 +31,9 @@
   transform: scale(1.05);
 }
 
-/* Título do Palco */
 .palco-title {
   color: #fff;
-  font-family: var(--fonte-principal); /* Fonte do título */
+  font-family: var(--fonte-principal);
   font-size: 2rem;
   margin-top: 2rem;
   margin-bottom: 1.5rem;
@@ -150,7 +149,7 @@
   gap: 10px;
   box-shadow: 0 4px 15px rgba(236, 103, 26, 0.3);
   transition: all 0.3s ease;
-  min-width: 160px; /* Define uma largura mínima para o botão não ficar minúsculo */
+  min-width: 160px;
 }
 
 .filter-btn:hover {
@@ -223,4 +222,133 @@
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+}
+
+/* SÍTIO À CIDADE */
+.sitio-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.sitio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 25px;
+}
+
+.sitio-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  overflow: hidden;
+  border-left: 8px solid #fd4600;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.sitio-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.sitio-header {
+  padding: 20px 20px 10px;
+}
+
+.sitio-data {
+  display: inline-block;
+  background: #ef6a0f;
+  color: #fff;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+}
+
+.sitio-local {
+  margin: 0;
+  font-size: 1.6rem;
+  color: #222;
+  font-family: var(--fonte-principal);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sitio-local i {
+  color: #ef6a0f;
+}
+
+.sitio-programacao {
+  padding: 0 20px 20px;
+}
+
+.sitio-programacao-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 12px 0;
+  border-bottom: 1px solid #ececec;
+}
+
+.sitio-programacao-item:last-child {
+  border-bottom: none;
+}
+
+.sitio-hora {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(239, 106, 15, 0.1);
+  color: #ef6a0f;
+  font-weight: 800;
+  font-size: 0.85rem;
+  padding: 6px 12px;
+  border-radius: 30px;
+  white-space: nowrap;
+}
+
+.sitio-hora i {
+  font-size: 1.1rem;
+}
+
+.sitio-atracao {
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.sitio-em-breve {
+  padding: 20px;
+  color: #777;
+  font-style: italic;
+  text-align: center;
+}
+
+/* RESPONSIVIDADE ( */
+@media (max-width: 768px) {
+  .sitio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sitio-local {
+    font-size: 1.3rem;
+  }
+
+  .sitio-programacao-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .sitio-hora {
+    min-width: auto;
+  }
 }

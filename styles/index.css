@@ -404,9 +404,35 @@
   z-index: 2;
 }
 
+#sitio-cidade {
+  scroll-margin-top: 100px;
+  background: url("../public/bgverde3.jpg");
+  background-position: center;
+  background-size: 100%;
+  background-repeat: repeat;
+  min-height: 80vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#sitio-cidade::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+#sitio-cidade > .container {
+  position: relative;
+  z-index: 2;
+}
+
 #mapa {
   scroll-margin-top: 70px;
-  background: url("../public/bgverde4.jpg");
+  background: url("../public/bgamarelo2.jpg");
   background-position: center;
 
   background-repeat: repeat;

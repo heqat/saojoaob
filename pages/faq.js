@@ -8,38 +8,38 @@ export default function FAQ() {
 
   const faqData = [
     {
-      pergunta: "Quando serão os dias de festa do Carnaval do Papangu 2026?",
+      pergunta: "Quais serão os dias de São João na Serra Negra?",
       resposta:
-        "A festa oficial começa na sexta-feira de carnaval, mas as prévias e o clima de folia tomam conta da cidade semanas antes. Fique ligado na nossa programação oficial para não perder os blocos de rua, as prévias e nosso Baile Municipal.",
+        "O São João na Serra Negra acontecerá nos dias 13, 14, 20, 21, 23, 24, 27 e 28 de junho de 2026. Prepare-se para viver o São João mais alto, mais frio e mais aconchegante do mundo!",
     },
     {
-      pergunta: "Como chegar em Bezerros?",
+      pergunta: "Quais serão os dias do São João do Sítio à Cidade?",
       resposta:
-        "Bezerros fica localizada no Agreste de Pernambuco, às margens da BR-232, a cerca de 100km de Recife e 30km de Caruaru. O acesso é fácil e duplicado, com diversas opções de ônibus saindo do Terminal Integrado de Passageiros (TIP) em Recife.",
+        "O São João do Sítio à Cidade percorrerá diversas comunidades rurais de Bezerros ao longo do mês de junho, e nós temos um encontro marcado nos dias 03, 05, 10, 11, 17, 25 e 26, então já anota na agenda!",
+    },
+    {
+      pergunta: "Como chegar à Serra Negra?",
+      resposta:
+        "A Serra Negra está localizada a aproximadamente 10 km do centro de Bezerros. O acesso pode ser feito por meio de carro e moto. Siga as sinalizações e aproveite o caminho até um dos cenários mais bonitos do Agreste pernambucano.",
     },
     {
       pergunta: "É seguro levar crianças?",
       resposta:
-        "Sim! O Carnaval de Bezerros é conhecido por ser um dos mais familiares e seguros do estado. Temos o polo infantil e horários mais tranquilos durante o dia, ideal para apresentar a cultura dos Papangus aos pequenos com tranquilidade.",
+        "Com certeza! O São João da Serra Negra é um evento pensado para toda a família. Recomendamos apenas que crianças estejam sempre acompanhadas por um responsável e que seja combinado um ponto de encontro em caso de desencontro.",
     },
     {
-      pergunta: "Com que roupa eu vou?",
+      pergunta: "Com que roupa eu devo ir?",
       resposta:
-        "Use roupas leves e confortáveis, o clima está bem quente e a grande concentração de pessoas deixam o local ainda mais abafado.",
+        "A Serra Negra possui um clima frio, especialmente no fim da tarde e à noite. Nossa dica é apostar em roupas confortáveis e agasalhos, assim você poderá aproveitar a festa com maior tranquilidade.",
     },
     {
       pergunta:
-        "Posso circular com recipientes de vidro nas imediações do palco principal?",
-      resposta: "Não, não é permitido.",
-    },
-    {
-      pergunta: "Onde será o local de apoio para emergências?",
+        "Posso circular com recipientes de vidro nas imediações do São João da Serra Negra?",
       resposta:
-        "Teremos quatro pontos de apoio: Ao lado da Matriz; atrás do palco do QG do Frevo; atrás do palco da Centenária; em frente à casa de mulher. Também temos a UPA 24h em pleno funcionamento. Mais informações e contatos disponíveis em 'Serviços' ",
+        "Não. Por questões de segurança, não é permitida a circulação com recipientes de vidro na área do evento. Prefira embalagens plásticas ou reutilizáveis para contribuir com a segurança e o bem-estar de todos.",
     },
   ];
 
-  // Função para alternar (abrir/fechar)
   const toggleFAQ = (index) => {
     if (activeIndex === index) {
       setActiveIndex(null); // Fecha se já estiver aberto
@@ -51,21 +51,18 @@ export default function FAQ() {
   return (
     <>
       <Head>
-        <title>FAQ - Carnaval do Papangu 2025</title>
-        <meta name="title" content="FAQ - Carnaval do Papangu 2026" />
+        <title>FAQ - São João na Serra Negra 2026</title>
+        <meta name="title" content="FAQ - São João na Serra Negra 2026" />
 
+        <meta property="og:url" content="https://saojoao.pe.gov.br/faq" />
         <meta
-          property="og:url"
-          content="https://carnaval.bezerros.pe.gov.br/faq"
+          property="og:title"
+          content="FAQ - São João na Serra Negra 2026"
         />
-        <meta property="og:title" content="FAQ - Carnaval do Papangu 2026" />
-        <meta
-          property="twitter:url"
-          content="https://carnaval.bezerros.pe.gov.br/faq"
-        />
+        <meta property="twitter:url" content="https://saojoao.pe.gov.br/faq" />
         <meta
           property="twitter:title"
-          content="FAQ - Carnaval do Papangu 2026"
+          content="FAQ - São João na Serra Negra 2026"
         />
       </Head>
 

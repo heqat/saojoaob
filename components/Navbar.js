@@ -7,7 +7,6 @@ import marca from "../public/logo-grande.png";
 
 // --- ALGORITMOS DE INTELIGÊNCIA DA BUSCA ---
 
-// 1. Normaliza: Remove acentos, caracteres especiais e deixa minúsculo
 const normalize = (str) => {
   return str
     .normalize("NFD")
@@ -16,12 +15,9 @@ const normalize = (str) => {
     .trim();
 };
 
-// 2. Levenshtein Distance: Calcula a "distância" entre duas palavras
-// Retorna quantos caracteres precisam ser mudados para A virar B
 const calculateLevenshtein = (a, b) => {
   const matrix = [];
 
-  // Se uma string for vazia, a distância é o tamanho da outra
   if (a.length === 0) return b.length;
   if (b.length === 0) return a.length;
 
@@ -32,18 +28,14 @@ const calculateLevenshtein = (a, b) => {
     matrix[0][j] = j;
   }
 
-  // Preenche a matriz
   for (let i = 1; i <= b.length; i++) {
     for (let j = 1; j <= a.length; j++) {
       if (b.charAt(i - 1) === a.charAt(j - 1)) {
         matrix[i][j] = matrix[i - 1][j - 1];
       } else {
         matrix[i][j] = Math.min(
-          matrix[i - 1][j - 1] + 1, // Substituição
-          Math.min(
-            matrix[i][j - 1] + 1, // Inserção
-            matrix[i - 1][j] + 1, // Remoção
-          ),
+          matrix[i - 1][j - 1] + 1,
+          Math.min(matrix[i][j - 1] + 1, matrix[i - 1][j] + 1),
         );
       }
     }
@@ -93,7 +85,7 @@ export default function Navbar() {
 
     closeMenu();
 
-    // --- MAPA DE INTENÇÕES ---
+    // MAPA
     const searchMap = [
       {
         route: "/historia",
