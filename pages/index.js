@@ -508,11 +508,9 @@ export default function Home() {
             ></iframe>
           </div>
         </section>
-        {/* 
-        <div className="divisoria-overlap">
-          <img src="/faixa-2.png" alt="Divisória decorativa" loading="lazy" />
-        </div>
-       
+
+        <div className="divisoria"></div>
+
         <section id="patrocinio" className="py-4">
           <div className="container d-flex justify-content-center">
             <Image
@@ -529,7 +527,7 @@ export default function Home() {
             />
           </div>
         </section>
-         */}
+
         <div className="divisoria"></div>
       </main>
       <Footer />
