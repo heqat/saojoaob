@@ -453,7 +453,6 @@ export default function Home() {
                       {evento.programacao.length > 0 ? (
                         evento.programacao.map((item, index) => (
                           <div key={index} className="sitio-programacao-item">
-                            {/* AQUI ESTÁ A MUDANÇA: O Ícone de Relógio inserido junto ao horário */}
                             <span className="sitio-hora">
                               <i className="bx bx-time-five"></i> {item.horario}
                             </span>

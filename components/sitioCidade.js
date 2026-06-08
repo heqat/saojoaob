@@ -62,11 +62,4 @@ export const cidade = [
     data: "",
     programacao: [],
   },
-
-  {
-    id: 2,
-    local: "Centro",
-    data: "",
-    programacao: [],
-  },
 ];
