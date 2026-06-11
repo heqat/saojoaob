@@ -15,16 +15,7 @@ import marcaPrefeitura from "../public/marca-prefeitura.png";
 export default function Home() {
   const router = useRouter();
 
-  const nomesOficiaisPalcos = {
-    "QG do Frevo": "Polo Lucas Cardoso",
-    "Palco Cultural": "Polo Mestre J. Borges",
-    "Palco Centenária": "Polo Mestre Lula Vassoureiro",
-    "Palco São Sebastião": "Polo Ronaldo Souto Maior",
-    "Espaço Frevo": "Polo Malvina Salvador",
-    "Forró do Papangu": "Polo Zezé e Zezita",
-    "Espaço Kids": "Polo Infantil",
-    "Polo Mercado Barra Branca": "Polo Mercado Barra Branca",
-  };
+  const nomesOficiaisPalcos = {};
 
   const [busca, setBusca] = useState("");
   const [abaAtiva, setAbaAtiva] = useState("apresentacao");
