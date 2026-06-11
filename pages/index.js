@@ -294,10 +294,6 @@ export default function Home() {
               PROGRAMAÇÃO OFICIAL
             </h2>
 
-            <p className="programacao-aviso text-center mb-4">
-              Os horários das apresentações ainda serão divulgados oficialmente.
-            </p>
-
             <div className="controls-container fade-in-animation">
               {diasDisponiveis.map((data) => (
                 <button

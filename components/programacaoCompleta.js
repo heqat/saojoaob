@@ -1,9 +1,4 @@
 export const programacaoGeral = [
-  // ==========================================
-  //            PALCO PRINCIPAL
-  // ==========================================
-
-  // --- DIA 13/06 - SÁBADO ---
   {
     id: 1,
     dia: "Sábado",
@@ -45,7 +40,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 14/06 - DOMINGO ---
   {
     id: 6,
     dia: "Domingo",
@@ -87,7 +81,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 20/06 - SÁBADO ---
   {
     id: 11,
     dia: "Sábado",
@@ -129,7 +122,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 21/06 - DOMINGO ---
   {
     id: 16,
     dia: "Domingo",
@@ -171,7 +163,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 23/06 - TERÇA ---
   {
     id: 21,
     dia: "Terça",
@@ -213,7 +204,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 24/06 - QUARTA ---
   {
     id: 26,
     dia: "Quarta",
@@ -255,7 +245,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 27/06 - SÁBADO ---
   {
     id: 31,
     dia: "Sábado",
@@ -297,7 +286,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // --- DIA 28/06 - DOMINGO ---
   {
     id: 36,
     dia: "Domingo",
@@ -339,11 +327,6 @@ export const programacaoGeral = [
     horario: "20:00",
   },
 
-  // ==========================================
-  //             PALCO CULTURAL
-  // ==========================================
-
-  // --- DIA 13/06 - SÁBADO ---
   {
     id: 41,
     dia: "Sábado",
@@ -385,7 +368,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 14/06 - DOMINGO ---
   {
     id: 46,
     dia: "Domingo",
@@ -407,7 +389,7 @@ export const programacaoGeral = [
     dia: "Domingo",
     data: "14/06",
     palco: "Palco Cultural",
-    artista: "Junina Asa Branca (Ameixas)",
+    artista: "Junina Asa Branca",
     horario: "15:30",
   },
   {
@@ -427,7 +409,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 20/06 - SÁBADO ---
   {
     id: 51,
     dia: "Sábado",
@@ -451,7 +432,7 @@ export const programacaoGeral = [
     palco: "Palco Cultural",
     artista: "Batalhão 44",
     horario: "16:30",
-  } /* PDF original marcava 16:30 para este */,
+  },
   {
     id: 54,
     dia: "Sábado",
@@ -461,7 +442,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 21/06 - DOMINGO ---
   {
     id: 55,
     dia: "Domingo",
@@ -503,7 +483,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 23/06 - TERÇA ---
   {
     id: 60,
     dia: "Terça",
@@ -545,7 +524,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 24/06 - QUARTA ---
   {
     id: 65,
     dia: "Quarta",
@@ -587,7 +565,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 27/06 - SÁBADO ---
   {
     id: 70,
     dia: "Sábado",
@@ -629,7 +606,6 @@ export const programacaoGeral = [
     horario: "18:00",
   },
 
-  // --- DIA 28/06 - DOMINGO ---
   {
     id: 75,
     dia: "Domingo",
